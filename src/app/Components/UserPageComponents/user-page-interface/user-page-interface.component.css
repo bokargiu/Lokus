@@ -1,0 +1,22 @@
+.container{
+    width: 181.3vh;
+    height: 100vh;
+    background-color: #c6ac8c;
+}
+.bar{
+    height: 15vh;
+    width: 100%;
+}
+.infos{
+    height: 75vh;
+    width: 100%;
+    background-color: aquamarine;
+}
+.area-ads{
+    height: 10vh;
+    width: 100%;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}

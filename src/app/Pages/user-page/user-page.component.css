@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+}
+.menu{
+    width: 27vh;
+    height: 100vh;
+}
+.interfece{
+    width: 73vh;
+    height: 100vh;
+}
