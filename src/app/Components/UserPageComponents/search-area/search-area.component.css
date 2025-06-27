@@ -1,5 +1,51 @@
 .container{
-    height: 15vh;
+    height: 10vh;
     width: 100%;
-    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icons{
+    margin: 0px;
+    margin-left: 35px;
+    display: flex;
+    list-style: none;
+    height: 50px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+.icons img{
+    width: 30px;
+    margin: 10px;
+    transition: 0.2s;
+}
+.icons img:hover{
+    width: 85%;
+    margin: 8px;
+}
+.logout{
+    margin-right: 30px;
+    height: 47px;
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn-out{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    border: 2px solid black;
+    transition: 0.2s;
+}
+.btn-out:hover{
+    border-radius: 7px;
+    height: 42px;
+    width: 42px;
+    font-size: 14px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.204);
 }

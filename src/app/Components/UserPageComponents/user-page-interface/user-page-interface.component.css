@@ -1,7 +1,7 @@
 .container{
     width: 181.3vh;
     height: 100vh;
-    background-color: #c6ac8c;
+    background-color: #F8F5F0;
 }
 .bar{
     height: 15vh;
@@ -10,13 +10,18 @@
 .infos{
     height: 75vh;
     width: 100%;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+}
+.cards-area{
+    height: 65vh;
+    width: 80%;
+    background-color: #D0CEBB;
 }
 .area-ads{
     height: 10vh;
     width: 100%;
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
 }

@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.625);
 }
 p{
     margin: 0px;
