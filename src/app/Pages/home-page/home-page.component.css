@@ -1,4 +1,10 @@
-.container-search{
+.container{
+    width: 100%;
+    height: 800px;
+    background-color: rgb(248, 245, 240);
+}
+
+.search-area{
     width: 100%;
     height: 30%;
     background-color: rgb(248, 245, 240);
@@ -47,9 +53,10 @@ input { /* alterações dentro da caixa de pesquisa */
         border-bottom: 2px solid rgb(51, 51, 51, 0.2);
         width: 60%;
         justify-self: center;
+        background-color: rgb(248, 245, 240);
 }
 
-.container{
+.options-area{
     width: 100%;
     height: 60%;
     background-color: rgb(248, 245, 240);
@@ -105,7 +112,7 @@ input { /* alterações dentro da caixa de pesquisa */
     opacity: 1;
 }
 
-.container-comments{
+.comments-area{
     width: 100%;
     height: 70%;
     background-color: rgb(248, 245, 240);
@@ -175,7 +182,7 @@ input { /* alterações dentro da caixa de pesquisa */
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4)
 }
 
-.container-end{
+.infos-area{
     width: 100%;
     height: 70%;
     background-color: rgb(248, 245, 240);
