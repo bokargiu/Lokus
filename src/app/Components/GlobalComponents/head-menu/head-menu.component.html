@@ -1,0 +1,15 @@
+<div class="container">
+    <button class="menu-button">Home</button>
+    <button class="menu-button">Empresas</button>
+    <button class="menu-button">FAQ</button>    
+    <button [cdkMenuTriggerFor]="menu"  class="menu-button">
+        <img class="icone-button" src="https://cdn-icons-png.flaticon.com/512/3917/3917711.png" alt="icone-login-cadastro">
+        <ng-template #menu>
+        <div class="menu-icon" cdkMenu>
+            <button class="menu-item" cdkMenuItem>Login</button>
+            <button class="menu-item" cdkMenuItem>Cadastrar-se</button>
+        </div>
+        </ng-template>
+    </button>
+
+</div>

@@ -8,10 +8,17 @@ import { CdkMenuModule } from '@angular/cdk/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomePageComponent } from './Pages/home-page/home-page.component';
+import { FootingComponent } from './Components/GlobalComponents/footing/footing.component';
+import { HeadMenuComponent } from './Components/GlobalComponents/head-menu/head-menu.component';
+import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    CompaniesPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,6 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     CdkMenuModule,
+    HeadMenuComponent,
+    FootingComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
