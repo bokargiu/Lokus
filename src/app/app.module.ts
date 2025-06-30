@@ -8,10 +8,14 @@ import { CdkMenuModule } from '@angular/cdk/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SubscriptionComponent } from './Pages/subscription/subscription.component';
+import { CardSubscriptionComponent } from './Components/card-subscription/card-subscription.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SubscriptionComponent,
+    CardSubscriptionComponent
   ],
   imports: [
     BrowserModule,

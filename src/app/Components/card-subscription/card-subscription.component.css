@@ -1,0 +1,66 @@
+.container{
+    background-color: #bfd8d2;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #333333;
+    transition: transform 0.3s ease; /* animação suave */
+
+}
+
+h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}
+
+p{
+  color: rgb(86, 86, 86);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+  font-size: 14px;
+}
+
+.container:hover {
+  transform: scale(1); /* aumenta o card em 5% */
+  cursor: pointer; /* opcional: muda o cursor para indicar interatividade */
+  animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes shadow-drop-center {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.542);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.542);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 20px 0px rgba(2255, 255, 255, 0.542);
+            box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.542);
+  }
+}
+@keyframes shadow-drop-center {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.542);
+            box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.542);
+  }
+}
+
+button{
+  background-color: #333333;
+  padding: 8px 10px;
+  color: #f8f5f0;
+  border-radius: 10px;
+  border:2px solid #333333;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
