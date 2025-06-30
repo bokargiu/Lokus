@@ -10,9 +10,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px solid #333333;
+    border: 3px solid #bfd8d2;
     transition: transform 0.3s ease; /* animação suave */
+     /* Estilos dos cards com hover de cor */
+    border-radius: 8px;
+    width: 280px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px #bfd8d2;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 
+}
+
+ul{
+    margin-top: 0px;
 }
 
 h3{
@@ -30,7 +40,12 @@ p{
   transform: scale(1); /* aumenta o card em 5% */
   cursor: pointer; /* opcional: muda o cursor para indicar interatividade */
   animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
+
+
+
 
 @-webkit-keyframes shadow-drop-center {
   0% {
@@ -54,8 +69,8 @@ p{
 }
 
 button{
-  background-color: #333333;
-  padding: 8px 10px;
+  background-color: #044e55;
+  padding: 10px 25px;
   color: #f8f5f0;
   border-radius: 10px;
   border:2px solid #333333;
