@@ -18,6 +18,12 @@
     margin-right: 40px;
 }
 
+.menu-button:hover{
+    color: #333333;
+    text-decoration: underline;
+    margin-bottom: 4px;
+}
+
 img{
     height: 18px;
     padding:2px;
