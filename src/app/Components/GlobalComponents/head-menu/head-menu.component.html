@@ -1,5 +1,6 @@
 <div class="container">
-    <button class="menu-button">Home</button>
+    <button [routerLink]="['']" class="menu-button">Home</button>
+    <button [routerLink]="['pesquisa']" class="menu-button">Pesquisar</button>
     <button class="menu-button">Empresas</button>
     <button class="menu-button">FAQ</button>    
     <button [cdkMenuTriggerFor]="menu"  class="menu-button">
