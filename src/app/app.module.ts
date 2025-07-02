@@ -13,6 +13,8 @@ import { FootingComponent } from './Components/GlobalComponents/footing/footing.
 import { HeadMenuComponent } from './Components/GlobalComponents/head-menu/head-menu.component';
 import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
 import { SearchPageComponent } from './Pages/search-page/search-page.component';
+import { ImagesComponent } from './Components/GlobalComponents/images/images.component';
+import { CardCompanyComponent } from './Components/GlobalComponents/card-company/card-company.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { SearchPageComponent } from './Pages/search-page/search-page.component';
     HomePageComponent,
     CompaniesPageComponent,
     SearchPageComponent,
+    ImagesComponent,
+    CardCompanyComponent,
   ],
   imports: [
     BrowserModule,
