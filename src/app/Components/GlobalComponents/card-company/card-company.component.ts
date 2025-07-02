@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-company.component.css']
 })
 export class CardCompanyComponent {
-
+  company = [
+    { nome:"Empresa 1", preco: 80.00 },
+    { nome:"Empresa 2", preco: 80.00 },
+    { nome:"Empresa 3", preco: 80.00 },
+    { nome:"Empresa 4", preco: 80.00 },
+    { nome:"Empresa 5", preco: 80.00 },
+    { nome:"Empresa 6", preco: 80.00 },
+  ]
 }
+
