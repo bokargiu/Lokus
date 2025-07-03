@@ -11,20 +11,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
 import { FootingComponent } from './Components/GlobalComponents/footing/footing.component';
 import { HeadMenuComponent } from './Components/GlobalComponents/head-menu/head-menu.component';
-import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
 import { SearchPageComponent } from './Pages/search-page/search-page.component';
 import { ImagesComponent } from './Components/GlobalComponents/images/images.component';
 import { CardCompanyComponent } from './Components/GlobalComponents/card-company/card-company.component';
+import { SignupPageComponent } from './Pages/signup-page/signup-page.component';
+import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
+import { SignupCompanyPageComponent } from './Pages/signup-company-page/signup-company-page.component';
+import { SignupUserPgComponent } from './Pages/signup-user-pg/signup-user-pg.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    CompaniesPageComponent,
     SearchPageComponent,
     ImagesComponent,
     CardCompanyComponent,
+    SignupPageComponent,
+    CompaniesPageComponent,
+    SignupCompanyPageComponent,
+    SignupUserPgComponent,
   ],
   imports: [
     BrowserModule,

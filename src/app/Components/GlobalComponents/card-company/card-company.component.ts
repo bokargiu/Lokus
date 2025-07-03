@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './card-company.component.html',
   styleUrls: ['./card-company.component.css']
 })
-export class CardCompanyComponent {
+export interface CardCompanyComponent {
   company = [
     { nome:"Empresa 1", preco: 80.00 },
     { nome:"Empresa 2", preco: 80.00 },
