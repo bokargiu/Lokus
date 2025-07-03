@@ -14,10 +14,9 @@ import { HeadMenuComponent } from './Components/GlobalComponents/head-menu/head-
 import { SearchPageComponent } from './Pages/search-page/search-page.component';
 import { ImagesComponent } from './Components/GlobalComponents/images/images.component';
 import { CardCompanyComponent } from './Components/GlobalComponents/card-company/card-company.component';
-import { SignupPageComponent } from './Pages/signup-page/signup-page.component';
 import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
 import { SignupCompanyPageComponent } from './Pages/signup-company-page/signup-company-page.component';
-import { SignupUserPgComponent } from './Pages/signup-user-pg/signup-user-pg.component';
+import { SignupUserPageComponent } from './Pages/signup-user-page/signup-user-page.component';
 
 
 @NgModule({
@@ -27,10 +26,9 @@ import { SignupUserPgComponent } from './Pages/signup-user-pg/signup-user-pg.com
     SearchPageComponent,
     ImagesComponent,
     CardCompanyComponent,
-    SignupPageComponent,
     CompaniesPageComponent,
     SignupCompanyPageComponent,
-    SignupUserPgComponent,
+    SignupUserPageComponent
   ],
   imports: [
     BrowserModule,

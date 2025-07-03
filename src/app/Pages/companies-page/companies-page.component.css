@@ -1,0 +1,36 @@
+
+.block1{
+    width: 100%;
+    height: 300px;
+    background-color: #f8f5f0;
+    display: flex;
+    align-items: center;
+}
+
+.images{
+    width: 100%;
+    height: 250px;
+    background-color: cyan;
+}
+
+.block2{
+    width: 100%;
+    height: 500px;
+    background-color: #f8f5f0;
+    display: flex;
+    align-items: center;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    width: 1000px;
+    padding: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    font-weight:lighter;
+    color: #333333;
+}
