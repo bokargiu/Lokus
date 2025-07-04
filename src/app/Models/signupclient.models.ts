@@ -6,5 +6,7 @@ export interface SignupClient {
     name: string,
     cpf: number,
     birthday: Date,
-    contact: number
+    contact: number,
+    role:string
 }
+

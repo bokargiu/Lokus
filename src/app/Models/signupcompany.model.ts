@@ -4,6 +4,6 @@ export interface SignupCompany{
     password : string,
     email : string,
     name: string,
-    cpnj: number,
-    contact: number
+    cpnj: string,
+    contact: string
 }
