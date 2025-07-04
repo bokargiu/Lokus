@@ -1,7 +1,14 @@
 <div class="container">
     <button [routerLink]="['']" class="menu-button">Home</button>
-    <button [routerLink]="['pesquisa']" class="menu-button">Pesquisar</button>
-    <button [routerLink]="['empresas']" class="menu-button">Empresas</button>
+    <button [routerLink]="['/pesquisa']" class="menu-button">Pesquisar</button>
+    <button [cdkMenuTriggerFor]="menu"  class="menu-button">Empresas</button>
+        <ng-template #menu>
+        <div class="menu-icon" cdkMenu>
+            <button class="menu-item" [routerLink]="['/empresa']" cdkMenuItem>Sobre</button>
+            <button class="menu-item" [routerLink]="['/login']" cdkMenuItem>Login</button>
+            <button class="menu-item" cdkMenuItem>Cadastrar-se</button>
+        </div>
+        </ng-template>
     <button class="menu-button">FAQ</button>    
     <button [cdkMenuTriggerFor]="menu"  class="menu-button">
         <img class="icone-button" src="https://cdn-icons-png.flaticon.com/512/3917/3917711.png" alt="icone-login-cadastro">
@@ -12,5 +19,4 @@
         </div>
         </ng-template>
     </button>
-
 </div>

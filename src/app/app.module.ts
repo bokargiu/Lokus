@@ -16,7 +16,8 @@ import { ImagesComponent } from './Components/GlobalComponents/images/images.com
 import { CardCompanyComponent } from './Components/GlobalComponents/card-company/card-company.component';
 import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
 import { SignupCompanyPageComponent } from './Pages/signup-company-page/signup-company-page.component';
-import { SignupUserPageComponent } from './Pages/signup-user-page/signup-user-page.component';
+import { LoginPageComponent } from './Pages/login-page/login-page.component';
+import { SignupClientPageComponent } from './Pages/signup-client-page/signup-client-page.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { SignupUserPageComponent } from './Pages/signup-user-page/signup-user-pa
     CardCompanyComponent,
     CompaniesPageComponent,
     SignupCompanyPageComponent,
-    SignupUserPageComponent
+    LoginPageComponent,
+    SignupClientPageComponent
   ],
   imports: [
     BrowserModule,

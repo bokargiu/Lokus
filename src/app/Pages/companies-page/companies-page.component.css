@@ -18,6 +18,7 @@
     height: 500px;
     background-color: #f8f5f0;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -33,4 +34,16 @@ h3 {
     font-size: 50px;
     font-weight:lighter;
     color: #333333;
+}
+
+.signup-box{
+    background-color: #ebd478;
+    padding: 9px;
+    border: 3px solid #ebd478;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #333333;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: medium;
+    font-weight: bold;
 }
