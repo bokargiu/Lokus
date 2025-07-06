@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CdkMenu } from '@angular/cdk/menu';
 
 @Component({
   selector: 'app-side-menu',

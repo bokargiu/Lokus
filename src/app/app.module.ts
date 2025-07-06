@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { CdkMenuModule } from '@angular/cdk/menu';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,6 @@ import { UserPageInterfaceComponent } from './Components/UserPageComponents/user
 import { SideMenuComponent } from './Components/UserPageComponents/side-menu/side-menu.component';
 import { SearchAreaComponent } from './Components/UserPageComponents/search-area/search-area.component';
 import { LocalizeNearMapComponent } from './Components/UserPageComponents/localize-near-map/localize-near-map.component';
-import { ButtomAdBarComponent } from './Components/UserPageComponents/buttom-ad-bar/buttom-ad-bar.component';
 
 
 @NgModule({
@@ -24,8 +23,6 @@ import { ButtomAdBarComponent } from './Components/UserPageComponents/buttom-ad-
     SideMenuComponent,
     SearchAreaComponent,
     LocalizeNearMapComponent,
-    ButtomAdBarComponent,
-
   ],
   imports: [
     BrowserModule,
