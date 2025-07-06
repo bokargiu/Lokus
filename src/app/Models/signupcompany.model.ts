@@ -6,4 +6,5 @@ export interface SignupCompany{
     name: string,
     cpnj: string,
     contact: string
+    role:string
 }

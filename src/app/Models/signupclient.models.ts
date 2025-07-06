@@ -4,9 +4,9 @@ export interface SignupClient {
     password: string,
     email: string,
     name: string,
-    cpf: number,
+    cpf: string,
     birthday: Date,
-    contact: number,
+    contact: string,
     role:string
 }
 

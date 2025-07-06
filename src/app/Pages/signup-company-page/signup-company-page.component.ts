@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup-company-page.component.css']
 })
 export class SignupCompanyPageComponent {
+  senha:string = '';
+  confirmarSenha:string = ''
 
+confirmar() {
+  console.log('Senha confirmada!');
+}
 }

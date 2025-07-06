@@ -1,1 +1,31 @@
-<p>signup-client-page works!</p>
+<app-head-menu/>
+
+<div class="container">
+        <div class="layer"></div>
+        <div class="block1">
+            <h4>INFORMAÇÕES PESSOAIS</h4>
+            <label>NOME COMPLETO:</label>
+            <input type="text" placeholder="">
+            <label>CPF</label>
+            <input type="text" placeholder="">
+            <label>DATA DE NASCIMENTO</label>
+            <input type="text" placeholder="">
+            <label>EMAIL</label>
+            <input type="text" placeholder="">
+            <label>CONTATO</label>
+            <input type="text" placeholder="">
+        </div>
+        <div class="block2">
+            <h4>INFORMAÇÕES DA CONTA</h4>
+            <label>USERNAME</label>
+            <input type="text" placeholder="">
+            <label>SENHA</label>
+            <input type="password" placeholder="" [(ngModel)]="senha">
+            <label>CONFIRMAR SENHA</label>
+            <input type="password" placeholder="" [(ngModel)]="confirmarSenha">
+            <button class="confirmar" [disabled]="!senha || !confirmarSenha || senha !== confirmarSenha">Confirmar</button>
+        </div>
+
+</div>
+
+<app-footing/>
