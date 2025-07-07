@@ -8,20 +8,18 @@
     width: 100%;
 }
 .infos{
-    height: 75vh;
+    height: 80vh;
     width: 100%;
-    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
 }
 .cards-area{
     height: 65vh;
     width: 80%;
     background-color: #D0CEBB;
-}
-.area-ads{
-    height: 10vh;
-    width: 100%;
-    /* background-color: rebeccapurple; */
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.312); 
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.196);
 }
