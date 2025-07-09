@@ -1,0 +1,9 @@
+.map{
+    height: 370px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D0CEBB;
+    border-radius: 5px;
+}

@@ -15,9 +15,9 @@
     align-items: center;
     gap: 25px;
 }
-.cards-area{
+.box-area{
     height: 65vh;
-    width: 80%;
+    width: 70%;
     background-color: #D0CEBB;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.312); 

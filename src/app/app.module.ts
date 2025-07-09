@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CdkMenuModule } from '@angular/cdk/menu';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,7 @@ import { LocalizeNearMapComponent } from './Components/UserPageComponents/locali
     FormsModule,
     HttpClientModule,
     CdkMenuModule,
+    LeafletModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

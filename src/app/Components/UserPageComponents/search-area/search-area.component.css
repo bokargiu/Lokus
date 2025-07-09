@@ -10,22 +10,30 @@
     margin-left: 35px;
     display: flex;
     list-style: none;
-    height: 50px;
-    width: 200px;
+    height: 60px;
+    width: 260px;
     justify-content: center;
     align-items: center;
     padding: 0px;
+    gap: 20px;
+}
+li{
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .icons img{
-    width: 30px;
+    width: 35px;
     margin: 10px;
     transition: 0.2s;
 }
 .icons img:hover{
-    width: 85%;
+    width: 42px;
     margin: 8px;
     cursor: pointer;
 }
+
 .logout{
     margin-right: 30px;
     height: 47px;
