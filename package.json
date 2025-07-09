@@ -20,8 +20,15 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+<<<<<<< HEAD
     "@asymmetrik/ngx-leaflet": "^16.0.1",
     "leaflet": "^1.9.4",
+=======
+<<<<<<< HEAD
+    "leaflet": "^1.9.4",
+=======
+>>>>>>> 6e24fec5afaf554e2a1c838819eaaf15c470310a
+>>>>>>> 04a5707e5e95d3d42a1362ea01d0ff7d8fc7aa5e
     "osm-api": "^2.7.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
