@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ProjetoLokus:build:production"
+              "buildTarget": "ProjetoLokus:build:production"
             },
             "development": {
-              "browserTarget": "ProjetoLokus:build:development"
+              "buildTarget": "ProjetoLokus:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ProjetoLokus:build"
+            "buildTarget": "ProjetoLokus:build"
           }
         },
         "test": {
