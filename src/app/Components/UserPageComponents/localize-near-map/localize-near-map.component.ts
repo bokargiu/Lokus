@@ -11,7 +11,7 @@ export class LocalizeNearMapComponent {
     iconUrl: 'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png',
     iconSize: [40, 40],
     iconAnchor: [20, 39]
-  })
+    })
   options = {
   
     layers: [
