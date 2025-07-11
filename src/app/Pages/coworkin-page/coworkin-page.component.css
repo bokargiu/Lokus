@@ -4,32 +4,40 @@
 .rodape{
     height: 70px;
 }
-.Page{
-    width: 100%;
-    height: 1000px;
-    background-color: #f8f5f0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
 
-}
-.Infos{
-    width: 90%;
-    height: 900px;
+.container{
+    width: 100%;
+    height: 620px;
     display: flex;
     justify-content: space-evenly;
-
+    background-color: #f8f5f0;
+    
 }
+
+.layer{
+        position: absolute;
+        width: 100%;
+        height: 620px;
+        background-image: url('src\assets\Images\layer1.png');    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:auto; 
+        opacity: 0.2;
+        pointer-events: none;
+        z-index: 0;  
+}
+
 .card-description{
     width: 500px;
     height: 600px;
     background-color: #92bcb2;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.227);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.485);
     display: flex;
     flex-direction: column;
     align-items: center;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
+    z-index: 1;
 }
 .description{
     height: 150px;
@@ -108,9 +116,10 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.266);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.479);
     border-radius: 10%;
     margin-top: 40px;
+    z-index: 1;
 }
 
 .images img{
