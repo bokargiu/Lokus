@@ -1,11 +1,30 @@
 .container{
+    width: 100%;
     display: flex;
 }
 .menu{
-    width: 27vh;
+    width: 17%;
     height: 100vh;
 }
 .interfece{
-    width: 73vh;
+    width: 83%;
     height: 100vh;
+}
+.campo1{
+ width: 23%;
+ height: 100vh;
+ background-color: #044E55;
+}
+.campo2{
+ width: 100%;
+ height: 100vh;
+ background-color: aquamarine;
+}
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
 }

@@ -1,9 +1,16 @@
 <div class="container">
-    <app-search-area class="bar"/>
-    <div class="infos">
-        <div class="box-area">
-            <div class="ex-card"></div>
-        </div>
-        <app-localize-near-map/>
-    </div>  
+    <div class="menubar" (mouseover)="sidenav.open()">
+        <app-menu-bar [sidenav]="sidenav"/>
+    </div>
+
+    <div class="interface">
+        <app-search-area class="search-bar"/>
+
+        <div class="infos">
+            <div class="box-area">
+
+            </div>
+            <app-localize-near-map/>
+        </div>  
+    </div>
 </div>

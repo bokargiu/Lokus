@@ -4,26 +4,33 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CdkMenuModule } from '@angular/cdk/menu';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatSidenavModule } from '@angular/material/sidenav'
+import { ViewChild } from '@angular/core';
+
+import { MatButton, MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UserPageComponent } from './Pages/user-page/user-page.component';
 import { UserPageInterfaceComponent } from './Components/UserPageComponents/user-page-interface/user-page-interface.component';
 import { SideMenuComponent } from './Components/UserPageComponents/side-menu/side-menu.component';
 import { SearchAreaComponent } from './Components/UserPageComponents/search-area/search-area.component';
 import { LocalizeNearMapComponent } from './Components/UserPageComponents/localize-near-map/localize-near-map.component';
+import { UserPageComponent } from './Pages/user-page/user-page.component';
+import { MenuBarComponent } from './Components/UserPageComponents/menu-bar/menu-bar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserPageComponent,
     UserPageInterfaceComponent,
     SideMenuComponent,
     SearchAreaComponent,
     LocalizeNearMapComponent,
+    UserPageComponent,
+    MenuBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +40,12 @@ import { LocalizeNearMapComponent } from './Components/UserPageComponents/locali
     FormsModule,
     HttpClientModule,
     CdkMenuModule,
-    LeafletModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatButtonModule,
+  ],
+  exports: [
+    UserPageInterfaceComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
