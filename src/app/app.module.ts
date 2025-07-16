@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SubscriptionComponent } from './Pages/subscription/subscription.component';
 import { CardSubscriptionComponent } from './Components/card-subscription/card-subscription.component';
+import { SubscriptionCompanyComponent } from './Pages/subscription-company/subscription-company.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SubscriptionComponent,
-    CardSubscriptionComponent
+    CardSubscriptionComponent,
+    SubscriptionCompanyComponent
   ],
   imports: [
     BrowserModule,
