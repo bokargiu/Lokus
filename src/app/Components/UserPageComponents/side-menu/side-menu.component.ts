@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { CdkMenu } from '@angular/cdk/menu';
+import { MenuItem } from 'primeng/api';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-side-menu',
@@ -7,5 +9,7 @@ import { CdkMenu } from '@angular/cdk/menu';
   styleUrls: ['./side-menu.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SideMenuComponent {
+export class SideMenuComponent{
+  num!: number;
+  @Input() sidenav!:MatSidenav
 }

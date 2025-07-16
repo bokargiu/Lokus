@@ -1,3 +1,19 @@
 <div class="container">
-    
+    <div class="infos">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7YMHtkcGzhlp4XRYnfbYsVULmOr5Jd_nGg&s" alt="" style="width: 40px; height: 40px; border-radius: 100%;">
+    </div>
+
+    <ul class="options">
+        <mat-icon fontIcon="home" class="icon-options"/>
+        <mat-icon fontIcon="textsms" class="icon-options"/>
+        <mat-icon fontIcon="star" class="icon-options"/>
+        <mat-icon fontIcon="favorite" class="icon-options"/>
+        <mat-icon fontIcon="shopping_cart" class="icon-options"/>
+        <mat-icon fontIcon="business" class="icon-options"/>
+        <mat-icon fontIcon="settings" class="icon-options"/>
+    </ul>
+
+    <div mat-button class="open">
+        <mat-icon fontIcon="arrow_circle_right" style="width: 24px; height: 24px; font-size: 24px;" (click)="sidenav.open()"/>
+    </div>
 </div>

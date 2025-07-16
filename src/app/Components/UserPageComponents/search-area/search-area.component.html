@@ -1,14 +1,10 @@
 <div class="container">
-    <div class="shortcuts">
-        <ul class="icons">
-            <li><mat-icon fontIcon="notifications" class="icon"/></li>
-            <li><mat-icon fontIcon="search" class="icon"/></li>
-        </ul>
-        <div class="search">
-            <input type="text" class="text">
-        </div>
-        </div>
+    <div class="search">
+        <input type="text" class="text">
+        <button mat-icon-button aria-label="search"><mat-icon fontIcon="search" class="icon"/></button>
+    </div>
     <div class="logout">
-        <mat-icon fontIcon="logout" class="btn-out"/>
+        <button mat-icon-button aria-label="notifications"><mat-icon fontIcon="notifications" class="icon"/></button>
+        <button mat-icon-button aria-label="logout button"><mat-icon fontIcon="logout" class="icon"/></button>
     </div>
 </div>

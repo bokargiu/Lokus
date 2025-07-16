@@ -8,8 +8,11 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { ViewChild } from '@angular/core';
+import { ButtonModule } from 'primeng/button'
+import { CardModule } from 'primeng/card'
 
-import { MatButton, MatButtonModule } from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MenuModule } from 'primeng/menu'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,6 +46,9 @@ import { MenuBarComponent } from './Components/UserPageComponents/menu-bar/menu-
     MatIconModule,
     MatSidenavModule,
     MatButtonModule,
+    ButtonModule,
+    MenuModule,
+    CardModule
   ],
   exports: [
     UserPageInterfaceComponent

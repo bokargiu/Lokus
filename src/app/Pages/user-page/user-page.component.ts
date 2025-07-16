@@ -9,5 +9,6 @@ import { UserPageInterfaceComponent } from 'src/app/Components/UserPageComponent
   styleUrls: ['./user-page.component.css'],
 })
 export class UserPageComponent {
+  opened:boolean = false
   @ViewChild('sidenav') sidenav!: MatSidenav;
 }
