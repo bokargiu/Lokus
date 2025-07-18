@@ -1,0 +1,23 @@
+
+ .saldo-card {
+  width: 100px;
+  height: 100px;
+  background-color: #f8f5f0f0;
+  margin: 0;
+ }
+
+  .saldo-titulo {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .saldo-valor {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+  }

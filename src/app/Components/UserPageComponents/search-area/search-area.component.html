@@ -4,7 +4,12 @@
         <button mat-icon-button aria-label="search"><mat-icon fontIcon="search" class="icon"/></button>
     </div>
     <div class="logout">
-        <button mat-icon-button aria-label="notifications"><mat-icon fontIcon="notifications" class="icon"/></button>
-        <button mat-icon-button aria-label="logout button"><mat-icon fontIcon="logout" class="icon"/></button>
+        <button mat-icon-button>
+            <mat-icon fontIcon="notifications" matBadge="10" matBadgeColor="warn" class="icon"/>
+        </button>
+
+        <button mat-icon-button>
+            <mat-icon fontIcon="logout" class="icon"/>
+        </button>
     </div>
 </div>

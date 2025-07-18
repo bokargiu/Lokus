@@ -37,7 +37,7 @@
     height: 42px;
     width: 300px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     color: black;
 

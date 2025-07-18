@@ -6,13 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { CdkMenuModule } from '@angular/cdk/menu';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { ViewChild } from '@angular/core';
-import { ButtonModule } from 'primeng/button'
-import { CardModule } from 'primeng/card'
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { DividerModule } from 'primeng/divider';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { MatButtonModule } from '@angular/material/button';
-import { MenuModule } from 'primeng/menu'
+import { MenuModule } from 'primeng/menu';
+import { CarouselModule } from 'primeng/carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +26,9 @@ import { SearchAreaComponent } from './Components/UserPageComponents/search-area
 import { LocalizeNearMapComponent } from './Components/UserPageComponents/localize-near-map/localize-near-map.component';
 import { UserPageComponent } from './Pages/user-page/user-page.component';
 import { MenuBarComponent } from './Components/UserPageComponents/menu-bar/menu-bar.component';
+import { UserBalanceCardComponent } from "./Components/UserPageComponents/Cards/UserPageHome/user-balance-card/user-balance-card.component";
+import { UserHomeComponent } from "./Components/UserPageComponents/Cards/UserPageHome/user-home/user-home.component";
+import { CardCompanyForUserPageComponent } from "./Components/UserPageComponents/Cards/UserPageHome/card-company-for-user-page/card-company-for-user-page.component";
 
 
 @NgModule({
@@ -34,6 +40,9 @@ import { MenuBarComponent } from './Components/UserPageComponents/menu-bar/menu-
     LocalizeNearMapComponent,
     UserPageComponent,
     MenuBarComponent,
+    UserBalanceCardComponent,
+    UserHomeComponent,
+    CardCompanyForUserPageComponent
   ],
   imports: [
     BrowserModule,
@@ -48,8 +57,11 @@ import { MenuBarComponent } from './Components/UserPageComponents/menu-bar/menu-
     MatButtonModule,
     ButtonModule,
     MenuModule,
-    CardModule
-  ],
+    CardModule,
+    DividerModule,
+    MatBadgeModule,
+    CarouselModule
+],
   exports: [
     UserPageInterfaceComponent
   ],
