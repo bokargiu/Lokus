@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
-import { CdkMenuModule } from '@angular/cdk/menu';ng 
+import { CdkMenuModule } from '@angular/cdk/menu';
+import { MatIconModule } from '@angular/material/icon'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +31,8 @@ import { SlidePicturesComponent } from './Components/GlobalComponents/slide-pict
     SignupCompanyPageComponent,
     LoginPageComponent,
     SignupClientPageComponent,
-    SlidePicturesComponent
+    SlidePicturesComponent,
+    HeadMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,8 +42,8 @@ import { SlidePicturesComponent } from './Components/GlobalComponents/slide-pict
     FormsModule,
     HttpClientModule,
     CdkMenuModule,
-    HeadMenuComponent,
-    FootingComponent
+    FootingComponent,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

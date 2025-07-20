@@ -16,7 +16,7 @@
   background-image: url('src/assets/images/layout_singup.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size:auto; 
+  background-size:cover; 
   opacity: 0.2;
   pointer-events: none;
   z-index: 0;

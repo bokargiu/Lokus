@@ -1,13 +1,13 @@
 .container{
     width: 100%;
     height: 800px;
-    background-color: rgb(248, 245, 240);
+    background-color: #FFFFFF;
 }
 
 .search-area{
     width: 100%;
     height: 230px;
-    background-color: rgb(248, 245, 240);
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,8 +24,9 @@ input { /* alterações dentro da caixa de pesquisa */
     margin-left: 4px;
     margin-right: 10px;
     bottom: 0;
-    background: white;
+    background: #f1f1f1;
     border: rgb(119, 119, 119);
+    border-radius: 20px;
     width:30%;
     box-sizing: border-box;
 }
@@ -34,7 +35,7 @@ input { /* alterações dentro da caixa de pesquisa */
     background-color: rgb(51, 51, 51);
     padding: 9px 15px;
     border: 3px solid rgb(51, 51, 51);
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     color: rgb(248, 245, 240);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -42,11 +43,11 @@ input { /* alterações dentro da caixa de pesquisa */
 }
 
 .search-button:hover {
-    background-color: rgb(248, 245, 240);
+    background-color: transparent;
     color: rgb(51, 51, 51);
     border: 3px solid rgb(51, 51, 51);
     padding: 9px 15px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .divider{
@@ -56,10 +57,13 @@ input { /* alterações dentro da caixa de pesquisa */
         background-color: rgb(248, 245, 240);
 }
 
+
+
+
 .options-area{
     width: 100%;
     height: 60%;
-    background-color: rgb(248, 245, 240);
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,8 +72,8 @@ input { /* alterações dentro da caixa de pesquisa */
 
 .option-card {
     position: relative; /*mantém o overlay na imagem */
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
     display: flex;
     justify-content: center;
     background-color:transparent;
@@ -115,33 +119,40 @@ input { /* alterações dentro da caixa de pesquisa */
 .comments-area{
     width: 100%;
     height: 70%;
-    background-color: rgb(248, 245, 240);
+    background-color: #f1f1f1;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
+    gap:50px;
 }
+
+
 
 .text{
     width: 30%;
     height: 70%;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:Roboto, Arial, sans-serif;
     display:flex;
     flex-direction: column;
 
 }
 
 .text h3{
-    font-size:130px;
+    font-size:70px;
     padding:10px;
     padding-bottom: 50px;
     color: rgb(51, 51, 51);
 }
 
 .text p{
-    font-size: 20px;
-    font-weight: 20px;
+    font-size: 17px;
+    font-weight: 10px;
+    margin-left: 30px auto;
     margin-bottom: 20px;
+    text-align: center;
 }
+
 
 .statistics{
     display: flex;
@@ -152,7 +163,7 @@ input { /* alterações dentro da caixa de pesquisa */
 
 .statistics h4{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
+    font-size: medium;
 }
 
 .num1{
@@ -162,30 +173,37 @@ input { /* alterações dentro da caixa de pesquisa */
 }
 
 .num2{
-    background-color: rgb(191, 216, 210);
+    background-color: transparent;
+    border: 3px solid #044e55;
     padding: 8px 10px;
-    color:rgb(51, 51, 51);
+    color: #044e55;
 }
 
 .num3{
-    background-color: rgb(248, 245, 240);
-    border: 3px solid rgb(235, 212, 120);
+    background-color: #FBF26F;
+    border: 3px solid #FBF26F;
     padding: 8px 10px;
-    color:rgb(235, 212, 120);
+    color: #333333;
 }
 
-.comments-card{
+.company-picture{
     width: 50%;
     height: 70%;
-    background-color: rgb(4, 78, 85);
-    border-radius: 10px;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4)
+    display:flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.company-picture img{
+    height: 120%;
+    width: 100%;
+    border-radius: 20px;
 }
 
 .infos-area{
     width: 100%;
     height: 70%;
-    background-color: rgb(248, 245, 240);
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,7 +212,9 @@ input { /* alterações dentro da caixa de pesquisa */
 
 .info-card{
     width: 15%;
+    height: 40%;
     text-align: center;
+    background-color: #ffffff;
     border: 1px solid rgb(248, 245, 240);   
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
     padding: 15px;

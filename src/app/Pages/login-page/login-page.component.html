@@ -4,14 +4,31 @@
         <div class="login-box">
             <div class="group-input">
                 <label>USUÁRIO: </label>
-                <input type="text" placeholder=" " class="info-text">
+                <input 
+                    type="text"
+                    [(ngModel)]="user"
+                    placeholder=" "
+                    class="info-text"
+                    name="username"
+                />
+
                 <label>SENHA: </label>
-                <input type="text" placeholder=""  class="info-text">
+                <input 
+                    type="password"
+                    [(ngModel)]="password"
+                    placeholder=""
+                    class="info-text"
+                    name="password"
+                />
             </div>
             <div class="block">
-
-                <button class="login-button">Entrar</button>
+                <button class="login-button" (click)="onLogin()">Entrar</button>
             </div>
+
+            <div *ngIf="errorMessage" class="error-message">
+            {{ errorMessage }}
+            </div>
+
         </div>
     </div>
 
