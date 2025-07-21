@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover; 
-  opacity: 0.2;
+  opacity: 0.1;
   pointer-events: none;
   z-index: 0;
 }
@@ -61,11 +61,17 @@ label{
 .login-button{
     padding: 8px 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
-    color: #044E55;
-    background-color: #f8f5f0;
+    color: #f8f5f0;
+    background-color: #044E55;
     font-size: 14px;
     border-radius: 10px;
     border: 0px ;
     cursor: pointer;
+}
+
+.reset-password{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    padding-top: 30px;
+    color:#333333
 }
 

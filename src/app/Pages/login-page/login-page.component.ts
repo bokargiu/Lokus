@@ -22,7 +22,7 @@ export class LoginPageComponent {
       this.authService.saveToken(res.token);
       console.log('Login bem sucedido!');
     } catch (err) {
-      this.errorMessage = 'Erro ao logar. Verifique usuário e senha';
+      this.errorMessage = 'Usuário ou senha inválida';
       console.error(err);
     }
   }
