@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 import { CdkMenuModule } from '@angular/cdk/menu';
-import { MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
+import { GalleriaModule } from 'primeng/galleria';  
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,7 +44,8 @@ import { SlidePicturesComponent } from './Components/GlobalComponents/slide-pict
     HttpClientModule,
     CdkMenuModule,
     FootingComponent,
-    MatIconModule
+    MatIconModule,
+    GalleriaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

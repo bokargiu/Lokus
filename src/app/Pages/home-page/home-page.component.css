@@ -4,6 +4,12 @@
     background-color: #FFFFFF;
 }
 
+.video-intro video{
+    height: 70%;
+    width: 100%;
+    filter: brightness(0.4);
+}
+
 .search-area{
     width: 100%;
     height: 230px;
