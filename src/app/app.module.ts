@@ -27,9 +27,9 @@ import { SearchAreaComponent } from './Components/UserPageComponents/search-area
 import { LocalizeNearMapComponent } from './Components/UserPageComponents/localize-near-map/localize-near-map.component';
 import { UserPageComponent } from './Pages/user-page/user-page.component';
 import { MenuBarComponent } from './Components/UserPageComponents/menu-bar/menu-bar.component';
-import { UserBalanceCardComponent } from "./Components/UserPageComponents/Cards/UserPageHome/user-balance-card/user-balance-card.component";
-import { UserHomeComponent } from "./Components/UserPageComponents/Cards/UserPageHome/user-home/user-home.component";
-import { CardCompanyForUserPageComponent } from "./Components/UserPageComponents/Cards/UserPageHome/card-company-for-user-page/card-company-for-user-page.component";
+import { UserBalanceCardComponent } from "./Components/UserPageComponents/Cards/UserHome/user-balance-card/user-balance-card.component";
+import { UserHomeComponent } from "./Components/UserPageComponents/Cards/UserHome/user-home/user-home.component";
+import { CardCompanyForUserPageComponent } from "./Components/UserPageComponents/Cards/UserHome/card-company-for-user-page/card-company-for-user-page.component";
 
 
 @NgModule({
