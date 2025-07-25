@@ -8,3 +8,21 @@
     display: flex;
     justify-content: center;
 }
+.title{
+    margin: 10px;
+    width: 95%;
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.card-carousel{
+    width: 850px;
+    height: 280px;
+    background-color: #ffffff;
+    margin: 0px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,9 +1,10 @@
 .container{
-    height: 15vh;
+    height: 13vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: white;
 
     /* border: 1px solid rgba(0, 0, 0, 0.44); */
     /* background-color: rgb(48, 17, 77); */
@@ -30,7 +31,8 @@
     width: 50%;
     font-size: 18px;
     padding-left: 7px;
-    border: 3px inset #D0CEBB;
+    background-color: #f1f1f1;
+    border: 3px solid #ededed;
 }
 .logout{
     gap: 25px;

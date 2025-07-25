@@ -1,22 +1,10 @@
 .container{
     width: 100%;
     height: 100vh;
-    background-color: #f8f5f0;
+    background-color: #f7f6f6;
+    /* background-color: #f1f1f1; */
     display: flex;
     z-index: -1;
-}
-.layer{
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-image: url('src/assets/Images/layer.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
-    z-index: 0;
-    padding: 0 ;
 }
 .menubar{
     z-index: 1;
@@ -29,17 +17,17 @@
     opacity: 1;
 }
 .infos{
-    height: 80vh;
+    height: 87vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 40px;
 }
 .box-area{
     height: 70vh;
     width: 60%;
-    background-color: #f1f1f1;
+    background-color: white;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.156); 
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.123);

@@ -1,23 +1,47 @@
 
- .saldo-card {
-  width: 100px;
-  height: 100px;
-  background-color: #f8f5f0f0;
-  margin: 0;
- }
-
+.container{
+  background-color: #ffffff ;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  width: 270px;
+  height: 140px;
+  margin-top: 0px;
+}
   .saldo-titulo {
     font-size: 20px;
-    margin: 0;
+    padding-top: 20px;
+    padding-left: 15px;
   }
 
   .saldo-valor {
     font-size: 30px;
-    margin: 0;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding-left: 15px;
   }
 
   .options {
     display: flex;
     justify-content: space-between;
     padding: 0 8px;
+    
+  }
+
+  .deposit{
+    background-color: transparent !important;
+    color: green !important;
+  }
+  .pay{
+    background-color: transparent !important;
+    color: rgb(161, 0, 0) !important;
+  }
+  .extract{
+    background-color: transparent !important;
+    color: rgb(44, 44, 44) !important;
+    transition: 0.3s;
+  }
+
+  button:hover{
+    background-color: rgba(87, 87, 87, 0.079) !important;
   }

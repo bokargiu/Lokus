@@ -16,6 +16,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MenuModule } from 'primeng/menu';
 import { CarouselModule } from 'primeng/carousel';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,9 +41,9 @@ import { CardCompanyForUserPageComponent } from "./Components/UserPageComponents
     LocalizeNearMapComponent,
     UserPageComponent,
     MenuBarComponent,
-    UserBalanceCardComponent,
     UserHomeComponent,
-    CardCompanyForUserPageComponent
+    CardCompanyForUserPageComponent,
+    UserBalanceCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +61,8 @@ import { CardCompanyForUserPageComponent } from "./Components/UserPageComponents
     CardModule,
     DividerModule,
     MatBadgeModule,
-    CarouselModule
+    CarouselModule,
+    MatCardModule,
 ],
   exports: [
     UserPageInterfaceComponent

@@ -1,7 +1,5 @@
 <div class="container">
 
-        <div class="layer"></div>
-
     <div class="menubar" (mouseover)="sidenav.open()">
         <app-menu-bar [sidenav]="sidenav"/>
     </div>
@@ -10,9 +8,7 @@
         <app-search-area class="search-bar"/>
 
         <div class="infos">
-            <div class="box-area">
-                <app-user-home/>
-            </div>
+            <app-user-home/>
             <app-localize-near-map/>
         </div>  
     </div>
