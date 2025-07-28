@@ -19,7 +19,9 @@ import { CompaniesPageComponent } from './Pages/companies-page/companies-page.co
 import { SignupCompanyPageComponent } from './Pages/signup-company-page/signup-company-page.component';
 import { LoginPageComponent } from './Pages/login-page/login-page.component';
 import { SignupClientPageComponent } from './Pages/signup-client-page/signup-client-page.component';
-import { SlidePicturesComponent } from './Components/GlobalComponents/slide-pictures/slide-pictures.component'; 
+import { SlidePicturesComponent } from './Components/GlobalComponents/slide-pictures/slide-pictures.component';
+import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-password-page.component';
+import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 
 
 @NgModule({
@@ -34,6 +36,9 @@ import { SlidePicturesComponent } from './Components/GlobalComponents/slide-pict
     SignupClientPageComponent,
     SlidePicturesComponent,
     HeadMenuComponent,
+    ResetPasswordPageComponent,
+    FaqPageComponent
+
   ],
   imports: [
     BrowserModule,

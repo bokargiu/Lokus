@@ -8,6 +8,8 @@ import { CompaniesPageComponent } from './Pages/companies-page/companies-page.co
 import { LoginPageComponent } from './Pages/login-page/login-page.component';
 import { SignupCompanyPageComponent } from './Pages/signup-company-page/signup-company-page.component';
 import { SignupClientPageComponent } from './Pages/signup-client-page/signup-client-page.component';
+import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-password-page.component';
+import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 
 const routes: Routes = [
   {path: "", component:HomePageComponent},
@@ -15,7 +17,9 @@ const routes: Routes = [
   {path: "empresa", component:CompaniesPageComponent},
   {path: "login", component:LoginPageComponent},
   {path: "cadastro-empresa", component:SignupCompanyPageComponent},
-  {path: "cadastro-cliente", component:SignupClientPageComponent}
+  {path: "cadastro-cliente", component:SignupClientPageComponent},
+  {path: "esqueceu-senha", component:ResetPasswordPageComponent},
+  {path: "perguntas", component:FaqPageComponent}
 ];
 
 @NgModule({
