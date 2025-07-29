@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-signup-client-page',
-  templateUrl: './signup-client-page.component.html',
-  styleUrls: ['./signup-client-page.component.css']
+  templateUrl: './signup-customer-page.component.html',
+  styleUrls: ['./signup-customer-page.component.css']
 })
 export class SignupClientPageComponent {
   nomeCompleto:string = '';
@@ -25,7 +25,7 @@ export class SignupClientPageComponent {
       return;
     }
 
-    const client = {
+    const customer = {
       nomeCompleto: this.nomeCompleto,
       cpf: this.cpf,
       dataNascimento: this.dataNascimento,
@@ -36,7 +36,7 @@ export class SignupClientPageComponent {
       role: 'Client'
     };
 
-    this.http.post('http://localhost:7101/api/client/signup', client).subscribe({
+    this.http.post('http://localhost:7101/api/client/signup', customer).subscribe({
       next:() => alert('Cliente cadastrado com sucesso!'),
       error: (err) =>alert('Erro ao cadastrar: ' + err.error?.message || err.message)
     });

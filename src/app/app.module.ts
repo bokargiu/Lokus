@@ -18,7 +18,7 @@ import { CardCompanyComponent } from './Components/GlobalComponents/card-company
 import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
 import { SignupCompanyPageComponent } from './Pages/signup-company-page/signup-company-page.component';
 import { LoginPageComponent } from './Pages/login-page/login-page.component';
-import { SignupClientPageComponent } from './Pages/signup-client-page/signup-client-page.component';
+import {  } from './Pages/signup-customer-page/signup-customer-page.component';
 import { SlidePicturesComponent } from './Components/GlobalComponents/slide-pictures/slide-pictures.component';
 import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-password-page.component';
 import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
@@ -33,7 +33,7 @@ import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
     CompaniesPageComponent,
     SignupCompanyPageComponent,
     LoginPageComponent,
-    SignupClientPageComponent,
+    SignupCostumerPageComponent,
     SlidePicturesComponent,
     HeadMenuComponent,
     ResetPasswordPageComponent,
