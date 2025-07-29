@@ -5,23 +5,25 @@
         <div class="block1">
             <h4>INFORMAÇÕES DA EMPRESA</h4>
             <label>NOME FANTASIA:</label>
-            <input type="text" placeholder="">
+            <input type="text" [(ngModel)]="nomeFantasia">
             <label>CNPJ</label>
-            <input type="text" placeholder="">
+            <input type="text" [(ngModel)]="cnpj">
             <label>EMAIL</label>
-            <input type="text" placeholder="">
+            <input type="text" [(ngModel)]="email">
             <label>CONTATO</label>
-            <input type="text" placeholder="">
+            <input type="text" [(ngModel)]="contato">
         </div>
         <div class="block2">
             <h4>INFORMAÇÕES DA CONTA</h4>
             <label>USERNAME</label>
-            <input type="text" placeholder="">
+            <input type="text" [(ngModel)]="username">
             <label>SENHA</label>
             <input type="password" placeholder="" [(ngModel)]="senha">
             <label>CONFIRMAR SENHA</label>
             <input type="password" placeholder="" [(ngModel)]="confirmarSenha">
-            <button class="confirmar" [disabled]="!senha || !confirmarSenha || senha !== confirmarSenha">Confirmar</button>
+            <button class="confirmar" 
+                    [disabled]="!senha || !confirmarSenha || senha !== confirmarSenha"
+                    (click)="confirm()">Confirmar</button>
         </div>
 
 </div>
