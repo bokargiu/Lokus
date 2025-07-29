@@ -9,7 +9,7 @@
             <label>CPF</label>
             <input type="text" [(ngModel)]="cpf">
             <label>DATA DE NASCIMENTO</label>
-            <input type="text" [(ngModel)]="dataNascimento">
+            <input type="date" [(ngModel)]="dataNascimento">
             <label>EMAIL</label>
             <input type="text" [(ngModel)]="email">
             <label>CONTATO</label>
@@ -23,7 +23,9 @@
             <input type="password" placeholder="" [(ngModel)]="senha">
             <label>CONFIRMAR SENHA</label>
             <input type="password" placeholder="" [(ngModel)]="confirmarSenha">
-            <button class="confirmar" [disabled]="!senha || !confirmarSenha || senha !== confirmarSenha">Confirmar</button>
+            <button class="confirmar" 
+                    [disabled]="!senha || !confirmarSenha || senha !== confirmarSenha"
+                    (click)="confirm()">Confirmar</button>
         </div>
 
 </div>

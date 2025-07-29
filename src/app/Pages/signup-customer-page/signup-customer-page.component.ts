@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './signup-customer-page.component.html',
   styleUrls: ['./signup-customer-page.component.css']
 })
-export class SignupClientPageComponent {
+export class SignupCostumerPageComponent {
   nomeCompleto:string = '';
   cpf:string = '';
   dataNascimento = '';
@@ -27,18 +27,25 @@ export class SignupClientPageComponent {
 
     const customer = {
       nomeCompleto: this.nomeCompleto,
-      cpf: this.cpf,
-      dataNascimento: this.dataNascimento,
-      email: this.email,
-      contato: this.contato,
-      username: this.username,
-      senha: this.senha,
-      role: 'Client'
+      CPF: this.cpf,
+      dataNascimento: new Date(this.dataNascimento),
+      Email: this.email,
+      Contato: this.contato,
+      Username: this.username,
+      Password: this.senha,
+      Role: 'Cliente'
     };
-
-    this.http.post('http://localhost:7101/api/client/signup', customer).subscribe({
-      next:() => alert('Cliente cadastrado com sucesso!'),
-      error: (err) =>alert('Erro ao cadastrar: ' + err.error?.message || err.message)
+    this.http.post('https://localhost:7101/api/SignupCostumer/SignUp', customer).subscribe({
+      next: (res: any) => alert(res.mensagem || 'Cliente cadastrado com sucesso!'),
+      error: (err) => {
+        console.error('Erro completo:', err);
+        // Se retornar lista de erros:
+        if (err.error?.erros) {
+          alert('Erro ao cadastrar:\n' + err.error.erros.join('\n'));
+        } else {
+          alert('Erro ao cadastrar: ' + (err.error?.erro || err.message));
+        }
+      }
     });
   }
 }
