@@ -3,14 +3,15 @@
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7YMHtkcGzhlp4XRYnfbYsVULmOr5Jd_nGg&s" alt="" style="width: 100px; height: 100px; border-radius: 100%;">
     </div>
     <ul class="options">
-        <li><mat-icon fontIcon="home" class="icon-options"/>Home</li>
-        <li><mat-icon fontIcon="textsms" class="icon-options"/>Mensagens</li>
-        <li><mat-icon fontIcon="star" class="icon-options"/>Feedback</li>
-        <li><mat-icon fontIcon="favorite" class="icon-options"/>Favoritos</li>
-        <li><mat-icon fontIcon="shopping_cart" class="icon-options"/>Compras</li>
-        <li><mat-icon fontIcon="business" class="icon-options"/>Torne-se Colaborador</li>
-        <li><mat-icon fontIcon="settings" class="icon-options"/>Configuração</li>
+        <li [routerLink]="'./home'"><mat-icon fontIcon="home" class="icon-options"/>Home</li>
+        <li [routerLink]="'./mensagens'"><mat-icon fontIcon="textsms" class="icon-options"/>Mensagens</li>
+        <li [routerLink]="'./feedback'"><mat-icon fontIcon="star" class="icon-options"/>Feedback</li>
+        <li [routerLink]="'./favorite'"><mat-icon fontIcon="favorite" class="icon-options"/>Favoritos</li>
+        <li [routerLink]="'./cart'"><mat-icon fontIcon="shopping_cart" class="icon-options"/>Compras</li>
+        <li [routerLink]="'./company'"><mat-icon fontIcon="business" class="icon-options"/>Torne-se Colaborador</li>
+        <li [routerLink]="'./options'"><mat-icon fontIcon="settings" class="icon-options"/>Configuração</li>
     </ul>
+    
 
     <div mat-button class="close">
         <mat-icon fontIcon="arrow_circle_left" style="width: 24px; height: 24px; font-size: 24px;" (click)="sidenav.close()"/>

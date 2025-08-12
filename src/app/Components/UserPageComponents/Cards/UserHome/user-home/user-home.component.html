@@ -1,25 +1,14 @@
 <div class="container">
-    <div class="up">
-        <app-user-balance-card/>
-        <app-user-balance-card/>
+    <div class="infos">
+        <div class="up">
+            <app-user-balance-card/>
+            <app-user-card-home/>
+        </div>
+        <div class="down">
+            <app-user-carousel-home/>
+        </div>
     </div>
-    <div class="down">
-        <mat-card class="card-carousel">
-            <div class="title">
-                <label style="color: black; font-weight: 500;">Principais Recomendações:</label>
-            </div>
-            <p-carousel [value]="PrincipaisRecomendacoes" 
-                        [numVisible]="3" 
-                        [numScroll]="3" 
-                        circular="true" 
-                        [style]="{'height':'270px',
-                                     'width':'850px',
-                                     'margin-top': '0px'}">
-
-                <ng-template let-product pTemplate="item">
-                  <app-card-company-for-user-page />
-               </ng-template>
-            </p-carousel>
-        </mat-card>
+    <div class="map">
+        <app-localize-near-map/>
     </div>
 </div>

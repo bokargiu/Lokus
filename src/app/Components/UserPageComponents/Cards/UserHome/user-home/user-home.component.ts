@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './user-home.component.css'
 })
 export class UserHomeComponent {
-  PrincipaisRecomendacoes:string[] = ["coworking", "coworking", "coworking",
-                                      "coworking", "coworking", "coworking",
-                                      "coworking", "coworking", "coworking",]
 
 }
