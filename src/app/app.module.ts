@@ -14,7 +14,8 @@ import { DividerModule } from 'primeng/divider';
 import { MatBadgeModule } from '@angular/material/badge';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { RouterModule } from '@angular/router';
-import { AccordionModule } from 'primeng/accordion'
+import { AccordionModule } from 'primeng/accordion';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MenuModule } from 'primeng/menu';
@@ -86,6 +87,7 @@ import { UserOptionsComponent } from './Components/UserPageComponents/Cards/User
     MatGridListModule,
     RouterModule,
     AccordionModule,
+    ScrollingModule,
 ],
   exports: [
     UserPageInterfaceComponent

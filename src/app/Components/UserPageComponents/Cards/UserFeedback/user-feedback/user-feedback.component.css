@@ -7,8 +7,17 @@
     gap: 5%;
     padding-right: 15vh;
 }
-.feedbacks{
-    width: 100vh;
+.left{
+    display: flex;
+    gap: 35px;
+}
+.nao-visitados{
+    width: 250px;
+    height: 70vh;
+    background-color: #ffffff;
+}
+.feedback{
+    width: 500px;
     height: 70vh;
     background-color: #ffffff;
 }
