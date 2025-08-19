@@ -1,0 +1,58 @@
+<div class="container">
+    <mat-card class="inbox-container">
+        <div class="mensagens">
+        <cdk-virtual-scroll-viewport appendOnly itemSize class="box">
+            @for (mensage of mensagens; track mensage){
+                <div class="mensagem" 
+                [ngClass]="{'enviada': mensage.tipo === 'enviada', 'recebida': mensage.tipo === 'recebida'}">
+                    <div class="mensagem-conteudo">
+                        <p-divider [style]="{'width':'100%', 'margin': '0px', 'peading': '0px'}"/>
+                        <p class="mensagem-texto">{{ mensage.texto }}</p>
+                        <span class="mensagem-hora">{{ mensage.hora }}</span>
+                        <p-divider [style]="{'width':'100%', 'margin': '0px', 'peading': '0px'}"/>  
+                    </div>
+                    <img [src]="mensage.perfil.img" alt="" class="mensagem-img">
+                </div>
+            }
+        </cdk-virtual-scroll-viewport>
+        </div>
+        <div class="diver">
+            <p-divider layout="vertical" [style]="{'height': '70vh', 'width':'10px', 'margin': '0px', 'peading': '0px'}"/>
+        </div>
+            <cdk-virtual-scroll-viewport appendOnly itemSize class="inbox">
+                @for (dialogos of inbox; track dialogos){
+                    <div class="inbox-conteudo">
+                        <div class="inbox-left">
+                            <p style="text-align: end;">{{dialogos.perfil.nome}}</p>
+                            <div class="inbox-text">
+                                <p>{{dialogos.last_mensage.quem}}</p>
+                                <p>{{LastMensage(dialogos.last_mensage.texto)}}</p>
+                            </div>
+                        </div>
+                        <div class="inbox-right">
+                            <img [src]="dialogos.perfil.img" alt="" class="inbox-img">
+                        </div>
+                    </div>
+                        <p-divider [style]="{'width':'98%', 'margin': '1px', 'peading': '1px'}"/>  
+                }
+            </cdk-virtual-scroll-viewport>
+    </mat-card>
+
+    <mat-card class="contatos">
+        <mat-card-header>
+            <div class="perfil">
+                <div class="user-infos">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7YMHtkcGzhlp4XRYnfbYsVULmOr5Jd_nGg&s" alt="" style="width: 60px; height: 60px; border-radius: 100%;">
+                    <p style="color: black;">&#64;Estaack</p>
+                </div>
+            </div>
+        </mat-card-header>
+        <p-divider [align]="'left'" [style]="{'width': '200px', 'color': 'black'}">Contatos:</p-divider>
+            <cdk-virtual-scroll-viewport appendOnly itemSize class="contatos-list">
+                @for (contact of contatos; track contact){
+                    <mat-card class="contato">
+                    </mat-card>
+                }
+            </cdk-virtual-scroll-viewport>
+    </mat-card>
+</div>

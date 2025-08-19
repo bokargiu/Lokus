@@ -1,0 +1,16 @@
+<mat-card class="card-carousel">
+    <div class="title">
+        <label style="color: black; font-weight: 500;">Principais Recomendações:</label>
+    </div>
+    <p-carousel [value]="PrincipaisRecomendacoes" 
+                [numVisible]="3" 
+                [numScroll]="3" 
+                circular="true" 
+                [style]="{'height':'270px',
+                             'width':'850px',
+                             'margin-top': '0px'}">
+        <ng-template let-product pTemplate="item">
+            <app-card-company-for-user-page/>
+       </ng-template>
+    </p-carousel>
+</mat-card>
