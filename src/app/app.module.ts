@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 import { CdkMenuModule } from '@angular/cdk/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { GalleriaModule } from 'primeng/galleria';  
+import { GalleriaModule } from 'primeng/galleria';
+import { AccordionModule } from 'primeng/accordion';  
+import { DividerModule } from 'primeng/divider'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -50,7 +52,9 @@ import { SignupCostumerPageComponent } from './Pages/signup-customer-page/signup
     CdkMenuModule,
     FootingComponent,
     MatIconModule,
-    GalleriaModule
+    GalleriaModule,
+    AccordionModule,
+    DividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -35,6 +35,7 @@ export class SignupCostumerPageComponent {
       Password: this.senha,
       Role: 'Cliente'
     };
+    
     this.http.post('https://localhost:7101/api/SignupCostumer/SignUp', customer).subscribe({
       next: (res: any) => alert(res.mensagem || 'Usuário cadastrado com sucesso!'),
       error: (err) => {

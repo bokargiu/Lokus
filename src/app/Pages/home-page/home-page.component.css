@@ -4,11 +4,42 @@
     background-color: #FFFFFF;
 }
 
-.video-intro video{
-    height: 70%;
+.video-intro {
+    position: relative; 
+    height: 100vh;      
     width: 100%;
-    filter: brightness(0.4);
+    overflow: hidden;  
 }
+
+.video-intro video {
+    height: 100vh;       
+    width: 100%;
+    object-fit: cover;  
+    filter: brightness(0.4); 
+}
+
+.text-intro {
+    position: absolute; 
+    top: 80%;          
+    left: 50%;          
+    transform: translate(-50%, -50%);
+    color: white;       
+    text-align: center;
+
+    z-index: 2;         
+    width: 100%;         
+}
+
+.title{
+    font-size: 68px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 5%;
+}
+
+.subtext {
+    font-size: 20px;
+}
+
 
 .search-area{
     width: 100%;
