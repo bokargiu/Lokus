@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './signup-customer-page.component.html',
   styleUrls: ['./signup-customer-page.component.css']
 })
-export class SignupCostumerPageComponent {
+export class SignupCustomerPageComponent {
   nomeCompleto:string = '';
   cpf:string = '';
   dataNascimento = '';

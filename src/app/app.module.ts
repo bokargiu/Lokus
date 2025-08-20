@@ -1,31 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { CdkMenuModule } from '@angular/cdk/menu';
-import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { ViewChild } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
-import { DividerModule } from 'primeng/divider';
-import { MatBadgeModule } from '@angular/material/badge';
-import {MatGridListModule} from '@angular/material/grid-list';
-import { RouterModule } from '@angular/router';
-import { AccordionModule } from 'primeng/accordion';
-import {ScrollingModule} from '@angular/cdk/scrolling';
-import { GalleriaModule } from 'primeng/galleria';
-
-import { MatButtonModule } from '@angular/material/button';
-import { MenuModule } from 'primeng/menu';
-import { CarouselModule } from 'primeng/carousel';
-import { MatCardModule } from '@angular/material/card';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
+
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { CdkMenuModule } from '@angular/cdk/menu';
+
+import { MatIconButton } from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule} from '@angular/material/badge';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { RouterModule } from '@angular/router';
+import { Scroll } from '@angular/router';
+
+import { ViewChild } from '@angular/core';
+
+import { ButtonModule} from 'primeng/button';
+import { CardModule} from 'primeng/card';
+import { DividerModule } from 'primeng/divider';
+import { AccordionModule } from 'primeng/accordion';
+import { MenuModule } from 'primeng/menu';
+import { GalleriaModule } from 'primeng/galleria';
+import { CarouselModule} from 'primeng/carousel';
+
+
 import { UserPageInterfaceComponent } from './Components/UserPageComponents/user-page-interface/user-page-interface.component';
 import { SideMenuComponent } from './Components/UserPageComponents/side-menu/side-menu.component';
 import { SearchAreaComponent } from './Components/UserPageComponents/search-area/search-area.component';
@@ -54,7 +60,8 @@ import { LoginPageComponent } from './Pages/login-page/login-page.component';
 import { SlidePicturesComponent } from './Components/GlobalComponents/slide-pictures/slide-pictures.component';
 import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-password-page.component';
 import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
-import { SignupCostumerPageComponent } from './Pages/signup-customer-page/signup-customer-page.component';
+import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup-customer-page.component';
+
 
 @NgModule({
   declarations: [
@@ -87,35 +94,40 @@ import { SignupCostumerPageComponent } from './Pages/signup-customer-page/signup
     HeadMenuComponent,
     ResetPasswordPageComponent,
     FaqPageComponent,
-    SignupCostumerPageComponent
+    SignupCustomerPageComponent,
+    FootingComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    CdkMenuModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatButtonModule,
-    ButtonModule,
-    MenuModule,
-    CardModule,
-    DividerModule,
-    MatBadgeModule,
-    CarouselModule,
-    MatCardModule,
-    MatGridListModule,
-    RouterModule,
-    AccordionModule,
-    ScrollingModule,
-    GalleriaModule,
-    FootingComponent,
-  ],
-  providers: [
-  ],
+  BrowserModule,
+  BrowserAnimationsModule,
+  FormsModule,
+  AppRoutingModule,
+  HttpClientModule,
+  CommonModule,
+  RouterModule,
+  CdkMenuModule,
+  ScrollingModule,
+
+  // Angular Material
+  MatIconModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatGridListModule,
+  MatCardModule,
+  MatBadgeModule,
+
+  // PrimeNG
+  ButtonModule,
+  CardModule,
+  DividerModule,
+  AccordionModule,
+  MenuModule,
+  GalleriaModule,
+  CarouselModule
+],
+
+  providers: [MatIconRegistry],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

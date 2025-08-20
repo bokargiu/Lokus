@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
 import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
 import { LoginPageComponent } from './Pages/login-page/login-page.component';
 import { SignupCompanyPageComponent } from './Pages/signup-company-page/signup-company-page.component';
-import { SignupCostumerPageComponent } from './Pages/signup-customer-page/signup-customer-page.component';
+import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup-customer-page.component';
 import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-password-page.component';
 import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 
@@ -53,7 +53,7 @@ const routes: Routes = [
   {path: "empresa", component:CompaniesPageComponent},
   {path: "login", component:LoginPageComponent},
   {path: "cadastro-empresa", component:SignupCompanyPageComponent},
-  {path: "cadastro-cliente", component:SignupCostumerPageComponent},
+  {path: "cadastro-cliente", component:SignupCustomerPageComponent},
   {path: "esqueceu-senha", component:ResetPasswordPageComponent},
   {path: "perguntas", component:FaqPageComponent}
 ];
