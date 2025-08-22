@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/Services/auth.service';
 import { firstValueFrom } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -15,12 +16,26 @@ export class LoginPageComponent {
   password='';
   errorMessage='';
 
-   constructor(private authService : AuthService) {}
+   constructor(private authService : AuthService, private router:Router) {}
+
   async onLogin() {
        try {
-      const res = await firstValueFrom(this.authService.login(this.user, this.password));
+      const res = await firstValueFrom(this.authService.login(this.user, this.password)
+      );
+
       this.authService.saveToken(res.token);
-      console.log('Login bem sucedido!');
+      this.authService.saveRole(res.role);
+
+      console.log('Login bem sucedido!', res);
+
+      if (res.role === 'customer') {
+        this.router.navigate(['/customer/home']);
+      } else if (res.role === 'company'){
+        this.router.navigate(['/empresa']);
+      } else {
+        this.router.navigate(['/']);
+      }
+
     } catch (err) {
       this.errorMessage = 'Usuário ou senha inválida';
       console.error(err);

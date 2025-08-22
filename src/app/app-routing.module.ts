@@ -21,41 +21,35 @@ import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-pa
 import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 
 const routes: Routes = [
-    {path: '', redirectTo: 'customer/home', pathMatch: 'full'},
+  // Página inicial 
+  { path: '', component: HomePageComponent, pathMatch: 'full' },
+
+  // Página do customer
   {
-    path: 'customer', 
-    component:UserPageComponent,
-    children: [{
-      path: 'home',
-      component: UserHomeComponent
-    },{
-      path: 'mensagens',
-      component: UserMensagensComponent
-    },{
-      path: 'feedback',
-      component: UserFeedbackComponent
-    },{
-      path: 'favorite',
-      component: UserFavoritesComponent
-    },{
-      path: 'cart',
-      component: UserCartComponent
-    },{
-      path: 'company',
-      component: UserCompanyComponent
-    },{
-      path: 'options',
-      component: UserOptionsComponent
-    }]
+    path: 'customer',
+    component: UserPageComponent,
+    children: [
+      { path: 'home', component: UserHomeComponent },
+      { path: 'mensagens', component: UserMensagensComponent },
+      { path: 'feedback', component: UserFeedbackComponent },
+      { path: 'favorite', component: UserFavoritesComponent },
+      { path: 'cart', component: UserCartComponent },
+      { path: 'company', component: UserCompanyComponent },
+      { path: 'options', component: UserOptionsComponent },
+    ],
   },
-  {path: "", component:HomePageComponent},
-  {path: "pesquisa", component:SearchPageComponent},
-  {path: "empresa", component:CompaniesPageComponent},
-  {path: "login", component:LoginPageComponent},
-  {path: "cadastro-empresa", component:SignupCompanyPageComponent},
-  {path: "cadastro-cliente", component:SignupCustomerPageComponent},
-  {path: "esqueceu-senha", component:ResetPasswordPageComponent},
-  {path: "perguntas", component:FaqPageComponent}
+
+  // Outras páginas
+  { path: 'pesquisa', component: SearchPageComponent },
+  { path: 'empresa', component: CompaniesPageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'cadastro-empresa', component: SignupCompanyPageComponent },
+  { path: 'cadastro-cliente', component: SignupCustomerPageComponent },
+  { path: 'esqueceu-senha', component: ResetPasswordPageComponent },
+  { path: 'perguntas', component: FaqPageComponent },
+
+  // Rota coringa (caso digite algo inexistente)
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
