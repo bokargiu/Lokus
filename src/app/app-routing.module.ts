@@ -29,6 +29,7 @@ const routes: Routes = [
     path: 'customer',
     component: UserPageComponent,
     children: [
+      {path: '', redirectTo: 'home', pathMatch: 'full'},
       { path: 'home', component: UserHomeComponent },
       { path: 'mensagens', component: UserMensagensComponent },
       { path: 'feedback', component: UserFeedbackComponent },

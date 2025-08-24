@@ -28,9 +28,9 @@ export class LoginPageComponent {
 
       console.log('Login bem sucedido!', res);
 
-      if (res.role === 'customer') {
+      if (res.role.toLowerCase() === 'customer') {
         this.router.navigate(['/customer/home']);
-      } else if (res.role === 'company'){
+      } else if (res.role.toLowerCase() === 'company'){
         this.router.navigate(['/empresa']);
       } else {
         this.router.navigate(['/']);

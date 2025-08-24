@@ -155,39 +155,33 @@ input { /* alterações dentro da caixa de pesquisa */
 
 .comments-area{
     width: 100%;
-    height: 70%;
+    height: 80vh;
     background-color: #f1f1f1;
     display: flex;
-    flex-wrap: wrap;
-    align-items:center;
-    justify-content: center;
-    gap:50px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 
-
 .text{
-    width: 30%;
+    width: 40%;
     height: 70%;
     font-family:Roboto, Arial, sans-serif;
-    display:flex;
-    flex-direction: column;
-
+    margin-left:0;
 }
 
 .text h3{
     font-size:70px;
-    padding:10px;
     padding-bottom: 50px;
     color: rgb(51, 51, 51);
 }
 
 .text p{
     font-size: 17px;
-    font-weight: 10px;
-    margin-left: 30px auto;
-    margin-bottom: 20px;
-    text-align: center;
+    font-weight: 400; 
+    margin: 0 auto 20px auto; 
+    white-space: pre-line; 
+    line-height: 1.6; 
 }
 
 
@@ -224,8 +218,8 @@ input { /* alterações dentro da caixa de pesquisa */
 }
 
 .company-picture{
-    width: 50%;
-    height: 70%;
+    width: 40%;
+    height: 60%;
     display:flex;
     align-items: center;
     justify-items: center;
@@ -239,7 +233,7 @@ input { /* alterações dentro da caixa de pesquisa */
 
 .infos-area{
     width: 100%;
-    height: 70%;
+    height: 75%;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
