@@ -1,24 +1,24 @@
-<div class="container">
-    <img class='logo-img' src="assets/Images/logo_transparent.png" alt="">
-    <div class="menu-list">
-        <button [routerLink]="['']" class="menu-button">Home</button>
-        <button [routerLink]="['/pesquisa']" class="menu-button">Pesquisar</button>
-        <button [cdkMenuTriggerFor]="menu"  class="menu-button">Empresas</button>
-            <ng-template #menu>
-            <div class="menu-icon" cdkMenu>
-                <button class="menu-item" [routerLink]="['/empresa']" cdkMenuItem>Sobre</button>
-                <button class="menu-item" [routerLink]="['/cadastro-empresa']" cdkMenuItem>Cadastrar-se</button>
-            </div>
-            </ng-template>
-        <button class="menu-button" [routerLink]="['/perguntas']">FAQ</button>    
-        <button [cdkMenuTriggerFor]="user"  class="menu-button">
-            <mat-icon fontIcon="person" class="login-img"/>
-            <ng-template #user>
-            <div class="menu-icon" cdkMenu>
-                <button class="menu-item" [routerLink]="['/login']" cdkMenuItem>Login</button>
-                <button class="menu-item" [routerLink]="['/cadastro-cliente']">Cadastrar-se</button>
-            </div>
-            </ng-template>
-        </button>
-    </div>
-</div>
+<mat-toolbar class="toolbar">
+
+    <img src="assets/images/logo_transparent.png" alt="Lokus" class="logo-img">
+    <span class="spacer"></span>
+
+    <a mat-button routerLink="/">Home</a>
+    <a mat-button routerLink="/pesquisar">Pesquisar</a>
+
+    <button mat-button [matMenuTriggerFor]="empresasMenu">Empresas</button>
+    <mat-menu #empresasMenu="matMenu">
+        <button mat-menu-item routerLink="/empresa">Sobre</button>
+        <button mat-menu-item routerLink="/cadastro-empresa">Cadastrar-se</button>
+    </mat-menu>
+    <a mat-button routerLink="/perguntas">FAQ</a>
+
+    <button mat-icon-button [matMenuTriggerFor]="userMenu" aria-label="Perfil">
+        <mat-icon>person</mat-icon>
+    </button>
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item routerLink="/login">Login</button>
+        <button mat-menu-item routerLink="/cadastro-cliente">Cadastrar-se</button>
+    </mat-menu>
+</mat-toolbar>
+

@@ -33,7 +33,7 @@ export class SignupCustomerPageComponent {
       Contato: this.contato,
       Username: this.username,
       Password: this.senha,
-      Role: 'Cliente'
+      Role: 'customer'
     };
     
     this.http.post('https://localhost:7101/api/SignupCostumer/SignUp', customer).subscribe({

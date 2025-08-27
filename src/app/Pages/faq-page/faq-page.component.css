@@ -1,7 +1,7 @@
 .container {
     width: 100%;
     height: 650px;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,10 +9,7 @@
 }
 
 .faq-box{
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #c7c7c7; /* aqui faz a borda externa da caixa */
+    width: 60%;
 }
 
 ::ng-deep .p-accordion .p-accordion-tab {
@@ -20,7 +17,16 @@
     border-bottom: 2px solid #c7c7c7;
 }
 
+::ng-deep .questions .p-accordion-header .p-accordion-header-link {
+  color: #044e55;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
 
-.questions{
-    border-bottom: 1px solid #465466;
+
+p{
+    font-family: 'Poppins', sans-serif;
+    color: #454545; 
+    font-size: 16px;
 }

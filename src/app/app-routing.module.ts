@@ -19,6 +19,7 @@ import { SignupCompanyPageComponent } from './Pages/signup-company-page/signup-c
 import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup-customer-page.component';
 import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-password-page.component';
 import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
+import { SupportComponent } from './Pages/support/support.component';
 
 const routes: Routes = [
   // Página inicial 
@@ -41,13 +42,14 @@ const routes: Routes = [
   },
 
   // Outras páginas
-  { path: 'pesquisa', component: SearchPageComponent },
+  { path: 'pesquisar', component: SearchPageComponent },
   { path: 'empresa', component: CompaniesPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'cadastro-empresa', component: SignupCompanyPageComponent },
   { path: 'cadastro-cliente', component: SignupCustomerPageComponent },
   { path: 'esqueceu-senha', component: ResetPasswordPageComponent },
   { path: 'perguntas', component: FaqPageComponent },
+  { path: 'suporte', component:SupportComponent},
 
   // Rota coringa (caso digite algo inexistente)
   { path: '**', redirectTo: '', pathMatch: 'full' }

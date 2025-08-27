@@ -1,12 +1,4 @@
-.container{
-    width: 100%;
-    height: 70px;
-    background-color: #333333;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items:first baseline;
-}
+
 
 h4{
     margin: 0px;

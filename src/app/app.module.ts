@@ -16,6 +16,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatBadgeModule} from '@angular/material/badge';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatMenuModule} from '@angular/material/menu';
 
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { RouterModule } from '@angular/router';
@@ -61,6 +63,7 @@ import { SlidePicturesComponent } from './Components/GlobalComponents/slide-pict
 import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-password-page.component';
 import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup-customer-page.component';
+import { SupportComponent } from './Pages/support/support.component';
 
 
 @NgModule({
@@ -95,7 +98,8 @@ import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup
     ResetPasswordPageComponent,
     FaqPageComponent,
     SignupCustomerPageComponent,
-    FootingComponent
+    FootingComponent,
+    SupportComponent
   ],
   imports: [
   BrowserModule,
@@ -115,6 +119,8 @@ import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup
   MatGridListModule,
   MatCardModule,
   MatBadgeModule,
+  MatToolbarModule,
+  MatMenuModule,
 
   // PrimeNG
   ButtonModule,
