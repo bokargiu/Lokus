@@ -20,6 +20,7 @@ import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup
 import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-password-page.component';
 import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 import { SupportComponent } from './Pages/support/support.component';
+import { CarouselComponent } from './Components/ImagesComponents/carousel/carousel.component';
 
 const routes: Routes = [
   // Página inicial 

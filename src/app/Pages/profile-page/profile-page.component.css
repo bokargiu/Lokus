@@ -1,0 +1,111 @@
+.container{
+    width: 100%;
+    height: 620px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f1f1f1;
+    
+}
+
+.card-description{
+    width: 500px;
+    height: 600px;
+    background-color: #92bcb2;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.485);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    z-index: 1;
+}
+
+.description{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.range{
+    width: 100%;
+    height: 90px;
+    background-color: #bfd8d2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.range button{
+    width: 190px;
+    height: 50px;
+    border-radius: 50px;
+    border: 3px solid #f8f5f0;
+    font-size: 20px;
+}
+.price h3{
+    font-size: 35px;
+    color: aliceblue;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width: 1px;
+    font-family:sans-serif;
+}
+.price{
+    height: 28px;
+    display: flex;
+ 
+}
+.assessment{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.iconsReviews{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  
+}
+.iconsReviews img{
+    width: 30px;
+    height: auto;
+    margin: 15px;
+}
+.description p{
+    Font-Family: 'Poppins', sans-serife;
+    color: aliceblue;
+    text-align: left;
+    margin-left: 15px;
+
+}
+.assessment p{
+    font-size: 20px;
+}
+.description h3{
+    color: aliceblue;
+    font-size: 50px;
+    Font-Family: 'Poppins', sans-serife;
+    margin: 10px;
+}
+.images{
+    background-color: #92bcb2;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.479);
+    border-radius: 10%;
+    margin-top: 40px;
+    z-index: 1;
+}
+
+.images img{
+    width: 450px;
+    height: 450px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.505);
+}
