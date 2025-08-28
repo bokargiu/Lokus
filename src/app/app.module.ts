@@ -64,6 +64,8 @@ import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-pa
 import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup-customer-page.component';
 import { SupportComponent } from './Pages/support/support.component';
+import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
+import { CarouselComponent } from './Components/ImagesComponents/carousel/carousel.component';
 
 
 @NgModule({
@@ -99,7 +101,9 @@ import { SupportComponent } from './Pages/support/support.component';
     FaqPageComponent,
     SignupCustomerPageComponent,
     FootingComponent,
-    SupportComponent
+    SupportComponent,
+    ProfilePageComponent,
+    CarouselComponent
   ],
   imports: [
   BrowserModule,
