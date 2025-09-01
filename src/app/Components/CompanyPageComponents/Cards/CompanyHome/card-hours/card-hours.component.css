@@ -1,0 +1,22 @@
+.container{
+    padding:15px;
+    background-color: #ffffff ;
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+    color: rgb(255, 255, 255);
+    margin-top: 0px;
+    border-radius: 20px;
+}
+.up{
+    display: flex;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}

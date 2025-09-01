@@ -83,7 +83,9 @@ import { CompanySupportComponent } from './Components/CompanyPageComponents/Card
 import { CompanyFeedbackComponent } from './Components/CompanyPageComponents/Cards/CompanyFeedback/company-feedback/company-feedback.component';
 import { CompanyUploadImagesComponent } from './Components/CompanyPageComponents/Cards/CompanyProfilePage/company-upload-images/company-upload-images.component';
 import { CompanyReservationsComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/company-reservations/company-reservations.component';
-
+import { CardHoursComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-hours/card-hours.component';
+import { CardRateComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-rate/card-rate.component';
+import { RateService } from './Services/rate.service';
 
 @NgModule({
   declarations: [
@@ -136,6 +138,8 @@ import { CompanyReservationsComponent } from './Components/CompanyPageComponents
     CompanyFeedbackComponent,
     CompanyUploadImagesComponent,
     CompanyReservationsComponent,
+    CardHoursComponent,
+    CardRateComponent,
 
   ],
   imports: [
