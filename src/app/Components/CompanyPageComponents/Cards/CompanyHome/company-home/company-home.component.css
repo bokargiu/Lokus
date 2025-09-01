@@ -1,0 +1,18 @@
+.up{
+    display: flex;
+    justify-content: space-between;
+}
+.down{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    height: 87vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}

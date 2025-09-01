@@ -25,6 +25,11 @@ import { SubscriptionsComponent } from './Pages/subscriptions/subscriptions.comp
 import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
 import { CompanyPageComponent } from './Pages/company-page/company-page.component';
 import { CompanyHomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/company-home/company-home.component';
+import { CompanyProfilePageComponent } from './Components/CompanyPageComponents/Cards/CompanyProfilePage/company-profile-page/company-profile-page.component';
+import { CompanyManagementComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/company-management/company-management.component';
+import { CompanyFeedbackComponent } from './Components/CompanyPageComponents/Cards/CompanyFeedback/company-feedback/company-feedback.component';
+import { CompanySupportComponent } from './Components/CompanyPageComponents/Cards/CompanySupport/company-support/company-support.component';
+import { CompanySettingsComponent } from './Components/CompanyPageComponents/Cards/CompanySettings/company-settings/company-settings.component';
 
 const routes: Routes = [
   // Página inicial 
@@ -53,6 +58,11 @@ const routes: Routes = [
   children: [
     {path: '', redirectTo: 'home-co', pathMatch: 'full'},
     {path: 'home-co', component:CompanyHomeComponent},
+    {path: 'agenda-reservas', component:CompanyManagementComponent},
+    {path: 'editar-perfil', component:CompanyProfilePageComponent},
+    {path: 'relacionamentos', component:CompanyFeedbackComponent},
+    {path: 'suporte', component:CompanySupportComponent},
+    {path: 'configuracao', component:CompanySettingsComponent},
   ],
 },
 
