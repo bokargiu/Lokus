@@ -31,7 +31,7 @@ export class LoginPageComponent {
       if (res.role.toLowerCase() === 'customer') {
         this.router.navigate(['/customer/home']);
       } else if (res.role.toLowerCase() === 'company'){
-        this.router.navigate(['/empresa']);
+        this.router.navigate(['/company/home-co']);
       } else {
         this.router.navigate(['/']);
       }

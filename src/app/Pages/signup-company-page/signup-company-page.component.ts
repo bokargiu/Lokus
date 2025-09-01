@@ -32,7 +32,7 @@ export class SignupCompanyPageComponent {
     Email: this.email,
     Username: this.username,
     Password: this.senha,
-    Role: 'Empresa'
+    Role: 'Company'
   };
 
   this.http.post('https://localhost:7101/api/SignupCompany/SignUp', company).subscribe({
