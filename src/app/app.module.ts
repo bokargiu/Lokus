@@ -76,7 +76,12 @@ import { MenuRowComponent } from './Components/CompanyPageComponents/menu-row/me
 import { CompanyPageComponent } from './Pages/company-page/company-page.component';
 import { CompanyHomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/company-home/company-home.component';
 import { GraphicsComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/graphics/graphics.component';
-
+import { CompanyManagementComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/company-management/company-management.component';
+import { CompanyProfilePageComponent } from './Components/CompanyPageComponents/Cards/CompanyProfilePage/company-profile-page/company-profile-page.component';
+import { CompanyReservationComponent } from './Components/CompanyPageComponents/Cards/CompanyReservation/company-reservation/company-reservation.component';
+import { CompanySettingsComponent } from './Components/CompanyPageComponents/Cards/CompanySettings/company-settings/company-settings.component';
+import { CompanySupportComponent } from './Components/CompanyPageComponents/Cards/CompanySupport/company-support/company-support.component';
+import { CompanyUploadImagesComponent } from './Components/CompanyPageComponents/Cards/CompanyUploadImages/company-upload-images/company-upload-images.component';
 
 @NgModule({
   declarations: [
@@ -122,6 +127,12 @@ import { GraphicsComponent } from './Components/CompanyPageComponents/Cards/Comp
     CompanyPageComponent,
     CompanyHomeComponent,
     GraphicsComponent,
+    CompanyManagementComponent,
+    CompanyProfilePageComponent,
+    CompanyReservationComponent,
+    CompanySettingsComponent,
+    CompanySupportComponent,
+    CompanyUploadImagesComponent,
 
   ],
   imports: [
