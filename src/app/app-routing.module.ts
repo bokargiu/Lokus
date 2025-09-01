@@ -21,6 +21,10 @@ import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-pa
 import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 import { SupportComponent } from './Pages/support/support.component';
 import { CarouselComponent } from './Components/ImagesComponents/carousel/carousel.component';
+import { SubscriptionsComponent } from './Pages/subscriptions/subscriptions.component';
+import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
+import { CompanyPageComponent } from './Pages/company-page/company-page.component';
+import { CompanyHomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/company-home/company-home.component';
 
 const routes: Routes = [
   // Página inicial 
@@ -42,6 +46,16 @@ const routes: Routes = [
     ],
   },
 
+//página da company
+{
+  path: 'company',
+  component: CompanyPageComponent,
+  children: [
+    {path: '', redirectTo: 'home-co', pathMatch: 'full'},
+    {path: 'home-co', component:CompanyHomeComponent},
+  ],
+},
+
   // Outras páginas
   { path: 'pesquisar', component: SearchPageComponent },
   { path: 'empresa', component: CompaniesPageComponent },
@@ -51,6 +65,8 @@ const routes: Routes = [
   { path: 'esqueceu-senha', component: ResetPasswordPageComponent },
   { path: 'perguntas', component: FaqPageComponent },
   { path: 'suporte', component:SupportComponent},
+  { path: 'planos', component:SubscriptionsComponent},
+  { path: 'perfil', component:ProfilePageComponent},
 
   // Rota coringa (caso digite algo inexistente)
   { path: '**', redirectTo: '', pathMatch: 'full' }

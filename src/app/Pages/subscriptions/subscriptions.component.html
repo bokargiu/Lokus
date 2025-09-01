@@ -1,0 +1,51 @@
+<app-head-menu/>
+
+<div class="container">
+  <h2>PLANOS DISPONÍVEIS</h2>
+
+  <p-tabView class="box" [(activeIndex)]="activeIndex">
+    
+    <p-tabPanel class="box-title" header="Clientes">
+      <p-carousel 
+        [value]="planosClientes" 
+        [numVisible]="3" 
+        [numScroll]="3" 
+        [circular]="false" 
+        [responsiveOptions]="responsiveOptions"
+        [showNavigators]="planosClientes.length > 3"
+        [showIndicators]="false">
+        
+        <ng-template let-plano pTemplate="item">
+          <app-card-subscription
+              [nome]="plano.nome" 
+              [preco]="plano.preco" 
+              [beneficios]="plano.beneficios">
+          </app-card-subscription>
+        </ng-template>
+      </p-carousel>
+    </p-tabPanel>
+
+    <p-tabPanel class="box-title" header="Empresas">
+      <p-carousel 
+        [value]="planosEmpresas" 
+        [numVisible]="3" 
+        [numScroll]="3" 
+        [circular]="false" 
+        [responsiveOptions]="responsiveOptions"
+        [showNavigators]="planosClientes.length > 3"
+        [showIndicators]="false">
+        
+        <ng-template let-plano pTemplate="item">
+          <app-card-subscription 
+            [nome]="plano.nome" 
+            [preco]="plano.preco" 
+            [beneficios]="plano.beneficios">
+          </app-card-subscription>
+        </ng-template>
+      </p-carousel>
+    </p-tabPanel>
+
+  </p-tabView>
+</div>
+
+<app-footing/>

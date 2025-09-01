@@ -32,6 +32,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { MenuModule } from 'primeng/menu';
 import { GalleriaModule } from 'primeng/galleria';
 import { CarouselModule} from 'primeng/carousel';
+import { TabViewModule } from 'primeng/tabview';
 
 
 import { UserPageInterfaceComponent } from './Components/UserPageComponents/user-page-interface/user-page-interface.component';
@@ -55,17 +56,26 @@ import { HomePageComponent } from './Pages/home-page/home-page.component';
 import { FootingComponent } from './Components/GlobalComponents/footing/footing.component';
 import { HeadMenuComponent } from './Components/GlobalComponents/head-menu/head-menu.component';
 import { SearchPageComponent } from './Pages/search-page/search-page.component';
-import { CardCompanyComponent } from './Components/GlobalComponents/card-company/card-company.component';
 import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
 import { SignupCompanyPageComponent } from './Pages/signup-company-page/signup-company-page.component';
 import { LoginPageComponent } from './Pages/login-page/login-page.component';
-import { SlidePicturesComponent } from './Components/GlobalComponents/slide-pictures/slide-pictures.component';
 import { ResetPasswordPageComponent } from './Pages/reset-password-page/reset-password-page.component';
 import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup-customer-page.component';
 import { SupportComponent } from './Pages/support/support.component';
 import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
 import { CarouselComponent } from './Components/ImagesComponents/carousel/carousel.component';
+import { SubscriptionsComponent } from './Pages/subscriptions/subscriptions.component';
+import { CardSubscriptionComponent } from './Components/card-subscription/card-subscription.component';
+import { CardCompanyComponent } from './Components/card-company/card-company.component';
+
+
+import { CompanyPageInterfaceComponent } from './Components/CompanyPageComponents/company-page-interface/company-page-interface.component';
+import { ColumnMenuComponent } from './Components/CompanyPageComponents/column-menu/column-menu.component';
+import { MenuRowComponent } from './Components/CompanyPageComponents/menu-row/menu-row.component';
+import { CompanyPageComponent } from './Pages/company-page/company-page.component';
+import { CompanyHomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/company-home/company-home.component';
+import { GraphicsComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/graphics/graphics.component';
 
 
 @NgModule({
@@ -91,11 +101,9 @@ import { CarouselComponent } from './Components/ImagesComponents/carousel/carous
     UserOptionsComponent,
     HomePageComponent,
     SearchPageComponent,
-    CardCompanyComponent,
     CompaniesPageComponent,
     SignupCompanyPageComponent,
     LoginPageComponent,
-    SlidePicturesComponent,
     HeadMenuComponent,
     ResetPasswordPageComponent,
     FaqPageComponent,
@@ -103,7 +111,18 @@ import { CarouselComponent } from './Components/ImagesComponents/carousel/carous
     FootingComponent,
     SupportComponent,
     ProfilePageComponent,
-    CarouselComponent
+    CarouselComponent,
+    SubscriptionsComponent,
+    CardSubscriptionComponent,
+    CardCompanyComponent,
+
+    CompanyPageInterfaceComponent,
+    ColumnMenuComponent,
+    MenuRowComponent,
+    CompanyPageComponent,
+    CompanyHomeComponent,
+    GraphicsComponent,
+
   ],
   imports: [
   BrowserModule,
@@ -133,7 +152,8 @@ import { CarouselComponent } from './Components/ImagesComponents/carousel/carous
   AccordionModule,
   MenuModule,
   GalleriaModule,
-  CarouselModule
+  CarouselModule,
+  TabViewModule
 ],
 
   providers: [MatIconRegistry],

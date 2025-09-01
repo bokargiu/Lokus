@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-card-company',
+
   templateUrl: './card-company.component.html',
-  styleUrls: ['./card-company.component.css']
+  styleUrl: './card-company.component.css'
 })
 export class CardCompanyComponent {
   company = [
@@ -15,4 +16,3 @@ export class CardCompanyComponent {
     { nome:"Empresa 6", preco: 80.00 },
   ]
 }
-
