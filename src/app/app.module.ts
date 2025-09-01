@@ -18,6 +18,7 @@ import { MatBadgeModule} from '@angular/material/badge';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatMenuModule} from '@angular/material/menu';
+import { MatCard } from '@angular/material/card';
 
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { RouterModule } from '@angular/router';
@@ -34,6 +35,7 @@ import { GalleriaModule } from 'primeng/galleria';
 import { CarouselModule} from 'primeng/carousel';
 import { TabViewModule } from 'primeng/tabview';
 
+import { Chart, registerables} from 'chart.js';
 
 import { UserPageInterfaceComponent } from './Components/UserPageComponents/user-page-interface/user-page-interface.component';
 import { SideMenuComponent } from './Components/UserPageComponents/side-menu/side-menu.component';
@@ -75,7 +77,6 @@ import { ColumnMenuComponent } from './Components/CompanyPageComponents/column-m
 import { MenuRowComponent } from './Components/CompanyPageComponents/menu-row/menu-row.component';
 import { CompanyPageComponent } from './Pages/company-page/company-page.component';
 import { CompanyHomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/company-home/company-home.component';
-import { GraphicsComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/graphics/graphics.component';
 import { CompanyManagementComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/company-management/company-management.component';
 import { CompanyProfilePageComponent } from './Components/CompanyPageComponents/Cards/CompanyProfilePage/company-profile-page/company-profile-page.component';
 import { CompanySettingsComponent } from './Components/CompanyPageComponents/Cards/CompanySettings/company-settings/company-settings.component';
@@ -86,6 +87,10 @@ import { CompanyReservationsComponent } from './Components/CompanyPageComponents
 import { CardHoursComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-hours/card-hours.component';
 import { CardRateComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-rate/card-rate.component';
 import { RateService } from './Services/rate.service';
+import { CardGraphicIncomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-graphic-income/card-graphic-income.component';
+import { CardGraphicHistogramComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-graphic-histogram/card-graphic-histogram.component';
+import { CardVisitsComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-visits/card-visits.component';
+
 
 @NgModule({
   declarations: [
@@ -130,7 +135,6 @@ import { RateService } from './Services/rate.service';
     MenuRowComponent,
     CompanyPageComponent,
     CompanyHomeComponent,
-    GraphicsComponent,
     CompanyManagementComponent,
     CompanyProfilePageComponent,
     CompanySettingsComponent,
@@ -140,6 +144,9 @@ import { RateService } from './Services/rate.service';
     CompanyReservationsComponent,
     CardHoursComponent,
     CardRateComponent,
+    CardGraphicIncomeComponent,
+    CardGraphicHistogramComponent,
+    CardVisitsComponent
 
   ],
   imports: [
@@ -162,6 +169,7 @@ import { RateService } from './Services/rate.service';
   MatBadgeModule,
   MatToolbarModule,
   MatMenuModule,
+  MatCard,
 
   // PrimeNG
   ButtonModule,
@@ -171,7 +179,8 @@ import { RateService } from './Services/rate.service';
   MenuModule,
   GalleriaModule,
   CarouselModule,
-  TabViewModule
+  TabViewModule,
+
 ],
 
   providers: [MatIconRegistry],

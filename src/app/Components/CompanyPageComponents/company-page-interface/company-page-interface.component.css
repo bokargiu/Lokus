@@ -18,12 +18,14 @@
 }
 .infos{
     height: 87vh;
-    width: 100%;
+    width: 90%;
     display: flex;
-    justify-content: center;
+    justify-content:left;
     align-items: center;
     gap: 40px;
+    margin-left: 10%;
 }
+
 .box-area{
     height: 70vh;
     width: 60%;
