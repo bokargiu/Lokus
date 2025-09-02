@@ -42,6 +42,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { CheckboxModule} from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { TableModule } from 'primeng/table';
 
 import { Chart, registerables} from 'chart.js';
 
@@ -91,7 +92,6 @@ import { CompanySettingsComponent } from './Components/CompanyPageComponents/Car
 import { CompanySupportComponent } from './Components/CompanyPageComponents/Cards/CompanySupport/company-support/company-support.component';
 import { CompanyFeedbackComponent } from './Components/CompanyPageComponents/Cards/CompanyFeedback/company-feedback/company-feedback.component';
 import { CompanyUploadImagesComponent } from './Components/CompanyPageComponents/Cards/CompanyProfilePage/company-upload-images/company-upload-images.component';
-import { CompanyReservationsComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/company-reservations/company-reservations.component';
 import { CardHoursComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-hours/card-hours.component';
 import { CardRateComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-rate/card-rate.component';
 import { RateService } from './Services/rate.service';
@@ -99,8 +99,9 @@ import { CardGraphicIncomeComponent } from './Components/CompanyPageComponents/C
 import { CardGraphicHistogramComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-graphic-histogram/card-graphic-histogram.component';
 import { CardVisitsComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-visits/card-visits.component';
 import { CardChoresComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-chores/card-chores.component';
-import { AddReservationDialogComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/add-reservation-dialog/add-reservation-dialog.component';
-
+import { CardAddDialogComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-add-dialog/card-add-dialog.component';
+import { CardConfirmDialogComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-confirm-dialog/card-confirm-dialog.component';
+import { CardReservationComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-reservation/card-reservation.component';
 
 @NgModule({
   declarations: [
@@ -151,14 +152,15 @@ import { AddReservationDialogComponent } from './Components/CompanyPageComponent
     CompanySupportComponent,
     CompanyFeedbackComponent,
     CompanyUploadImagesComponent,
-    CompanyReservationsComponent,
     CardHoursComponent,
     CardRateComponent,
     CardGraphicIncomeComponent,
     CardGraphicHistogramComponent,
     CardVisitsComponent,
     CardChoresComponent,
-    AddReservationDialogComponent,
+    CardAddDialogComponent,
+    CardConfirmDialogComponent,
+    CardReservationComponent
 
   ],
   imports: [
@@ -199,7 +201,8 @@ import { AddReservationDialogComponent } from './Components/CompanyPageComponent
   TabViewModule,
   CheckboxModule,
   InputTextModule,
-  InputTextareaModule
+  InputTextareaModule,
+  TableModule
 
 ],
 

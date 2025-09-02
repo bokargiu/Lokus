@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Place } from 'src/app/Models/company.model';
+import { CompanyService } from 'src/app/Services/company.service';
 
 @Component({
   selector: 'app-company-management',
@@ -33,5 +34,15 @@ export class CompanyManagementComponent {
     if (confirm('Deseja realmente excluir este espaço?')) {
       this.places.splice(index, 1);
     }
+  }
+
+  constructor(private companyService: CompanyService) {
+    this.loadSpaces();
+  }
+
+  loadSpaces() {
+    this.companyService.getSpaces().subscribe(places => {
+      this.places = places;
+    });
   }
 }

@@ -2,19 +2,20 @@ import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Place, Reservation} from 'src/app/Models/company.model'
 
+
 @Component({
-  selector: 'app-add-reservation-dialog',
-  templateUrl: './add-reservation-dialog.component.html',
-  styleUrl: './add-reservation-dialog.component.css'
+  selector: 'app-card-add-dialog',
+  templateUrl: './card-add-dialog.component.html',
+  styleUrl: './card-add-dialog.component.css'
 })
-export class AddReservationDialogComponent {
-    date: string = '';
+export class CardAddDialogComponent {
+  date: string = '';
   startTime: string = '';
   endTime: string = '';
   reservedBy: string = '';
 
   constructor(
-    public dialogRef: MatDialogRef<AddReservationDialogComponent>,
+    public dialogRef: MatDialogRef<CardAddDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: { place: Place }
   ) {}
 
@@ -39,5 +40,4 @@ export class AddReservationDialogComponent {
   cancel() {
     this.dialogRef.close();
   }
-
 }

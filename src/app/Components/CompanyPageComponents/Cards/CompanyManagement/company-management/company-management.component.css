@@ -1,25 +1,34 @@
-.container{
-    width: 500px;
-    height: 500px;
-    background-color: #ffffff !important;
+.company-management-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 
- h2{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: #333333;
+/* Estilo para todos os cards */
+mat-card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
 
- }
-
-.space-item {
-  border: 1px solid #ccc;
-  padding: 14px;
+/* Card Gestão de Espaços */
+.management-card .space-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
-  border-radius: 8px;
-  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.space-item button {
-  position: absolute;
-  top: 10px;
+/* Card Reservas */
+.reservations-card {
+  max-height: 400px;
+  overflow-y: auto; /* rolamento caso tenha muitas reservas */
+}
+
+/* Botões dentro da lista de espaços */
+button mat-icon {
+  vertical-align: middle;
 }

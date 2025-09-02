@@ -1,11 +1,11 @@
-<mat-card>
+<mat-card class="reservation-compo">
   <h2>Reservas</h2>
 
   <p-calendar [(ngModel)]="selectedDate" view="month" dateFormat="yy-mm-dd"></p-calendar>
 
-  <div *ngFor="let space of spaces">
-    <h3>{{ space.name }}</h3>
-    <p-table [value]="space.reservations">
+  <div *ngFor="let place of places">
+    <h3>{{ place.name }}</h3>
+    <p-table [value]="place.reservations">
       <ng-template pTemplate="header">
         <tr>
           <th>Data</th>

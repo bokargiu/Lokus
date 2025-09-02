@@ -1,0 +1,19 @@
+<div class="reservation-dialog">
+
+    <h2 mat-dialog-title>Confirmar Reserva</h2>
+    <mat-dialog-content>
+      <p>Espaço: {{ data.space.name }}</p>
+      <p>Data: {{ data.date }}</p>
+      <p>Horário: {{ data.block.start }} - {{ data.block.end }}</p>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>Reservado por</mat-label>
+        <input matInput [(ngModel)]="reservedBy" placeholder="Seu nome ou empresa">
+      </mat-form-field>
+    </mat-dialog-content>
+    
+    <mat-dialog-actions align="end">
+      <button mat-button (click)="cancel()">Cancelar</button>
+      <button mat-raised-button color="primary" (click)="confirm()">Confirmar</button>
+    </mat-dialog-actions>
+</div>
