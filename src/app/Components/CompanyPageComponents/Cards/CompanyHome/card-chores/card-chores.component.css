@@ -1,0 +1,38 @@
+.container {
+    margin: 15px 0;
+    height: 52vh;
+    max-height: 52vh;
+    overflow-y: auto;   
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 10%;
+}
+
+h3{
+    margin-top: 10px;
+    color: #333333;
+}
+
+textarea[pinputtextarea] {
+  max-height: 200px; 
+  overflow-y: auto; 
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.remove-icon {
+  font-size: 20px;       
+  color: #e53935;   
+  cursor: pointer;  
+  transition: color 0.2s ease;
+  margin-top: 4px;      
+}
+
+.remove-icon:hover {
+  color: #b71c1c;      
+}

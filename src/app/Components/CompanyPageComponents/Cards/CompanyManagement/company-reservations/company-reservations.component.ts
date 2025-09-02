@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Place, Reservation } from 'src/app/Models/company.model';
 
 @Component({
   selector: 'app-company-reservations',

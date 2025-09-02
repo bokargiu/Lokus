@@ -1,1 +1,38 @@
-<p>company-support works!</p>
+<mat-card class="container">
+    
+    <div class="form-info">
+      <h3>Central de Suporte</h3>
+    <mat-form-field appearance="fill">
+      <mat-label>* Nome da Empresa / Contato</mat-label>
+      <input matInput [(ngModel)]="supportData.name" placeholder="Digite seu nome ou nome da empresa">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>* Email</mat-label>
+      <input matInput [(ngModel)]="supportData.email" placeholder="Digite seu email">
+    </mat-form-field>
+    
+    <label class="form-title">* Categoria: </label>
+    <mat-radio-group [(ngModel)]="supportData.reason">
+      <mat-radio-button value="problema_tecnico">Problema Técnico</mat-radio-button>
+      <mat-radio-button value="duvida_funcionalidade">Dúvida sobre Funcionalidade</mat-radio-button>
+      <mat-radio-button value="outro">Outro</mat-radio-button>
+    </mat-radio-group>
+
+  </div>
+
+  <div class="form-description">
+
+    <textarea pInputTextarea
+              placeholder="Descreva seu problema ou dúvida..."
+              [(ngModel)]="supportData.description"
+              rows="5">
+    </textarea>
+
+    <button mat-raised-button class="send-button" (click)="sendSupportRequest()">
+      Enviar
+    </button>
+  </div>
+
+
+</mat-card>

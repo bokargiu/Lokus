@@ -1,0 +1,25 @@
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: #ffffff !important;
+}
+
+ h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333333;
+
+ }
+
+.space-item {
+  border: 1px solid #ccc;
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.space-item button {
+  position: absolute;
+  top: 10px;
+}

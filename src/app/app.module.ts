@@ -19,6 +19,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatCard } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'; 
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogActions } from '@angular/material/dialog';
 
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { RouterModule } from '@angular/router';
@@ -34,6 +39,9 @@ import { MenuModule } from 'primeng/menu';
 import { GalleriaModule } from 'primeng/galleria';
 import { CarouselModule} from 'primeng/carousel';
 import { TabViewModule } from 'primeng/tabview';
+import { CheckboxModule} from 'primeng/checkbox';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 import { Chart, registerables} from 'chart.js';
 
@@ -90,6 +98,8 @@ import { RateService } from './Services/rate.service';
 import { CardGraphicIncomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-graphic-income/card-graphic-income.component';
 import { CardGraphicHistogramComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-graphic-histogram/card-graphic-histogram.component';
 import { CardVisitsComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-visits/card-visits.component';
+import { CardChoresComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-chores/card-chores.component';
+import { AddReservationDialogComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/add-reservation-dialog/add-reservation-dialog.component';
 
 
 @NgModule({
@@ -146,7 +156,9 @@ import { CardVisitsComponent } from './Components/CompanyPageComponents/Cards/Co
     CardRateComponent,
     CardGraphicIncomeComponent,
     CardGraphicHistogramComponent,
-    CardVisitsComponent
+    CardVisitsComponent,
+    CardChoresComponent,
+    AddReservationDialogComponent,
 
   ],
   imports: [
@@ -170,6 +182,11 @@ import { CardVisitsComponent } from './Components/CompanyPageComponents/Cards/Co
   MatToolbarModule,
   MatMenuModule,
   MatCard,
+  MatFormFieldModule,
+  MatInputModule,
+  MatRadioModule,
+  MatDialogModule,
+  MatDialogActions,
 
   // PrimeNG
   ButtonModule,
@@ -180,6 +197,9 @@ import { CardVisitsComponent } from './Components/CompanyPageComponents/Cards/Co
   GalleriaModule,
   CarouselModule,
   TabViewModule,
+  CheckboxModule,
+  InputTextModule,
+  InputTextareaModule
 
 ],
 

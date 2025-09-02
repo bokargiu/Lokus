@@ -1,1 +1,27 @@
-<p>company-reservations works!</p>
+<mat-card>
+  <h2>Reservas</h2>
+
+  <p-calendar [(ngModel)]="selectedDate" view="month" dateFormat="yy-mm-dd"></p-calendar>
+
+  <div *ngFor="let space of spaces">
+    <h3>{{ space.name }}</h3>
+    <p-table [value]="space.reservations">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Data</th>
+          <th>Início</th>
+          <th>Fim</th>
+          <th>Reservado por</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-reservation>
+        <tr>
+          <td>{{ reservation.date }}</td>
+          <td>{{ reservation.startTime }}</td>
+          <td>{{ reservation.endTime }}</td>
+          <td>{{ reservation.reservedBy || '-' }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</mat-card>
