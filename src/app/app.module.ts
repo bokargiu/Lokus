@@ -24,6 +24,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialogActions } from '@angular/material/dialog';
+import { MatListModule} from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
+
 
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { RouterModule } from '@angular/router';
@@ -43,8 +46,11 @@ import { CheckboxModule} from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { TableModule } from 'primeng/table';
+import { CalendarModule } from 'primeng/calendar';
 
 import { Chart, registerables} from 'chart.js';
+
+import { LOCALE_ID } from '@angular/core';
 
 import { UserPageInterfaceComponent } from './Components/UserPageComponents/user-page-interface/user-page-interface.component';
 import { SideMenuComponent } from './Components/UserPageComponents/side-menu/side-menu.component';
@@ -99,9 +105,10 @@ import { CardGraphicIncomeComponent } from './Components/CompanyPageComponents/C
 import { CardGraphicHistogramComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-graphic-histogram/card-graphic-histogram.component';
 import { CardVisitsComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-visits/card-visits.component';
 import { CardChoresComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-chores/card-chores.component';
-import { CardAddDialogComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-add-dialog/card-add-dialog.component';
-import { CardConfirmDialogComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-confirm-dialog/card-confirm-dialog.component';
-import { CardReservationComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-reservation/card-reservation.component';
+import { CardScheduleComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-schedule/card-schedule.component';
+import { CardSpaceComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-space/card-space.component';
+import { CardListComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-list/card-list.component';
+
 
 @NgModule({
   declarations: [
@@ -158,9 +165,9 @@ import { CardReservationComponent } from './Components/CompanyPageComponents/Car
     CardGraphicHistogramComponent,
     CardVisitsComponent,
     CardChoresComponent,
-    CardAddDialogComponent,
-    CardConfirmDialogComponent,
-    CardReservationComponent
+    CardScheduleComponent,
+    CardSpaceComponent,
+    CardListComponent,
 
   ],
   imports: [
@@ -189,6 +196,8 @@ import { CardReservationComponent } from './Components/CompanyPageComponents/Car
   MatRadioModule,
   MatDialogModule,
   MatDialogActions,
+  MatListModule,
+  MatSelectModule,
 
   // PrimeNG
   ButtonModule,
@@ -202,11 +211,12 @@ import { CardReservationComponent } from './Components/CompanyPageComponents/Car
   CheckboxModule,
   InputTextModule,
   InputTextareaModule,
-  TableModule
+  TableModule,
+  CalendarModule
 
 ],
 
-  providers: [MatIconRegistry],
+  providers: [MatIconRegistry, { provide: LOCALE_ID, useValue: 'pt-BR' }],
 
   bootstrap: [AppComponent]
 })

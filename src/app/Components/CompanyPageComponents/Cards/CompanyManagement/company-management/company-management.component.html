@@ -1,26 +1,5 @@
-<div class="company-management-container">
-
-  <!-- Card 1: Gestão de Espaços -->
-  <mat-card class="management-card">
-    <h2>Gestão de Espaços</h2>
-
-    <div *ngFor="let place of places; let i = index" class="space-item">
-      <h3>{{ place.name }}</h3>
-      <p>{{ place.description }}</p>
-
-      <button mat-icon-button color="primary" (click)="editPlace(place)">
-        <mat-icon>edit</mat-icon>
-      </button>
-      <button mat-icon-button color="warn" (click)="deletePlace(i)">
-        <mat-icon>delete</mat-icon>
-      </button>
-    </div>
-
-    <button mat-raised-button color="primary" (click)="addPlace()">
-      Adicionar Espaço
-    </button>
-  </mat-card>
-
-
-  
+<div class="settings-container">
+  <app-card-space></app-card-space>
+  <app-card-schedule></app-card-schedule>
+  <app-card-list></app-card-list>
 </div>

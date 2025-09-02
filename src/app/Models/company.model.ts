@@ -3,21 +3,25 @@ export interface CardCompany {
     preco : number
 }
 
+export interface Availability {
+  id: number;
+  placeId: number;
+  startTime: string;
+  endTime: string;
+  specificDate?: Date;
+  dayOfWeek?: number;
+  month?: number;
+}
+
 export interface Place {
   id: number;
   name: string;
+  type: string;
+  capacity: number;
   description: string;
-  reservations: Reservation[];
+  availabilities: Availability[];
 }
 
-export interface Reservation {
-  id: number;
-  placeId: number;
-  date: string;      // yyyy-mm-dd
-  startTime: string; // hh:mm
-  endTime: string;   // hh:mm
-  reservedBy?: string;
-}
 
 export interface TimeBlock {
   start: string;    // "08:00"

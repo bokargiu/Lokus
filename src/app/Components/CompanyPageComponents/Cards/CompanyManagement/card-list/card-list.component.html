@@ -1,0 +1,9 @@
+<mat-card>
+  <h2>Lista de Disponibilidades</h2>
+
+  <mat-list>
+    <mat-list-item *ngFor="let schedule of schedules">
+      {{ schedule.spaceName }} - {{ schedule.dayOfWeek }} às {{ schedule.time }}
+    </mat-list-item>
+  </mat-list>
+</mat-card>
