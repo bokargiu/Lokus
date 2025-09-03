@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ScheduleService {
-  private apiUrl = 'http://localhost:5000/api/schedules';
+  private apiUrl = 'http://localhost:7101/api/Schedule';
 
   constructor(private http: HttpClient) {}
 

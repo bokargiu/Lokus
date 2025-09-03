@@ -1,65 +1,92 @@
 .container{
     width: 100%;
-    height: 620px;
+    height: 120vh;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     background-color: #f1f1f1;
     
 }
 
-.card-description{
+.card-profile{
     width: 500px;
-    height: 600px;
-    background-color: #92bcb2;
+    height: 550px;
+    background-color: #333333;
+    border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.485);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
     z-index: 1;
 }
 
 .description{
-    height: 150px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    
 }
-.range{
+
+h3{
+    font-family: 'Poppins', sans-serif !important;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 600;
+    align-items: center;
+}
+
+p{
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 5%;
+    letter-spacing: 1px;
+    text-indent: 10%;
+}
+
+.rent{
     width: 100%;
-    height: 90px;
-    background-color: #bfd8d2;
+    height: 80px;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-around;
 
 }
-.range button{
+.rent button{
     width: 190px;
     height: 50px;
-    border-radius: 50px;
-    border: 3px solid #f8f5f0;
+    border-radius: 15px;
+    background-color:  #044e55;
     font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif !important;
 }
-.price h3{
-    font-size: 35px;
-    color: aliceblue;
-    -webkit-text-stroke-color: rgb(0, 0, 0);
-    -webkit-text-stroke-width: 1px;
-    font-family:sans-serif;
-}
+
 .price{
-    height: 28px;
     display: flex;
- 
+    align-self: center;
+    justify-content: center;
 }
+
+.price p{
+    color: #333333;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
 .assessment{
     width: 50%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    padding: 5%;
+    color: #ffffff !important;
 
 }
 .iconsReviews{
@@ -74,22 +101,12 @@
     height: auto;
     margin: 15px;
 }
-.description p{
-    Font-Family: 'Poppins', sans-serife;
-    color: aliceblue;
-    text-align: left;
-    margin-left: 15px;
 
-}
+
 .assessment p{
     font-size: 20px;
 }
-.description h3{
-    color: aliceblue;
-    font-size: 50px;
-    Font-Family: 'Poppins', sans-serife;
-    margin: 10px;
-}
+
 .images{
     background-color: #92bcb2;
     width: 500px;

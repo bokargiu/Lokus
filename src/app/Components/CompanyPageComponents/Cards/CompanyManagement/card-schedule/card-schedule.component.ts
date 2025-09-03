@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { SpaceService } from 'src/app/Services/space.service';
+import { SpaceService, Space } from 'src/app/Services/space.service';
 import { ScheduleService } from 'src/app/Services/schedule.service';
-import { MatOption } from '@angular/material/core';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 @Component({
   selector: 'app-card-schedule',
   templateUrl: './card-schedule.component.html',
   styleUrl: './card-schedule.component.css'
 })
-export class CardScheduleComponent {
-  spaces: any[] = [];
+export class CardScheduleComponent implements OnInit{
+  spaces: Space[] = [];
   selectedSpaceId!: number;
   dayOfWeek: string = '';
   time: string = '';
@@ -24,21 +22,26 @@ export class CardScheduleComponent {
   ) {}
 
   ngOnInit(): void {
+    this.loadSpaces();
+  }
+
+  loadSpaces() {
     this.spaceService.getSpaces().subscribe(data => {
       this.spaces = data;
     });
   }
 
   addSchedule() {
-    const schedule = {
+    if (!this.selectedSpaceId || !this.dayOfWeek || !this.time) return;
+
+    this.scheduleService.addSchedule({
       spaceId: this.selectedSpaceId,
       dayOfWeek: this.dayOfWeek,
       time: this.time
-    };
-
-    this.scheduleService.addSchedule(schedule).subscribe(() => {
+    }).subscribe(() => {
       this.dayOfWeek = '';
       this.time = '';
+      this.loadSpaces(); // Atualiza os horários do spaceCard automaticamente
     });
   }
 
