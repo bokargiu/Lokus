@@ -1,0 +1,9 @@
+.rating-card {
+  margin-top: 16px;
+}
+
+.rating-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}

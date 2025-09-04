@@ -110,6 +110,9 @@ import { CardSpaceComponent } from './Components/CompanyPageComponents/Cards/Com
 import { CardListComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-list/card-list.component';
 
 
+import { CardBoxFeedbackComponent } from './Components/card-box-feedback/card-box-feedback.component';
+import { CardRatingComponent } from './Components/card-rating/card-rating.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -168,6 +171,9 @@ import { CardListComponent } from './Components/CompanyPageComponents/Cards/Comp
     CardScheduleComponent,
     CardSpaceComponent,
     CardListComponent,
+
+    CardBoxFeedbackComponent,
+    CardRatingComponent
 
   ],
   imports: [
