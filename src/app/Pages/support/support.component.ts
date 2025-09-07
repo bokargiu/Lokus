@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class SupportComponent {
 
+openRecoverPassword() {
+  window.open('http://localhost:4200/esqueceu-senha', '_blank');
+}
+
+openQandA(){
+  window.open('http://localhost:4200/perguntas', '_blank');
+}
+
+
 }

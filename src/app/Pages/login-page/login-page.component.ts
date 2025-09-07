@@ -19,26 +19,20 @@ export class LoginPageComponent {
    constructor(private authService : AuthService, private router:Router) {}
 
   async onLogin() {
-       try {
-      const res = await firstValueFrom(this.authService.login(this.user, this.password)
-      );
+       this.authService.login(this.user, this.password).subscribe({
+      next: (res) => {
+        this.authService.saveToken(res.token);
+        this.authService.saveRole(res.role);
 
-      this.authService.saveToken(res.token);
-      this.authService.saveRole(res.role);
-
-      console.log('Login bem sucedido!', res);
-
-      if (res.role.toLowerCase() === 'customer') {
-        this.router.navigate(['/customer/home']);
-      } else if (res.role.toLowerCase() === 'company'){
-        this.router.navigate(['/company/home-co']);
-      } else {
-        this.router.navigate(['/']);
+        if (res.role === 'company') {
+          this.router.navigate(['/company/home-co']);
+        } else {
+          this.router.navigate(['/customer/home']);
+        }
+      },
+      error: (err) => {
+        console.error('Erro no login', err);
       }
-
-    } catch (err) {
-      this.errorMessage = 'Usuário ou senha inválida';
-      console.error(err);
-    }
+    });
   }
 }

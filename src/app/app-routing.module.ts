@@ -25,11 +25,13 @@ import { SubscriptionsComponent } from './Pages/subscriptions/subscriptions.comp
 import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
 import { CompanyPageComponent } from './Pages/company-page/company-page.component';
 import { CompanyHomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/company-home/company-home.component';
-import { CompanyProfilePageComponent } from './Components/CompanyPageComponents/Cards/CompanyProfilePage/company-profile-page/company-profile-page.component';
-import { CompanyManagementComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/company-management/company-management.component';
+import { CompanySpacesComponent } from './Components/CompanyPageComponents/Cards/CompanySpaces/company-spaces/company-spaces.component';
 import { CompanyFeedbackComponent } from './Components/CompanyPageComponents/Cards/CompanyFeedback/company-feedback/company-feedback.component';
 import { CompanySupportComponent } from './Components/CompanyPageComponents/Cards/CompanySupport/company-support/company-support.component';
 import { CompanySettingsComponent } from './Components/CompanyPageComponents/Cards/CompanySettings/company-settings/company-settings.component';
+import { CompanyEditProfileComponent } from './Components/CompanyPageComponents/Cards/CompanyEditProfile/company-edit-profile/company-edit-profile.component';
+import { AuthGuard } from './Services/authguard.service';
+import { StablishmentListPageComponent } from './Components/CompanyPageComponents/stablishment-list-page/stablishment-list-page.component';
 
 const routes: Routes = [
   // Página inicial 
@@ -38,7 +40,7 @@ const routes: Routes = [
   // Página do customer
   {
     path: 'customer',
-    component: UserPageComponent,
+    component: UserPageComponent, canActivate: [AuthGuard],data: { role: 'customer' },
     children: [
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       { path: 'home', component: UserHomeComponent },
@@ -55,16 +57,30 @@ const routes: Routes = [
 {
   path: 'company',
   component: CompanyPageComponent,
+  canActivate: [AuthGuard],
+  data: { role: 'company' },
   children: [
-    {path: '', redirectTo: 'home-co', pathMatch: 'full'},
-    {path: 'home-co', component:CompanyHomeComponent},
-    {path: 'agenda-reservas', component:CompanyManagementComponent},
-    {path: 'editar-perfil', component:CompanyProfilePageComponent},
-    {path: 'relacionamentos', component:CompanyFeedbackComponent},
-    {path: 'suporte', component:CompanySupportComponent},
-    {path: 'configuracao', component:CompanySettingsComponent},
-  ],
+    // Página de seleção de estabelecimentos (gateway)
+    { path: '', redirectTo: 'stablishments', pathMatch: 'full' },
+    { path: 'stablishments', component: StablishmentListPageComponent },
+
+    // Painel do estabelecimento (rota pai)
+    {
+      path: 'dashboard/:stablishmentId',
+      component: CompanyHomeComponent,
+      children: [
+        { path: '', redirectTo: 'home', pathMatch: 'full' }, // redireciona para o home do painel
+        { path: 'home', component: CompanyHomeComponent },
+        { path: 'agenda-reservas', component: CompanySpacesComponent },
+        { path: 'editar-perfil', component: CompanyEditProfileComponent },
+        { path: 'relacionamentos', component: CompanyFeedbackComponent },
+        { path: 'suporte', component: CompanySupportComponent },
+        { path: 'configuracao', component: CompanySettingsComponent },
+      ]
+    }
+  ]
 },
+
 
   // Outras páginas
   { path: 'pesquisar', component: SearchPageComponent },
@@ -78,9 +94,8 @@ const routes: Routes = [
   { path: 'planos', component:SubscriptionsComponent},
   { path: 'perfil', component:ProfilePageComponent},
 
-  // Rota coringa (caso digite algo inexistente)
-  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

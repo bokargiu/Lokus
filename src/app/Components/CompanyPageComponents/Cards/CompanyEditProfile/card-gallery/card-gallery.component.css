@@ -1,0 +1,16 @@
+/* estilo mínimo para não esconder nada */
+.plain-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10%;
+}
+
+.plain-slot {
+  border: 1px solid #999;
+  padding: 12px;
+  min-width: 110px;
+  text-align: center;
+  background: #fafafa;
+}
+

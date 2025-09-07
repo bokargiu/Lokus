@@ -1,0 +1,21 @@
+<mat-card class="container" *ngIf="stablishment">
+  <mat-card-title class="edit-title">Editar informações do perfil</mat-card-title>
+
+  <mat-card-content>
+    <mat-card-title class="edit-subtitle">Nome:</mat-card-title>
+    <mat-form-field appearance="fill" class="w-full">
+      <input matInput [(ngModel)]="stablishment.virtualName" placeholder="Digite o nome aqui..." class="input-info">
+    </mat-form-field>
+
+    <mat-card-title class="edit-subtitle">Descrição:</mat-card-title>
+    <mat-form-field appearance="fill" class="w-full">
+      <textarea matInput rows="4" [(ngModel)]="stablishment.description" placeholder="Digite as informações da empresa..."></textarea>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button  (click)="saveChanges()" [disabled]="loading" class="button-save">
+      {{ loading ? 'Salvando...' : 'Salvar Alterações' }}
+    </button>
+  </mat-card-actions>
+</mat-card>

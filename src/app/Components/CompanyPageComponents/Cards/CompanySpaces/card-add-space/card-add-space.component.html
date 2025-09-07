@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-title>Adicionar Espaço</mat-card-title>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome do Espaço</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Capacidade</mat-label>
+      <input matInput type="number" formControlName="capacity">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Preço</mat-label>
+      <input matInput type="number" formControlName="price">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Unidade</mat-label>
+      <mat-select formControlName="priceEnum">
+        <mat-option value="PorHora">Por Hora</mat-option>
+        <mat-option value="PorDia">Por Dia</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Salvar Espaço</button>
+  </form>
+</mat-card>

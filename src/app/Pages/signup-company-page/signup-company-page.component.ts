@@ -9,43 +9,53 @@ import { HttpClient } from '@angular/common/http';
 
 export class SignupCompanyPageComponent {
 
-  nomeFantasia:string='';
-  cnpj:string='';
-  email:string='';
-  contato:string='';
-  username:string='';
-  senha:string = '';
-  confirmarSenha:string = ''
+  nomeFantasia: string = '';
+  cnpj: string = '';
+  email: string = '';
+  contato: string = '';
+  username: string = '';
+  senha: string = '';
+  confirmarSenha: string = '';
 
   constructor (private http:HttpClient) {}
 
-  confirm() {
-      if (this.senha !== this.confirmarSenha) {
+    confirm() {
+    if (this.senha !== this.confirmarSenha) {
       alert("Senhas não coincidem!");
       return;
-  }
-
-  const company = {
-    NameCompany: this.nomeFantasia,
-    Cnpj: this.cnpj,
-    ContactOther: this.contato,
-    Email: this.email,
-    Username: this.username,
-    Password: this.senha,
-    Role: 'Company'
-  };
-
-  this.http.post('https://localhost:7101/api/SignupCompany/SignUp', company).subscribe({
-    next: (res:any) => alert(res.message || 'Usuário cadastrado com sucesso!'),
-    error: (err) =>{
-      console.error('Erro completo:', err);
-      
-      if(err.error?.erros) {
-        alert('Erro ao cadastrar: \n' + err.error.errors.join('\n'));
-      } else {
-        alert('Erro ao cadastrar: ' + (err.error?.erro || err.messsage));
-      }
     }
-  });
+
+    const companyDto = {
+      NameCompany: this.nomeFantasia,
+      Cnpj: this.cnpj,
+      ContactOther: this.contato,
+      Username: this.username,
+      Password: this.senha,
+      Email: this.email,
+      Stablishments: [
+        {
+          Name: this.nomeFantasia,
+          VirtualName: this.nomeFantasia.replace(/\s+/g, '').toLowerCase(),
+          Description: '',
+          Contact: this.contato,
+          Address: {
+            Road: '',
+            City: '',
+            State: '',
+            Cep: ''
+          }
+        }
+      ]
+    };
+
+    this.http.post('https://localhost:7101/api/SignupCompany/register', companyDto)
+      .subscribe({
+        next: (res: any) => alert('Usuário cadastrado com sucesso!'),
+        error: (err) => {
+          console.error('Erro completo:', err);
+          alert('Erro ao cadastrar: ' + (err.error?.message || err.message));
+        }
+      });
   }
+  
 }

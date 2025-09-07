@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -26,6 +26,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialogActions } from '@angular/material/dialog';
 import { MatListModule} from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+
+import { QueryList } from '@angular/core';
+import { ViewChildren } from '@angular/core';
+import { ElementRef } from '@angular/core';
 
 
 import { ScrollingModule } from '@angular/cdk/scrolling';
@@ -92,12 +96,9 @@ import { ColumnMenuComponent } from './Components/CompanyPageComponents/column-m
 import { MenuRowComponent } from './Components/CompanyPageComponents/menu-row/menu-row.component';
 import { CompanyPageComponent } from './Pages/company-page/company-page.component';
 import { CompanyHomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/company-home/company-home.component';
-import { CompanyManagementComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/company-management/company-management.component';
-import { CompanyProfilePageComponent } from './Components/CompanyPageComponents/Cards/CompanyProfilePage/company-profile-page/company-profile-page.component';
 import { CompanySettingsComponent } from './Components/CompanyPageComponents/Cards/CompanySettings/company-settings/company-settings.component';
 import { CompanySupportComponent } from './Components/CompanyPageComponents/Cards/CompanySupport/company-support/company-support.component';
 import { CompanyFeedbackComponent } from './Components/CompanyPageComponents/Cards/CompanyFeedback/company-feedback/company-feedback.component';
-import { CompanyUploadImagesComponent } from './Components/CompanyPageComponents/Cards/CompanyProfilePage/company-upload-images/company-upload-images.component';
 import { CardHoursComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-hours/card-hours.component';
 import { CardRateComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-rate/card-rate.component';
 import { RateService } from './Services/rate.service';
@@ -105,13 +106,22 @@ import { CardGraphicIncomeComponent } from './Components/CompanyPageComponents/C
 import { CardGraphicHistogramComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-graphic-histogram/card-graphic-histogram.component';
 import { CardVisitsComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-visits/card-visits.component';
 import { CardChoresComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/card-chores/card-chores.component';
-import { CardScheduleComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-schedule/card-schedule.component';
-import { CardSpaceComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-space/card-space.component';
-import { CardListComponent } from './Components/CompanyPageComponents/Cards/CompanyManagement/card-list/card-list.component';
-
+import { SearchBarAreaComponent } from './Components/CompanyPageComponents/search-bar-area/search-bar-area.component';
 
 import { CardBoxFeedbackComponent } from './Components/card-box-feedback/card-box-feedback.component';
 import { CardRatingComponent } from './Components/card-rating/card-rating.component';
+
+import { CardEditProfileComponent } from './Components/CompanyPageComponents/Cards/CompanyEditProfile/card-edit-profile/card-edit-profile.component';
+import { CardGalleryComponent } from './Components/CompanyPageComponents/Cards/CompanyEditProfile/card-gallery/card-gallery.component';
+import { CompanyEditProfileComponent } from './Components/CompanyPageComponents/Cards/CompanyEditProfile/company-edit-profile/company-edit-profile.component';
+
+import { CompanySpacesComponent } from './Components/CompanyPageComponents/Cards/CompanySpaces/company-spaces/company-spaces.component';
+import { CardAvailabilityComponent } from './Components/CompanyPageComponents/Cards/CompanySpaces/card-availability/card-availability.component';
+import { CardListSpaceComponent } from './Components/CompanyPageComponents/Cards/CompanySpaces/card-list-space/card-list-space.component';
+import { CardAddSpaceComponent } from './Components/CompanyPageComponents/Cards/CompanySpaces/card-add-space/card-add-space.component';
+import { StablishmentListPageComponent } from './Components/CompanyPageComponents/stablishment-list-page/stablishment-list-page.component';
+import { StablishmentGalleryService } from './Services/stablishment-gallery.service';
+
 
 @NgModule({
   declarations: [
@@ -156,30 +166,37 @@ import { CardRatingComponent } from './Components/card-rating/card-rating.compon
     MenuRowComponent,
     CompanyPageComponent,
     CompanyHomeComponent,
-    CompanyManagementComponent,
-    CompanyProfilePageComponent,
     CompanySettingsComponent,
     CompanySupportComponent,
     CompanyFeedbackComponent,
-    CompanyUploadImagesComponent,
     CardHoursComponent,
     CardRateComponent,
     CardGraphicIncomeComponent,
     CardGraphicHistogramComponent,
     CardVisitsComponent,
     CardChoresComponent,
-    CardScheduleComponent,
-    CardSpaceComponent,
-    CardListComponent,
+    SearchBarAreaComponent,
+    StablishmentListPageComponent,
 
     CardBoxFeedbackComponent,
-    CardRatingComponent
+    CardRatingComponent,
+
+    CardEditProfileComponent,
+    CardGalleryComponent,
+    CompanyEditProfileComponent,
+
+
+    CompanySpacesComponent,
+    CardAvailabilityComponent,
+    CardListSpaceComponent,
+    CardAddSpaceComponent
 
   ],
   imports: [
   BrowserModule,
   BrowserAnimationsModule,
   FormsModule,
+  ReactiveFormsModule,
   AppRoutingModule,
   HttpClientModule,
   CommonModule,
@@ -204,6 +221,7 @@ import { CardRatingComponent } from './Components/card-rating/card-rating.compon
   MatDialogActions,
   MatListModule,
   MatSelectModule,
+
 
   // PrimeNG
   ButtonModule,

@@ -24,4 +24,8 @@ export class CompaniesPageComponent implements OnInit{
     ]
   }
 
+  openRegister(){
+    window.open('http://localhost:4200/cadastro-empresa', '_blank')
+  }
+
 }

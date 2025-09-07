@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Selecione o seu estabelecimento</h2>
+
+  <div *ngIf="loading" class="loading">
+    Carregando estabelecimentos...
+  </div>
+
+  <div *ngIf="!loading && stablishments.length === 0" class="no-stablishments">
+    Nenhum estabelecimento encontrado.
+  </div>
+
+  <div class="cards" *ngIf="!loading && stablishments.length > 0">
+    <div 
+      class="card" 
+      *ngFor="let s of stablishments"
+      (click)="goToDashboard(s.id)"
+    >
+      <h3>{{ s.name }}</h3>
+      <p>ID: {{ s.id }}</p>
+    </div>
+  </div>
+</div>

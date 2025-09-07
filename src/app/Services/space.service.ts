@@ -3,18 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
   export interface Space {
-  id: number;
+  id: string;
+  stablishmentId: string;
   name: string;
-  schedules?: Schedule[];
+  capacity: number;
+  description?: string;
+  price: number;
+  priceEnum: 'PorHora' | 'PorDia';
 }
 
-  export interface Schedule {
-    id: number;
-    dayOfWeek: string;
-    time: string;
-    spaceId: number;
-    spaceName?: string;
-  }
 
 @Injectable({
   providedIn: 'root'
@@ -26,11 +23,19 @@ export class SpaceService {
 
   constructor(private http: HttpClient) {}
 
-  getSpaces(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+addSpace(space: Partial<Space>): Observable<Space> {
+    return this.http.post<Space>(this.apiUrl, space);
   }
 
-  addSpace(space: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, space);
+  getSpacesByStablishment(stablishmentId: string): Observable<Space[]> {
+    return this.http.get<Space[]>(`${this.apiUrl}/stablishment/${stablishmentId}`);
+  }
+
+  updateSpace(spaceId: string, space: Partial<Space>): Observable<Space> {
+    return this.http.put<Space>(`${this.apiUrl}/${spaceId}`, space);
+  }
+
+  deleteSpace(spaceId: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${spaceId}`);
   }
 }
