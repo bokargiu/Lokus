@@ -1,0 +1,9 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="over">
+        <app-side-menu [sidenav]="sidenav"/>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <app-user-page-interface [sidenav]="sidenav"/>
+    </mat-sidenav-content>
+</mat-sidenav-container>

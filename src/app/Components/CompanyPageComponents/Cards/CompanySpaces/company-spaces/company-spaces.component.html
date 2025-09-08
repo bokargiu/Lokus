@@ -1,0 +1,5 @@
+<div class="container">
+  <app-card-add-space (spaceAdded)="onSpaceAdded($event)"></app-card-add-space>
+  <app-card-list-space [spaces]="spaces"></app-card-list-space>
+  <app-card-availability [spaces]="spaces"></app-card-availability>
+</div>

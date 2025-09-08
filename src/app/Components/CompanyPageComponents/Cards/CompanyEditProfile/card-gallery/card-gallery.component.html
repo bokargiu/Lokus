@@ -1,0 +1,25 @@
+<div class="gallery-grid">
+  <mat-card *ngFor="let slot of slots; let i = index" class="photo-card">
+
+    <!-- Se já tiver imagem -->
+    <ng-container *ngIf="images[i] as img; else uploadSlot">
+      <!-- Apenas o nome do arquivo / identificador -->
+      <p>{{ img.fileName }}</p>
+      <button mat-mini-button color="warn" (click)="deleteImage(img.id)">
+        Excluir
+      </button>
+    </ng-container>
+
+    <!-- Slot vazio para upload -->
+    <ng-template #uploadSlot>
+      <p>Slot {{ i + 1 }}</p>
+      <input type="file" (change)="onFileSelected($event, i)" [disabled]="images.length >= 10"/>
+    </ng-template>
+
+  </mat-card>
+</div>
+
+<button mat-raised-button color="primary" (click)="salvar()">
+  Salvar Alterações
+</button>
+

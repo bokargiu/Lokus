@@ -1,0 +1,52 @@
+
+.container{
+  background-color: #ffffff ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+  width: 300px;
+  height: 170px;
+  margin-top: 0px;
+}
+.infos{
+  margin-top: 10px;
+}
+  .saldo-titulo {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 15px;
+  }
+
+  .saldo-valor {
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    margin-bottom: 15px;
+    
+  }
+
+  .deposit{
+    background-color: transparent !important;
+    color: green !important;
+  }
+  .pay{
+    background-color: transparent !important;
+    color: rgb(161, 0, 0) !important;
+  }
+  .extract{
+    background-color: transparent !important;
+    color: rgb(44, 44, 44) !important;
+    transition: 0.3s;
+  }
+
+  button:hover{
+    background-color: rgba(87, 87, 87, 0.079) !important;
+  }

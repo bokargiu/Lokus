@@ -1,0 +1,47 @@
+.container{
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+
+    /* border: 1px solid rgba(0, 0, 0, 0.44); */
+    /* background-color: rgb(48, 17, 77); */
+}
+.icon{
+    height: 28px;
+    width: 28px;
+    font-size: 28px;
+    transition: 0.2s;
+    color: black;
+}
+.search{
+    /* background-color: brown; */
+
+    justify-content: center;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.text{
+    border-radius: 50px;
+    height: 30px;
+    width: 50%;
+    font-size: 18px;
+    padding-left: 7px;
+    background-color: #f1f1f1;
+    border: 3px solid #ededed;
+}
+.logout{
+    gap: 25px;
+    height: 42px;
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: black;
+
+    /* background-color: aquamarine; */
+}

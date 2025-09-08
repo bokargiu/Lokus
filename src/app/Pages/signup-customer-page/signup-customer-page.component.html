@@ -1,0 +1,33 @@
+<app-head-menu/>
+
+<div class="container">
+        <div class="layer"></div>
+        <div class="block1">
+            <h4>INFORMAÇÕES PESSOAIS</h4>
+            <label>NOME COMPLETO:</label>
+            <input type="text" [(ngModel)]="nomeCompleto">
+            <label>CPF</label>
+            <input type="text" [(ngModel)]="cpf">
+            <label>DATA DE NASCIMENTO</label>
+            <input type="date" [(ngModel)]="dataNascimento">
+            <label>EMAIL</label>
+            <input type="text" [(ngModel)]="email">
+            <label>CONTATO</label>
+            <input type="text" [(ngModel)]="contato">
+        </div>
+        <div class="block2">
+            <h4>INFORMAÇÕES DA CONTA</h4>
+            <label>USERNAME</label>
+            <input type="text" [(ngModel)]="username">
+            <label>SENHA</label>
+            <input type="password" placeholder="" [(ngModel)]="senha">
+            <label>CONFIRMAR SENHA</label>
+            <input type="password" placeholder="" [(ngModel)]="confirmarSenha">
+            <button class="confirmar" 
+                    [disabled]="!senha || !confirmarSenha || senha !== confirmarSenha"
+                    (click)="confirm()">Confirmar</button>
+        </div>
+
+</div>
+
+<app-footing/>

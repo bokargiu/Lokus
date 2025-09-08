@@ -1,0 +1,26 @@
+<mat-card class="container">
+    <h3> <strong>Lista Tarefas </strong></h3>
+    <div *ngFor="let task of tasks; let i = index" class="task-item">
+    <p-checkbox 
+        [(ngModel)]="task.done" 
+        binary="true" 
+        [inputId]="'taskCheck' + i"
+    ></p-checkbox>
+
+    <textarea 
+        pInputTextarea 
+        placeholder="Escreva sua tarefa..." 
+        [(ngModel)]="task.text"
+        [disabled]="task.done"
+        autoResize
+        rows="1"
+        (ngModelChange)="onTaskInput(i)"
+    ></textarea>
+
+     <mat-icon 
+        class="remove-icon"
+        (click)="removeTask(i)"
+    >close</mat-icon>
+  </div>
+
+</mat-card>

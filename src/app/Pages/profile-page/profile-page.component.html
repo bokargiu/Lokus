@@ -1,0 +1,64 @@
+<app-head-menu/>
+    <div class="container">
+        <mat-card class="card-profile">
+                
+                <div class="description">
+                    <h3>Coworking</h3>
+                    <p>Coworking em Blumenau com ambiente moderno, confortável e ideal para freelancers e pequenas empresas.
+                        Oferece estações de trabalho, salas de reunião, estúdios para gravações e Wi-Fi rápido. 
+                        Conta com cafeteria, serviços de impressão, bicicletário e e pet-friendly. 
+                        Localizado na área central de Blumenau, nosso espaço é perfeito para você que procura qualidade e novas oportunidades.
+                    </p>
+                </div>
+                <div class="rent">
+                    <div class="button">
+                        <button>Alugar</button>
+                    </div>
+                    <div class="price">
+                        <p>R$20,22/h</p>
+
+                    </div>
+                </div>
+                <div class="assessment">
+                    <div class="iconsReviews">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3916/3916582.png" alt="">
+
+                        
+                    </div>
+                    <div class="iconsReviews">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6955/6955566.png" alt="">
+
+                    </div>
+                    <div class="iconsReviews">
+                        <img src="https://cdn-icons-png.flaticon.com/512/9254/9254512.png" alt="">
+
+                    </div>
+                    <div class="iconsReviews">
+                        <img src="https://cdn-icons-png.flaticon.com/512/16059/16059904.png" alt="">
+
+                    </div>
+                    <div class="iconsReviews">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3916/3916676.png" alt="">
+
+                    </div>
+                    
+                    
+                    
+                    
+                </div>
+            </mat-card>
+    
+            <div class="images">
+                    <app-carousel></app-carousel>
+                
+            </div>
+
+            <div class="feedback">
+                <app-card-rating [companyId]="company.id"></app-card-rating>
+                <app-card-box-feedback [companyId]="company.id"></app-card-box-feedback>
+
+            </div>
+
+    </div>
+<app-footing/>
+

@@ -1,0 +1,27 @@
+.container{
+    padding: 10%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 10%;
+    margin: 15px 0;
+}
+
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333333
+}
+
+mat-card-title {
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+canvas {
+    width: 100% !important;
+    height: 230px !important;
+}

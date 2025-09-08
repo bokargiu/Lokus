@@ -1,0 +1,19 @@
+<div class="container" (mouseleave)="sidenav.close()">
+    <div class="infos">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7YMHtkcGzhlp4XRYnfbYsVULmOr5Jd_nGg&s"
+             alt="" style="width: 100px; height: 100px; border-radius: 100%;">
+    </div>
+    <ul class="options">
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'home']" class="icon-options">Home</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'agenda-reservas']" class="icon-options">Agenda e Reservas</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'editar-perfil']" class="icon-options">Editar Perfil</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'relacionamentos']" class="icon-options">Relacionamentos</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'suporte']" class="icon-options">Suporte</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'configuracao']" class="icon-options">Configuração</li>
+    </ul>
+
+    <div mat-button class="close">
+        <mat-icon fontIcon="arrow_circle_left" style="width: 24px; height: 24px; font-size: 24px;" (click)="sidenav.close()">arrow_circle_left</mat-icon>
+    </div>
+</div>
+

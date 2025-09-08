@@ -1,0 +1,36 @@
+<app-head-menu/>
+    <div class="container">
+        <div class="layer"></div>
+        <div class="login-box">
+            <div class="group-input">
+                <label>USUÁRIO: </label>
+                <input 
+                    type="text"
+                    [(ngModel)]="user"
+                    placeholder=" "
+                    class="info-text"
+                    name="username"
+                />
+
+                <label>SENHA: </label>
+                <input 
+                    type="password"
+                    [(ngModel)]="password"
+                    placeholder=""
+                    class="info-text"
+                    name="password"
+                />
+            </div>
+            <div class="block">
+                <button class="login-button" (click)="onLogin()">Entrar</button>
+            </div>
+
+            <div *ngIf="errorMessage" class="error-message">
+            {{ errorMessage }}
+            </div>
+            
+            <a href="" class="reset-password" [routerLink]="['/esqueceu-senha']">Esqueceu a senha?</a> 
+        </div>
+    </div>
+
+<app-footing/>

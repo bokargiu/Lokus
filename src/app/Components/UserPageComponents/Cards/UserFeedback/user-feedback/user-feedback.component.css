@@ -1,0 +1,83 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.block{
+    display: flex;
+    gap: 5%;
+    padding-right: 15vh;
+}
+.left{
+    display: flex;
+    gap: 35px;
+}
+.nao-visitados{
+    width: 250px;
+    height: 70vh;
+    background-color: #ffffff;
+}
+.feedback{
+    width: 500px;
+    height: 70vh;
+    background-color: #ffffff;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+.infos{
+    width: 43vh;
+    height: 150px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+}
+.infos-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+.infos-buttons{
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 5px;
+    transition: 0.1s;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    user-select: none;
+    border-radius: 5px;
+}
+.infos-buttons:hover{
+    background-color: rgba(0, 0, 0, 0.044);
+    cursor: pointer;
+}
+.infos-buttons:active{
+    background-color: rgba(0, 0, 0, 0.029);
+}
+.user-infos{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.best{
+    width: 43vh;
+    height: 310px;
+    background-color: #ffffff;
+
+}
+.diver-loc{
+    display: flex;
+    justify-content: center;
+    width: 43vh;
+}
+.diver{
+    width: 38vh;
+}

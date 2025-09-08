@@ -1,0 +1,8 @@
+<mat-card *ngFor="let space of spaces" class="space-card">
+  <mat-card-title>{{ space.name }}</mat-card-title>
+  <mat-card-content>
+    Capacidade: {{ space.capacity }}<br>
+    Preço: {{ space.price }} / {{ space.priceEnum }}<br>
+    Descrição: {{ space.description }}
+  </mat-card-content>
+</mat-card>

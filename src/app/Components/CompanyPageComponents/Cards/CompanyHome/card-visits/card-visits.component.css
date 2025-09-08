@@ -1,0 +1,26 @@
+.container{
+    height: 15vh;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 20px;
+}
+.up{
+    display: flex;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    align-self: center;
+}

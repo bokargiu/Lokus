@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    height: 870px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-box{
+    width: 60%;
+}
+
+::ng-deep .p-accordion .p-accordion-tab {
+    margin: 2px;
+    border-bottom: 2px solid #c7c7c7;
+}
+
+::ng-deep .questions .p-accordion-header .p-accordion-header-link {
+  color: #044e55;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+p{
+    font-family: 'Poppins', sans-serif;
+    color: #454545; 
+    font-size: 16px;
+}

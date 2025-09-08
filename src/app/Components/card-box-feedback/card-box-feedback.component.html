@@ -1,0 +1,14 @@
+
+<mat-card class="container">
+  <mat-card-header>
+    <mat-card-title>O que dizem sobre este espaço</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div *ngFor="let feedback of feedbacks" class="feedback-item">
+      <p><strong>{{ feedback.username }}</strong> - {{ feedback.createdAt | date:'shortDate' }}</p>
+      <p>{{ feedback.comment }}</p>
+      <mat-divider></mat-divider>
+    </div>
+  </mat-card-content>
+</mat-card>

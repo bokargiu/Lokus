@@ -1,0 +1,45 @@
+<mat-card>
+  <mat-card-title>Definir Disponibilidade</mat-card-title>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Espaço</mat-label>
+      <mat-select formControlName="spaceId" (selectionChange)="loadAvailabilities($event.value)">
+        <mat-option *ngFor="let s of spaces" [value]="s.id">{{ s.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Dia da Semana</mat-label>
+      <mat-select formControlName="diaSemana">
+        <mat-option *ngFor="let dia of diasSemana" [value]="dia.valor">{{ dia.nome }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Hora Início</mat-label>
+      <input matInput type="time" formControlName="horaInicio">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Hora Fim</mat-label>
+      <input matInput type="time" formControlName="horaFim">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Adicionar Disponibilidade</button>
+  </form>
+
+  <mat-divider></mat-divider>
+
+  <h4>Disponibilidades</h4>
+  <mat-list>
+    <mat-list-item *ngFor="let a of availabilities">
+      {{ diasSemana[a.diaSemana].nome }}: {{ a.horaInicio }} - {{ a.horaFim }}
+      <span class="spacer"></span>
+      <button mat-button color="warn" (click)="markUnavailable(a.id)" [disabled]="a.status === 'Indisponivel'">
+        Indisponível
+      </button>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+

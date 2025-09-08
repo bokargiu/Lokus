@@ -1,0 +1,158 @@
+.container{
+    display: flex;
+    height: 70vh;
+}
+.inbox-container{
+    width: 900px;
+    height: 70vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+}
+.mensagens{
+    width: 700px;
+    height: 70vh;
+}
+
+.mensagem {
+  display: flex;
+  padding: 10px 14px;
+  margin: 8px;
+}
+
+.mensagem-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.mensagem-conteudo{
+  width: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mensagem-texto {
+  font-size: 13px;
+  text-align: justify;
+  color: #222;
+  line-height: 1.4;
+  max-width: 400px;
+  height: max-content;
+}
+
+.mensagem-hora {
+  font-size: 11px;
+  color: #777;
+  align-self: flex-end;
+}
+
+/* Mensagens enviadas (direita, fundo teal clarinho) */
+.enviada {
+  width: max-content;
+  background-color: rgba(0, 102, 102, 0.1);
+  margin-left: auto;
+  text-align: right;
+  flex-direction: row;
+}
+
+/* Mensagens recebidas (esquerda, branco) */
+.recebida {
+  width: max-content;
+  background-color: #f0f0f0c0;
+  margin-right: auto;
+  text-align: left;
+  flex-direction: row-reverse;
+}
+
+.inbox{
+    width: 200px;
+    height: 70vh;
+    color: black;
+}
+
+.inbox-conteudo{
+    display: flex;
+}
+
+.inbox-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.inbox-text{
+    margin-left: 5px;
+    display: flex;
+    gap: 5px;
+    color: #777;
+    font-size: 12px;
+}
+
+.inbox-right{
+    width: 70px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.inbox-img{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+}
+
+.box{
+    width: 100%;
+    height: 70vh;
+    color: black;
+    gap: 10px;
+}
+.inbox-notification{
+    margin: 5px;
+    margin-bottom: 10px;
+    width: 95%;
+    height: 75px;
+    background-color: #f7f6f6;
+    transition: 0.2s;
+}
+.inbox-notification:hover{
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.449);
+}
+.contatos{
+    width: 250px;
+    height: 70vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contatos-list{
+    width: 250px;
+    height: 300px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contato{
+    width: 60px;
+    height: 40px;
+    background-color: #f2f2f2;
+}
+.perfil{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user-infos{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}

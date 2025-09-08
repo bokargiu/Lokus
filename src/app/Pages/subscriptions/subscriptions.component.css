@@ -1,0 +1,40 @@
+.container {
+    height:740px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px; 
+    font-weight: 600;
+    color: #044e55;
+}
+
+.box{
+    width: 180vh;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+
+
+::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background-color: #afafaf !important;
+  color: #ffffff !important;
+  border: none !important; 
+  font-weight: 600;
+}
+
+
+::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: none !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease; /* aqui entra */
+}

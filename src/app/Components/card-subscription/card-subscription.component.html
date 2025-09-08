@@ -1,0 +1,16 @@
+<div class="container">
+  
+  <div class="card-subscription">
+    <div class="box-text">
+      <h3>{{ nome }}</h3>
+      <p><strong>Preço:</strong> {{ preco }}</p>
+      <p><strong>Benefícios:</strong></p>
+      <ul>
+        <li *ngFor="let b of beneficios">{{ b }}</li>
+      </ul>
+    </div>
+    <div class="button-sign">
+      <button pButton label="Assinar" class="p-button-rounded p-button-success"></button>
+    </div>
+  </div>
+</div>
