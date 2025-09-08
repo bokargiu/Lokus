@@ -8,7 +8,7 @@ import { UserPageInterfaceComponent } from 'src/app/Components/UserPageComponent
   templateUrl: './user-page.component.html',
   styleUrls: ['./user-page.component.css'],
 })
-export class UserPageComponent {
+export class UserPageComponent{
   opened:boolean = false
   @ViewChild('sidenav') sidenav!: MatSidenav;
 }

@@ -1,22 +1,22 @@
 import { Component, Injectable } from "@angular/core";
 import { Inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { jwtDecode, JwtPayload, JwtDecodeOptions, JwtHeader } from 'jwt-decode';
 
 export interface LoginResponse {
-  token: string;
-  role: 'customer' | 'company'; 
+  token: string
 }
 
 @Injectable({ providedIn: 'root'})
 export class AuthService {
-    private apiUrl = 'https://localhost:7101/api/auth/login';
+    private apiUrl = 'http://localhost:5105/api/Auth/login';
 
     constructor (private http: HttpClient) {}
 
     login(username: string, password: string) {
     return this.http.post<LoginResponse>(this.apiUrl, {
-        username,
-        password
+        "username": username,
+        "password": password
     });
     }
 
@@ -28,12 +28,17 @@ export class AuthService {
         return localStorage.getItem('token');
     }
 
-      saveRole(role: string) {
-    localStorage.setItem('role', role);
+      saveRole(role: string) {             // Esse acho que deveriamos tirar,  
+    localStorage.setItem('role', role);    // pois a token já manda a role e o token é const.
     }
 
-    getRole(): string | null {
-        return localStorage.getItem('role');
+    getDecoded(): any {
+      let tk = this.getToken();
+      if(tk != null) {
+        const decoded = jwtDecode<JwtPayload>(tk)
+        return decoded
+      }
+        return
     }
 
     logout() {

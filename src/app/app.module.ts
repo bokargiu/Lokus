@@ -46,7 +46,6 @@ import { UserCarouselHomeComponent } from './Components/UserPageComponents/Cards
 import { UserFavoritesComponent } from './Components/UserPageComponents/Cards/UserFavorites/user-favorites/user-favorites.component';
 import { UserFeedbackComponent } from './Components/UserPageComponents/Cards/UserFeedback/user-feedback/user-feedback.component';
 import { UserMensagensComponent } from './Components/UserPageComponents/Cards/UserMensagens/user-mensagens/user-mensagens.component';
-import { UserCartComponent } from './Components/UserPageComponents/Cards/UserCart/user-cart/user-cart.component';
 import { UserCompanyComponent } from './Components/UserPageComponents/Cards/UserCompany/user-company/user-company.component';
 import { UserOptionsComponent } from './Components/UserPageComponents/Cards/UserOptions/user-options/user-options.component';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
@@ -81,7 +80,6 @@ import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup
     UserFavoritesComponent,
     UserFeedbackComponent,
     UserMensagensComponent,
-    UserCartComponent,
     UserCompanyComponent,
     UserOptionsComponent,
     HomePageComponent,
@@ -107,6 +105,7 @@ import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup
   RouterModule,
   CdkMenuModule,
   ScrollingModule,
+  
 
   // Angular Material
   MatIconModule,
@@ -123,7 +122,7 @@ import { SignupCustomerPageComponent } from './Pages/signup-customer-page/signup
   AccordionModule,
   MenuModule,
   GalleriaModule,
-  CarouselModule
+  CarouselModule,
 ],
 
   providers: [MatIconRegistry],

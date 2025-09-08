@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  styleUrls: ['./login-page.component.css'],
 })
 export class LoginPageComponent {
 
@@ -24,13 +24,13 @@ export class LoginPageComponent {
       );
 
       this.authService.saveToken(res.token);
-      this.authService.saveRole(res.role);
 
       console.log('Login bem sucedido!', res);
+      const response = this.authService.getDecoded()
 
-      if (res.role.toLowerCase() === 'customer') {
-        this.router.navigate(['/customer/home']);
-      } else if (res.role.toLowerCase() === 'company'){
+      if (response.role === 'customer') {
+        this.router.navigate(['/customer']);
+      } else if (response.role === 'company'){
         this.router.navigate(['/empresa']);
       } else {
         this.router.navigate(['/']);

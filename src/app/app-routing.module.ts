@@ -6,7 +6,6 @@ import { UserHomeComponent } from './Components/UserPageComponents/Cards/UserHom
 import { UserFeedbackComponent } from './Components/UserPageComponents/Cards/UserFeedback/user-feedback/user-feedback.component';
 import { UserMensagensComponent } from './Components/UserPageComponents/Cards/UserMensagens/user-mensagens/user-mensagens.component';
 import { UserFavoritesComponent } from './Components/UserPageComponents/Cards/UserFavorites/user-favorites/user-favorites.component';
-import { UserCartComponent } from './Components/UserPageComponents/Cards/UserCart/user-cart/user-cart.component';
 import { UserCompanyComponent } from './Components/UserPageComponents/Cards/UserCompany/user-company/user-company.component';
 import { UserOptionsComponent } from './Components/UserPageComponents/Cards/UserOptions/user-options/user-options.component';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
@@ -34,7 +33,6 @@ const routes: Routes = [
       { path: 'mensagens', component: UserMensagensComponent },
       { path: 'feedback', component: UserFeedbackComponent },
       { path: 'favorite', component: UserFavoritesComponent },
-      { path: 'cart', component: UserCartComponent },
       { path: 'company', component: UserCompanyComponent },
       { path: 'options', component: UserOptionsComponent },
     ],
