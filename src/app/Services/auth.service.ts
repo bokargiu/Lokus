@@ -2,22 +2,17 @@ import { Component, Injectable } from "@angular/core";
 import { Inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { BehaviorSubject, Observable } from 'rxjs';
-import { jwtDecode, JwtPayload } from 'jwt-decode';
+import { jwtDecode, JwtPayload, JwtDecodeOptions, JwtHeader } from 'jwt-decode';
+
+
 
 export interface LoginResponse {
-  token: string;
-  role: 'customer' | 'company'; 
-} 
-
-interface DecodedToken {
-  stablishmentId: string;
-  exp: number;
-  iat: number;
+  token: string
 }
 
 @Injectable({ providedIn: 'root'})
 export class AuthService {
-    private apiUrl = 'https://localhost:7101/api/auth/login';
+    private apiUrl = 'http://localhost:5105/api/Auth/login';
 
     private loggedIn$ = new BehaviorSubject<boolean>(this.isLoggedIn());
     public isLoggedInObservable = this.loggedIn$.asObservable();
@@ -27,8 +22,8 @@ export class AuthService {
 
     login(username: string, password: string) {
     return this.http.post<LoginResponse>(this.apiUrl, {
-        username,
-        password
+        "username": username,
+        "password": password
     });
     }
 
@@ -41,12 +36,17 @@ export class AuthService {
         return localStorage.getItem('token');
     }
 
-      saveRole(role: string) {
-    localStorage.setItem('role', role);
+      saveRole(role: string) {             // Esse acho que deveriamos tirar,  
+    localStorage.setItem('role', role);    // pois a token já manda a role e o token é const.
     }
 
-    getRole(): string | null {
-        return localStorage.getItem('role');
+    getDecoded(): any {
+      let tk = this.getToken();
+      if(tk != null) {
+        const decoded = jwtDecode<JwtPayload>(tk)
+        return decoded
+      }
+        return
     }
 
     logout(): void {
@@ -83,15 +83,6 @@ export class AuthService {
             return null;
         }
 
-    }
-
-    getDecoded(): any {
-        let tk = this.getToken();
-        if (tk != null){
-            const decoded = jwtDecode<JwtPayload>(tk)
-            return decoded
-        }
-        return
     }
 
 }

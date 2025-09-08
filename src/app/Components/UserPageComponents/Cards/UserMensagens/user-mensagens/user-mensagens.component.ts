@@ -1,19 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/Services/auth.service';
+import { CustomerService } from 'src/app/Services/customer.service';
+import { PhotoService } from 'src/app/Services/photo.service';
 
 @Component({
   selector: 'app-user-mensagens',
   templateUrl: './user-mensagens.component.html',
   styleUrl: './user-mensagens.component.css'
 })
-export class UserMensagensComponent {
-  mensagens:any[] = [
+export class UserMensagensComponent implements OnInit {
+  imageUrl:string = ""
+  constructor(private authService:AuthService, private customerService:CustomerService, private photoService:PhotoService){}
+ngOnInit() {
+    const decoded = this.authService.getDecoded();
+    this.customerService.getCustomerIdByUserId(decoded.primarysid).subscribe(CustomerId =>{
+      if (!CustomerId) return;
+      this.photoService.getImageOfProfile(CustomerId).subscribe(photo => {
+        if (!photo.base64Data) return;
+        this.imageUrl = 'data:image/png;base64,'+ photo.base64Data
+        this.mensagens = [
     {
       "tipo": "enviada",
       "texto": "Olá! Você foi sorteado para fazer um teste do Lokus App.",
       "hora": "13:35 18/08/2025",
       "perfil": {
         "nome": "Bokargiu",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7YMHtkcGzhlp4XRYnfbYsVULmOr5Jd_nGg&s"
+        "img": this.imageUrl
       }
     },
     {
@@ -31,10 +43,13 @@ export class UserMensagensComponent {
       "hora": "13:37 18/08/2025",
       "perfil": {
         "nome": "Bokargiu",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7YMHtkcGzhlp4XRYnfbYsVULmOr5Jd_nGg&s"
+        "img": this.imageUrl
       }
-    },
-  ]
+    },]
+      })
+    })
+  }
+  mensagens:any[] = []
   inbox:any[] = [
     {
       "perfil": {

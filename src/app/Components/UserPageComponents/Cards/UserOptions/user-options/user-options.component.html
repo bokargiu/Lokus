@@ -1,1 +1,19 @@
-<p>user-options works!</p>
+<mat-card class="Imagens">
+    <mat-card-title style="margin-left: 10px; margin-top: 5px;">
+        Configurações de Imagem:
+    </mat-card-title>
+    <mat-card-content class="config-imgs">
+        <div class="box-img-profile">
+            <p-divider align="left" type="solid">
+                <b>Imagens de Perfil</b>
+            </p-divider>
+            <div class="box-input-img-profile">
+                <h3>Adicionar Foto de Perfil:</h3>
+                <input type="file" (change)="onFile($event)" class="input-img-profile">
+                @if (profileImage != null){
+                    <button (click)="upLoadProfileImage()" class="apply-button">Salvar</button>
+                }
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

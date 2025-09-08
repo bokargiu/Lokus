@@ -1,7 +1,6 @@
 .container{
     display: flex;
     height: 70vh;
-    gap: 5vh;
 }
 .inbox-container{
     width: 900px;
