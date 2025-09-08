@@ -27,20 +27,21 @@ export class SignupCustomerPageComponent {
 
     const customer = {
       nomeCompleto: this.nomeCompleto,
-      CPF: this.cpf,
+      cpf: this.cpf,
       dataNascimento: new Date(this.dataNascimento),
-      Email: this.email,
-      Contato: this.contato,
-      Username: this.username,
-      Password: this.senha,
-      Role: 'customer'
+      email: this.email,
+      contato: this.contato,
+      username: this.username,
+      password: this.senha,
+      comfirmPassword: this.confirmarSenha, // precisa bater com o DTO
+      role: 'customer'
     };
     
-    this.http.post('https://localhost:7101/api/SignupCostumer/SignUp', customer).subscribe({
-      next: (res: any) => alert(res.mensagem || 'Usuário cadastrado com sucesso!'),
+    this.http.post('https://localhost:7101/api/Customer/SingUp', customer).subscribe({
+      next: (res: any) =>
+        alert(res.mensagem || 'Usuário cadastrado com sucesso!'),
       error: (err) => {
         console.error('Erro completo:', err);
-        // Se retornar lista de erros:
         if (err.error?.erros) {
           alert('Erro ao cadastrar:\n' + err.error.erros.join('\n'));
         } else {

@@ -1,18 +1,19 @@
 <div class="container" (mouseleave)="sidenav.close()">
     <div class="infos">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7YMHtkcGzhlp4XRYnfbYsVULmOr5Jd_nGg&s" alt="" style="width: 100px; height: 100px; border-radius: 100%;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7YMHtkcGzhlp4XRYnfbYsVULmOr5Jd_nGg&s"
+             alt="" style="width: 100px; height: 100px; border-radius: 100%;">
     </div>
     <ul class="options">
-        <li [routerLink]="'./home-co'"><mat-icon fontIcon="home" class="icon-options"/>Home</li>
-        <li [routerLink]="'./agenda-reservas'"><mat-icon fontIcon="assignment" class="icon-options"/>Agenda e Reservas</li>
-        <li [routerLink]="'./editar-perfil'"><mat-icon fontIcon="create" class="icon-options"/>Editar Perfil</li>
-        <li [routerLink]="'./relacionamentos'"><mat-icon fontIcon="star" class="icon-options"/>Relacionamentos</li>
-        <li [routerLink]="'./suporte'"><mat-icon fontIcon="help_outline" class="icon-options"/>Suporte</li>
-        <li [routerLink]="'./configuracao'"><mat-icon fontIcon="settings" class="icon-options"/>Configuração</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'home']" class="icon-options">Home</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'agenda-reservas']" class="icon-options">Agenda e Reservas</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'editar-perfil']" class="icon-options">Editar Perfil</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'relacionamentos']" class="icon-options">Relacionamentos</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'suporte']" class="icon-options">Suporte</li>
+        <li [routerLink]="['/company/dashboard', stablishmentId, 'configuracao']" class="icon-options">Configuração</li>
     </ul>
-    
 
     <div mat-button class="close">
-        <mat-icon fontIcon="arrow_circle_left" style="width: 24px; height: 24px; font-size: 24px;" (click)="sidenav.close()"/>
+        <mat-icon fontIcon="arrow_circle_left" style="width: 24px; height: 24px; font-size: 24px;" (click)="sidenav.close()">arrow_circle_left</mat-icon>
     </div>
 </div>
+

@@ -32,6 +32,7 @@ import { CompanySettingsComponent } from './Components/CompanyPageComponents/Car
 import { CompanyEditProfileComponent } from './Components/CompanyPageComponents/Cards/CompanyEditProfile/company-edit-profile/company-edit-profile.component';
 import { AuthGuard } from './Services/authguard.service';
 import { StablishmentListPageComponent } from './Components/CompanyPageComponents/stablishment-list-page/stablishment-list-page.component';
+import { DashboardLayoutComponent } from './Components/CompanyPageComponents/dashboard-layout/dashboard-layout.component';
 
 const routes: Routes = [
   // Página inicial 
@@ -55,31 +56,30 @@ const routes: Routes = [
 
 //página da company
 {
-  path: 'company',
-  component: CompanyPageComponent,
-  canActivate: [AuthGuard],
-  data: { role: 'company' },
-  children: [
-    // Página de seleção de estabelecimentos (gateway)
-    { path: '', redirectTo: 'stablishments', pathMatch: 'full' },
-    { path: 'stablishments', component: StablishmentListPageComponent },
+    path: 'company',
+    canActivate: [AuthGuard],
+    data: { role: 'company' },
+    children: [
+      { path: '', redirectTo: 'stablishments', pathMatch: 'full' },
+      { path: 'stablishments', component: StablishmentListPageComponent },
 
-    // Painel do estabelecimento (rota pai)
-    {
-      path: 'dashboard/:stablishmentId',
-      component: CompanyHomeComponent,
-      children: [
-        { path: '', redirectTo: 'home', pathMatch: 'full' }, // redireciona para o home do painel
-        { path: 'home', component: CompanyHomeComponent },
-        { path: 'agenda-reservas', component: CompanySpacesComponent },
-        { path: 'editar-perfil', component: CompanyEditProfileComponent },
-        { path: 'relacionamentos', component: CompanyFeedbackComponent },
-        { path: 'suporte', component: CompanySupportComponent },
-        { path: 'configuracao', component: CompanySettingsComponent },
-      ]
-    }
-  ]
-},
+      // Dashboard usando o layout
+      {
+        path: 'dashboard/:stablishmentId',
+        component: DashboardLayoutComponent,
+        children: [
+          { path: '', redirectTo: 'home', pathMatch: 'full' },
+          { path: 'home', component: CompanyHomeComponent },
+          { path: 'agenda-reservas', component: CompanySpacesComponent },
+          { path: 'editar-perfil', component: CompanyEditProfileComponent },
+          { path: 'relacionamentos', component: CompanyFeedbackComponent },
+          { path: 'suporte', component: CompanySupportComponent },
+          { path: 'configuracao', component: CompanySettingsComponent },
+        ]
+      }
+    ]
+  }
+,
 
 
   // Outras páginas

@@ -40,6 +40,9 @@ export class SignupCompanyPageComponent {
           Contact: this.contato,
           Address: {
             Road: '',
+            number: "",
+            complement: "",
+            neighborhood: "",
             City: '',
             State: '',
             Cep: ''

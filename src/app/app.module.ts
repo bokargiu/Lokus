@@ -122,6 +122,7 @@ import { CardAddSpaceComponent } from './Components/CompanyPageComponents/Cards/
 import { StablishmentListPageComponent } from './Components/CompanyPageComponents/stablishment-list-page/stablishment-list-page.component';
 import { StablishmentGalleryService } from './Services/stablishment-gallery.service';
 
+import { DashboardLayoutComponent } from './Components/CompanyPageComponents/dashboard-layout/dashboard-layout.component';
 
 @NgModule({
   declarations: [
@@ -189,7 +190,9 @@ import { StablishmentGalleryService } from './Services/stablishment-gallery.serv
     CompanySpacesComponent,
     CardAvailabilityComponent,
     CardListSpaceComponent,
-    CardAddSpaceComponent
+    CardAddSpaceComponent,
+
+    DashboardLayoutComponent
 
   ],
   imports: [

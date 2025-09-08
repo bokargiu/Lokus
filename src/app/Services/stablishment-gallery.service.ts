@@ -17,25 +17,25 @@ export class StablishmentGalleryService {
 
   constructor(private http: HttpClient) {}
 
-    uploadImage(stablishmentId: string, file: File): Observable<StablishmentGalleryDto> {
-        const reader = new FileReader();
+  uploadImage(stablishmentId: string, file: File): Observable<StablishmentGalleryDto> {
+    const reader = new FileReader();
 
-        return new Observable(observer => {
-            reader.onload = () => {
+    return new Observable(observer => {
+        reader.onload = () => {
             const base64 = (reader.result as string).split(',')[1]; // remove "data:image/png;base64,"
             this.http.post<StablishmentGalleryDto>(`${this.apiUrl}/upload`, {
                 stablishmentId,
                 fileName: file.name,
-                base64
+                base64: base64
             }).subscribe({
                 next: res => observer.next(res),
                 error: err => observer.error(err),
                 complete: () => observer.complete()
             });
-            };
-            reader.readAsDataURL(file);
-        });
-        }
+        };
+        reader.readAsDataURL(file);
+    });
+}
 
   getImages(stablishmentId: string): Observable<StablishmentGalleryDto[]> {
     return this.http.get<StablishmentGalleryDto[]>(`${this.apiUrl}/stablishment/${stablishmentId}`);
@@ -45,3 +45,4 @@ export class StablishmentGalleryService {
     return this.http.delete(`${this.apiUrl}/${imageId}`);
   }
 }
+

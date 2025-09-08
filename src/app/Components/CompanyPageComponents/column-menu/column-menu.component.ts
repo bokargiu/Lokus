@@ -8,4 +8,5 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class ColumnMenuComponent {
   @Input() sidenav!: MatSidenav;
+  @Input() stablishmentId!: string;
 }

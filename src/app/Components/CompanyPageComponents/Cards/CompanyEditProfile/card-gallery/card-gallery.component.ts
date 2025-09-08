@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { StablishmentGalleryService, StablishmentGalleryDto } from 'src/app/Services/stablishment-gallery.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CardGalleryComponent implements OnInit {
 
-  stablishmentId!: string;
+  @Input() stablishmentId!: string; 
   images: StablishmentGalleryDto[] = [];
   slots = Array.from({ length: 10 }); // 10 slots
 
@@ -18,13 +18,18 @@ export class CardGalleryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.stablishmentId = params['id']; // pega o ID da rota
+    if (!this.stablishmentId) { // pega da rota só se não recebeu como input
+      this.route.params.subscribe(params => {
+        this.stablishmentId = params['id'];
+        this.loadImages();
+      });
+    } else {
       this.loadImages();
-    });
+    }
   }
 
   loadImages(): void {
+    if (!this.stablishmentId) return;
     this.galleryService.getImages(this.stablishmentId).subscribe({
       next: res => this.images = res,
       error: err => console.error('Erro ao carregar imagens', err)
@@ -57,8 +62,8 @@ export class CardGalleryComponent implements OnInit {
 
   salvar(): void {
     alert('Alterações salvas! (ainda precisa integrar ao perfil do stablishment)');
-    // Futuro: atualizar perfil do stablishment junto com imagens, se necessário
   }
+
 
 
 }

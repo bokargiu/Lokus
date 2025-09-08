@@ -17,25 +17,26 @@ export class StablishmentListPageComponent implements OnInit{
   ) {}
 
   ngOnInit(): void {
-  this.stablishmentService.getMyStablishments().subscribe({
-    next: (data) => {
-      this.stablishments = data;
-      this.loading = false;
+    this.loading = true;
+    this.stablishmentService.getMyStablishments().subscribe({
+      next: (data) => {
+        this.stablishments = data;
+        this.loading = false;
 
-      if (this.stablishments.length === 1) {
-        this.goToDashboard(this.stablishments[0].id);
+        if (this.stablishments.length === 1) {
+          this.goToDashboard(this.stablishments[0].id);
+        }
+      },
+      error: (err) => {
+        console.error('Erro ao carregar estabelecimentos:', err);
+        this.loading = false;
       }
-    },
-    error: (err) => {
-      console.error('Erro ao carregar estabelecimentos:', err);
-      this.loading = false;
-    }
-  });
-}
+    });
+  }
 
   goToDashboard(id: string): void {
-    this.router.navigate([`/dashboard/${id}`]);
-    }
+    this.router.navigate([`/company/dashboard/${id}`]);
+  }
   
 
 }
