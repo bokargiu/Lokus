@@ -33,11 +33,11 @@ export class SignupCustomerPageComponent {
       contato: this.contato,
       username: this.username,
       password: this.senha,
-      comfirmPassword: this.confirmarSenha, // precisa bater com o DTO
+      confirmPassword: this.confirmarSenha, 
       role: 'customer'
     };
     
-    this.http.post('https://localhost:7101/api/Customer/SingUp', customer).subscribe({
+    this.http.post('https://localhost:7101/api/Customer/SignUp', customer).subscribe({
       next: (res: any) =>
         alert(res.mensagem || 'Usuário cadastrado com sucesso!'),
       error: (err) => {

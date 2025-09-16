@@ -6,7 +6,7 @@ import { jwtDecode } from "jwt-decode";
 
 export interface Stablishment {
     id: string;
-    companyName: string;
+    name: string;
     virtualName: string;
     description: string;
 }
@@ -49,7 +49,8 @@ export class StablishmentService{
     }
 
     updateStablishment(id: string, dto: any) {
-        return this.http.patch(`${this.apiUrl}/Stablishment/${id}`, dto); 
-    }
+  return this.http.patch(`${this.apiUrl}/${id}`, dto);
+}
+
 
 }
