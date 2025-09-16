@@ -8,6 +8,5 @@ import { MatSidenav } from '@angular/material/sidenav'
 })
 export class CompanyPageInterfaceComponent {
   GETColaborador:boolean = false;
-  @Input() sidenav!: MatSidenav;
 
 }

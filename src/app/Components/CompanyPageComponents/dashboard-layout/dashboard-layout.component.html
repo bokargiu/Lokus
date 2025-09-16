@@ -1,26 +1,7 @@
 <mat-sidenav-container class="dashboard-container">
-
-  <!-- Menu lateral expandido (column-menu) -->
-  <mat-sidenav #sidenav mode="over">
-    <app-column-menu [stablishmentId]="stablishmentId" [sidenav]="sidenav"></app-column-menu>
-  </mat-sidenav>
-
-  <!-- Conteúdo principal com menu-row sempre visível -->
-  <mat-sidenav-content>
   
   <mat-sidenav-content class="dashboard-items">
     
-    <div class="dashboard-wrapper">
-      
-      <!-- Menu row (sempre visível) -->
-      <div class="menu-row-wrapper" (mouseenter)="sidenav.open()">
-        <app-menu-row [sidenav]="sidenav"></app-menu-row>
-      </div>
-
-      <!-- Área principal do dashboard -->
-      <div class="main-content">
-        <app-search-bar-area></app-search-bar-area>
-        <div class="infos">
     <div class="dashboard-wrapper"> 
       <app-column-menu [stablishmentId]="stablishmentId"></app-column-menu>
     </div>
@@ -30,8 +11,6 @@
           <router-outlet></router-outlet>
         </div>
       </div>
-
-    </div>
 
   </mat-sidenav-content>
 

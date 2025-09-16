@@ -17,7 +17,6 @@ export interface Booking {
   providedIn: 'root'
 })
 export class BookingService {
-  private apiUrl = 'https://localhost:7101/api/booking';
   private apiUrl = 'https://localhost:7101/api/Booking';
 
   constructor(private http: HttpClient) {}
@@ -28,10 +27,6 @@ export class BookingService {
 
   cancelBooking(bookingId: string, customerId: string): Observable<Booking> {
     return this.http.patch<Booking>(`${this.apiUrl}/${bookingId}/cancel/${customerId}`, {});
-  }
-
-  getBookingsBySpace(spaceId: string): Observable<Booking[]> {
-    return this.http.get<Booking[]>(`${this.apiUrl}/space/${spaceId}`);
   }
 
   getBookingsByCustomer(customerId: string): Observable<Booking[]> {

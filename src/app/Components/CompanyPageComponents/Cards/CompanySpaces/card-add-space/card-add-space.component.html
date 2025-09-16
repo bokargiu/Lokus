@@ -1,4 +1,3 @@
-<mat-card>
 <mat-card class="container">
   <mat-card-title>Adicionar Espaço</mat-card-title>
   <form [formGroup]="form" (ngSubmit)="submit()">
@@ -22,13 +21,6 @@
       <input matInput type="number" formControlName="price">
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Unidade</mat-label>
-      <mat-select formControlName="priceEnum">
-        <mat-option value="PorHora">Por Hora</mat-option>
-        <mat-option value="PorDia">Por Dia</mat-option>
-      </mat-select>
-    </mat-form-field>
     <mat-form-field>
   <mat-label>Preço por</mat-label>
   <mat-select formControlName="priceEnum" required>

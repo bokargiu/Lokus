@@ -9,10 +9,6 @@
   [showNavigators]="false"
   class="feedback-carousel">
 
-<mat-card class="container">
-  <mat-card-header>
-    <mat-card-title>O que dizem sobre este espaço</mat-card-title>
-  </mat-card-header>
   <ng-template pTemplate="item" let-fb>
     <mat-card class="feedback-card">
       <div class="header">
@@ -23,8 +19,4 @@
     </mat-card>
   </ng-template>
 
-      <p>{{ feedback.comment }}</p>
-      <mat-divider></mat-divider>
-    </div>
-  </mat-card-content>
-</mat-card></p-carousel>
+</p-carousel>

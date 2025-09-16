@@ -6,7 +6,6 @@ import { CardCompany } from '../Models/company.model';
 @Injectable({ providedIn: 'root' })
 
 export class CardCompanyService {
-    private apiUrl = 'https://localhost:7101/api/SignupCompany/register'
     private apiUrl = 'https://localhost:7101/api/Company/Signup'
 
     constructor(private http: HttpClient) {}

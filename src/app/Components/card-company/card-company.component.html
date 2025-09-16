@@ -1,16 +1,5 @@
 <div class="wraping-box">
-
-    <div *ngFor="let item of company" class="box">
-        <img src="" alt="">
-        <h3>Preferidos</h3>
-        <br>
-        <br>
-        <br>
-        <p>{{item.nome}}</p>
-        <p>{{item.preco}}</p>
-    </div>
-
-</div>  <div *ngFor="let item of stablishments" class="box" (click)="goToProfile(item.id)">
+  <div *ngFor="let item of stablishments" class="box" (click)="goToProfile(item.id)">
     <h3>{{ item.virtualName }}</h3> 
   </div>
 </div>

@@ -32,11 +32,6 @@ export class StablishmentService{
         return this.http.get<Stablishment>(`${this.apiUrl}/${id}`);
     }
 
-    // Atualiza stablishment pelo ID
-    updateStablishment(id: string, data: {virtualName?: string; description?: string}): Observable<void> {
-        return this.http.put<void>(`${this.apiUrl}/${id}`, data);
-    }
-
     getMyStablishments(): Observable<StablishmentResponseDto[]> {
     const token = localStorage.getItem('token'); // pega o token
     console.log('Token que será enviado:', token); // <-- adicione aqui
@@ -46,7 +41,6 @@ export class StablishmentService{
             Authorization: `Bearer ${token}`
         }
     });
-}
     }
 
     // stablishment.service.ts

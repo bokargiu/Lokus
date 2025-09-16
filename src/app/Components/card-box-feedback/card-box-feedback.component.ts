@@ -8,21 +8,9 @@ export interface Feedback {
 @Component({
   selector: 'app-card-box-feedback',
   templateUrl: './card-box-feedback.component.html',
-  styleUrl: './card-box-feedback.component.css'
   styleUrls: ['./card-box-feedback.component.css']
 })
-export class CardBoxFeedbackComponent {
-  @Input() companyId!: string;
 
-  feedbacks:FeedbackDto[] = [];
-
-  constructor(private feedbackService: FeedbackService) {}
-
-  ngOnInit(): void {
-    if (this.companyId) {
-      this.loadFeedbacks();
-    }
-  }
 export class CardBoxFeedbackComponent {
 public Feedbacks: Feedback[] = [
     { userName: "Alice M.", content: "Adoro trabalhar aqui! Ambiente tranquilo e bem iluminado.", createdAt: "2025-09-01T10:15:00Z" },
@@ -32,16 +20,8 @@ public Feedbacks: Feedback[] = [
     { userName: "Eduarda F.", content: "Ambiente inspirador, ótimo para networking e conhecer pessoas.", createdAt: "2025-09-04T11:30:00Z" }
   ];
 
-  loadFeedbacks(): void {
-    this.feedbackService.getFeedbacks(this.companyId).subscribe({
-      next: (data) => this.feedbacks = data,
-      error: (err) => console.error('Erro ao carregar feedbacks', err)
-    });
   formatDate(dateStr: string): string {
     const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short', year: 'numeric' };
     return new Date(dateStr).toLocaleDateString('pt-BR', options);
   }
-
-
-}
 }

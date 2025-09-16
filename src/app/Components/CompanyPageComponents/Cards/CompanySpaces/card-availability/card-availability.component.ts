@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Availability, AvailabilityService } from 'src/app/Services/availability.service';
-import { Space } from 'src/app/Services/space.service';
 import { Space, SpaceService } from 'src/app/Services/space.service';
 import { AuthService } from 'src/app/Services/auth.service';
 
@@ -11,8 +10,6 @@ import { AuthService } from 'src/app/Services/auth.service';
   templateUrl: './card-availability.component.html',
   styleUrl: './card-availability.component.css'
 })
-export class CardAvailabilityComponent {
- @Input() spaces: Space[] = [];
 export class CardAvailabilityComponent implements OnInit {
   @Input() spaces: Space[] = [];
   form: FormGroup;
@@ -28,7 +25,6 @@ export class CardAvailabilityComponent implements OnInit {
     { nome: 'Sábado', valor: 6 }
   ];
 
-  constructor(private fb: FormBuilder, private availabilityService: AvailabilityService) {
   constructor(
     private fb: FormBuilder,
     private availabilityService: AvailabilityService,
@@ -36,8 +32,6 @@ export class CardAvailabilityComponent implements OnInit {
     private authService: AuthService
   ) {
     this.form = this.fb.group({
-      spaceId: ['', Validators.required],
-      diaSemana: ['', Validators.required],
       spaceId: [null, Validators.required],
       diaSemana: [null, Validators.required],
       horaInicio: ['', Validators.required],
@@ -45,7 +39,6 @@ export class CardAvailabilityComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
   ngOnInit(): void {
     const decoded: any = this.authService.getDecoded();
     const userId = decoded?.primarysid;

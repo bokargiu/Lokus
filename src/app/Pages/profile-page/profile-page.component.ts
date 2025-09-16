@@ -1,8 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FeedbackDto, FeedbackService } from 'src/app/Services/feedback.service';
-import { CardBoxFeedbackComponent
-
- } from 'src/app/Components/card-box-feedback/card-box-feedback.component';
 import { MatCard } from "@angular/material/card";
 import { Companies } from 'src/app/Mock/companies-mock';
 import { ActivatedRoute } from '@angular/router';
@@ -19,8 +15,6 @@ import { Space, SpaceService } from 'src/app/Services/space.service';
   templateUrl: './profile-page.component.html',
   styleUrl: './profile-page.component.css',
 })
-export class ProfilePageComponent{
-  company: any;
 export class ProfilePageComponent implements OnInit{
   stablishment: any = null; 
   spaces: Space[] = [];

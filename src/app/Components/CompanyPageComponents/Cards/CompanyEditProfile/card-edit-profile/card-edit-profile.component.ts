@@ -1,30 +1,19 @@
-import { Component, OnInit } from '@angular/core';
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Stablishment, StablishmentService } from 'src/app/Services/stablishment.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-card-edit-profile',
   templateUrl: './card-edit-profile.component.html',
   styleUrl: './card-edit-profile.component.css'
 })
-export class CardEditProfileComponent  implements OnInit {
-  stablishmentId: string = '';
 export class CardEditProfileComponent  implements OnInit, OnChanges {
   @Input() stablishmentId!: string;
   stablishment: Stablishment = { id: '', companyName: '', virtualName: '', description: '' };
   loading: boolean = false;
 
-  constructor(
-    private stablishmentService: StablishmentService,
-    private route: ActivatedRoute
-  ) {}
   constructor(private stablishmentService: StablishmentService) {}
 
   ngOnInit(): void {
-    const stablishmentId = this.route.snapshot.paramMap.get('id');
-    if (stablishmentId) {
-      this.stablishmentService.getStablishment(stablishmentId).subscribe({
     // não precisa mais buscar aqui
   }
 
@@ -42,7 +31,6 @@ export class CardEditProfileComponent  implements OnInit, OnChanges {
   }
 
   saveChanges(): void {
-    if (!this.stablishment) return;
     if (!this.stablishment || !this.stablishment.id) return;
 
     this.loading = true;

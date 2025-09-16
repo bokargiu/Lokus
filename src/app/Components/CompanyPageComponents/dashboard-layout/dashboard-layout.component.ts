@@ -11,10 +11,8 @@ export class DashboardLayoutComponent implements OnInit{
   
   stablishmentId: string = '';
 
-constructor(private route: ActivatedRoute) {}
 constructor(private route: ActivatedRoute, private router:Router) {}
 
- ngOnInit(): void {
    ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const id = params.get('stablishmentId');

@@ -1,4 +1,3 @@
-import { Component } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Stablishment, StablishmentService } from 'src/app/Services/stablishment.service';
@@ -9,15 +8,6 @@ import { Stablishment, StablishmentService } from 'src/app/Services/stablishment
   templateUrl: './card-company.component.html',
   styleUrl: './card-company.component.css'
 })
-export class CardCompanyComponent {
-  company = [
-    { nome:"Empresa 1", preco: 80.00 },
-    { nome:"Empresa 2", preco: 80.00 },
-    { nome:"Empresa 3", preco: 80.00 },
-    { nome:"Empresa 4", preco: 80.00 },
-    { nome:"Empresa 5", preco: 80.00 },
-    { nome:"Empresa 6", preco: 80.00 },
-  ]
 export class CardCompanyComponent implements OnInit{
 
   stablishments: Stablishment[] = [];
