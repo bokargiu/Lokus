@@ -1,0 +1,6 @@
+.container{
+    direction: flex;
+    flex-direction: column;
+    max-width: 70%;
+    gap:5%;
+}

@@ -27,6 +27,7 @@ export class StablishmentService{
 
     constructor(private http: HttpClient) {}
 
+    
     getStablishment(id: string): Observable<Stablishment> {
         return this.http.get<Stablishment>(`${this.apiUrl}/${id}`);
     }
@@ -46,4 +47,15 @@ export class StablishmentService{
         }
     });
 }
+    }
+
+    // stablishment.service.ts
+    getByCompany(companyId: string): Observable<Stablishment[]> {
+        return this.http.get<Stablishment[]>(`${this.apiUrl}/byCompany/${companyId}`);
+    }
+
+    updateStablishment(id: string, dto: any) {
+        return this.http.patch(`${this.apiUrl}/Stablishment/${id}`, dto); 
+    }
+
 }

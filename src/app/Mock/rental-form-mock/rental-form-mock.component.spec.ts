@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenuRowComponent } from './menu-row.component';
+import { RentalFormMockComponent } from './rental-form-mock.component';
 
-describe('MenuRowComponent', () => {
-  let component: MenuRowComponent;
-  let fixture: ComponentFixture<MenuRowComponent>;
+describe('RentalFormMockComponent', () => {
+  let component: RentalFormMockComponent;
+  let fixture: ComponentFixture<RentalFormMockComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuRowComponent]
+      imports: [RentalFormMockComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MenuRowComponent);
+    fixture = TestBed.createComponent(RentalFormMockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,9 +1,12 @@
 <mat-sidenav-container class="example-container">
     <mat-sidenav #sidenav mode="over">
         <app-column-menu [sidenav]="sidenav"/>
+    <mat-sidenav >
+        <app-column-menu/>
     </mat-sidenav>
 
     <mat-sidenav-content>
         <app-company-page-interface [sidenav]="sidenav"/>
+        <app-company-page-interface/>
     </mat-sidenav-content>
 </mat-sidenav-container>

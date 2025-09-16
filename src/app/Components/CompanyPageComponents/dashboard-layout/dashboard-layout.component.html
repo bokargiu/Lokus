@@ -7,6 +7,8 @@
 
   <!-- Conteúdo principal com menu-row sempre visível -->
   <mat-sidenav-content>
+  
+  <mat-sidenav-content class="dashboard-items">
     
     <div class="dashboard-wrapper">
       
@@ -19,6 +21,12 @@
       <div class="main-content">
         <app-search-bar-area></app-search-bar-area>
         <div class="infos">
+    <div class="dashboard-wrapper"> 
+      <app-column-menu [stablishmentId]="stablishmentId"></app-column-menu>
+    </div>
+    <div class="main-content">
+      <app-search-bar-area></app-search-bar-area>
+      <div class="infos">
           <router-outlet></router-outlet>
         </div>
       </div>

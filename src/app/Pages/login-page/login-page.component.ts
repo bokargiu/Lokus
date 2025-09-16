@@ -21,6 +21,12 @@ export class LoginPageComponent {
    constructor(private authService : AuthService, private router:Router) {}
 
   async onLogin() {
+
+      const res = await firstValueFrom(this.authService.login(this.user, this.password));
+      this.authService.saveToken(res.token);
+
+      
+      
        this.authService.login(this.user, this.password).subscribe({
       next: (res) => {
         this.authService.saveToken(res.token);

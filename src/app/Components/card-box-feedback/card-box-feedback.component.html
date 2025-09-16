@@ -1,14 +1,30 @@
+<p>O que dizem por aí...</p>
+<p-carousel
+  [value]="Feedbacks"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+  [autoplayInterval]="3000"
+  [showIndicators]="false"
+  [showNavigators]="false"
+  class="feedback-carousel">
 
 <mat-card class="container">
   <mat-card-header>
     <mat-card-title>O que dizem sobre este espaço</mat-card-title>
   </mat-card-header>
+  <ng-template pTemplate="item" let-fb>
+    <mat-card class="feedback-card">
+      <div class="header">
+        <div class="username">{{ fb.userName }}</div>
+        <div class="date">{{ formatDate(fb.createdAt) }}</div>
+      </div>
+      <div class="content">{{ fb.content }}</div>
+    </mat-card>
+  </ng-template>
 
-  <mat-card-content>
-    <div *ngFor="let feedback of feedbacks" class="feedback-item">
-      <p><strong>{{ feedback.username }}</strong> - {{ feedback.createdAt | date:'shortDate' }}</p>
       <p>{{ feedback.comment }}</p>
       <mat-divider></mat-divider>
     </div>
   </mat-card-content>
-</mat-card>
+</mat-card></p-carousel>

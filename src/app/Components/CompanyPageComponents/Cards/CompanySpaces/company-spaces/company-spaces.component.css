@@ -1,0 +1,8 @@
+.container{
+    height: 80vh;
+    width: 80%;
+    direction: flex;
+    flex-direction: column;
+    justify-self: right;
+    gap: 50% !important;
+}

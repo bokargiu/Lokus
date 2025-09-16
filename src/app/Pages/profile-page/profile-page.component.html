@@ -59,6 +59,51 @@
 
             </div>
 
+<div class="container" *ngIf="stablishment">
+  <mat-card class="card-profile">
+    <div class="description">
+      <h3>{{ stablishment.virtualName || stablishment.companyName }}</h3>
+      <p>{{ stablishment.description }}</p>
     </div>
 <app-footing/>
+    <div class="rent">
+      <div class="button">
+        <button (click)="openRentalForm()">Alugar</button>
+      </div>
+    </div>
+    <div class="assessment">
+      <app-card-rating [companyId]="stablishment.id"></app-card-rating>
+    </div>
+  </mat-card>
 
+  <mat-card class="card-info">
+    <app-carousel></app-carousel>
+    <app-card-box-feedback></app-card-box-feedback>
+  </mat-card>
+
+  <!-- Modal de Reserva -->
+  <div class="modal" *ngIf="showRentalForm">
+    <div class="modal-content">
+    <app-card-rental-form 
+      *ngIf="showRentalForm" 
+      [stablishmentId]="stablishment?.id"
+      (confirmed)="onConfirmedRental($event)">
+    </app-card-rental-form>
+      <button class="close" (click)="closeRentalForm()">X</button>
+    </div>
+  </div>
+
+  <!-- Mensagem de confirmação -->
+  <div class="mensagem" *ngIf="confirmed && rentalDetails">
+    <div class="mensagem-content">
+      <button class="close-btn" (click)="closeMessage()">×</button>
+      <h4><strong>Aluguel confirmado!</strong></h4>
+      <p><strong>Espaço:</strong> {{ rentalDetails.spaceName }}</p>
+      <p *ngIf="rentalDetails.date"><strong>Data:</strong> {{ rentalDetails.date | date:'dd/MM/yyyy' }}</p>
+      <p><strong>Horário:</strong> {{ rentalDetails.hour }} às {{ rentalDetails.endHour || parseHour(rentalDetails.hour) }}</p>
+      <p><strong>Preço:</strong> R$ {{ rentalDetails.price | number:'1.2-2' }}</p>
+    </div>
+  </div>
+</div>
+
+<app-footing/>

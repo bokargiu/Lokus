@@ -10,6 +10,7 @@ export interface Booking {
   horaInicio: string;
   horaFim: string;
   status: 'Pendente' | 'Confirmado' | 'Cancelado';
+  price: number; // preço do space
 }
 
 @Injectable({
@@ -17,6 +18,7 @@ export interface Booking {
 })
 export class BookingService {
   private apiUrl = 'https://localhost:7101/api/booking';
+  private apiUrl = 'https://localhost:7101/api/Booking';
 
   constructor(private http: HttpClient) {}
 

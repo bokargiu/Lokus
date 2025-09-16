@@ -10,4 +10,7 @@
         <p>{{item.preco}}</p>
     </div>
 
+</div>  <div *ngFor="let item of stablishments" class="box" (click)="goToProfile(item.id)">
+    <h3>{{ item.virtualName }}</h3> 
+  </div>
 </div>

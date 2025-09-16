@@ -1,0 +1,66 @@
+.full-width {
+  width: 100%;
+}
+
+mat-card {
+    background-color: #333333;
+    padding: 16px;
+}
+
+mat-card-title {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+/* Aplica estilo aos mat-form-field com outline */
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  stroke: #333333; /* contorno normal */
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  stroke: #333333; /* contorno quando focado */
+}
+
+::ng-deep .mat-form-field-label {
+  color: #333333; /* label */
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #333333;
+}
+
+/* Input e select */
+::ng-deep input.mat-input-element,
+::ng-deep .mat-select-value-text {
+  color: #333333;
+}
+
+/* Datepicker toggle */
+::ng-deep .mat-datepicker-toggle-default-icon {
+  color: #333333;
+}
+
+/* Mat-option */
+::ng-deep .mat-select-panel .mat-option.mat-selected,
+::ng-deep .mat-select-panel .mat-option:hover {
+  background-color: #e0e0e0;
+  color: #333333;
+}
+
+/* Botão */
+::ng-deep button.mat-raised-button {
+  background-color: #044e55 !important;
+  color: #fff;
+}
+
+::ng-deep button.mat-raised-button:hover {
+  background-color: #555555;
+}

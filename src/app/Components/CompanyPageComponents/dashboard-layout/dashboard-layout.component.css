@@ -2,9 +2,11 @@
   height: 100vh;
   width: 100%;
   background-color: #ffffff !important;
+  background-color: #e5e5e5;
 }
 
 .dashboard-wrapper {
+.dashboard-items{
   display: flex;
   height: 100%;
 }
@@ -12,15 +14,23 @@
 .menu-row-wrapper {
   width: 60px; /* largura do menu-row */
   z-index: 10;
+.dashboard-wrapper {
+  display: flex;
+  width: 60px;
 }
 
+
 .main-content {
+  width: 90%;
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-self: right;
 }
 
 .infos {
+  width: 98%;
   flex: 1;
   padding: 16px;
+
 }

@@ -1,10 +1,12 @@
 <mat-card>
+<mat-card class="containter">
   <mat-card-title>Definir Disponibilidade</mat-card-title>
   <form [formGroup]="form" (ngSubmit)="submit()">
     
     <mat-form-field appearance="fill">
       <mat-label>Espaço</mat-label>
       <mat-select formControlName="spaceId" (selectionChange)="loadAvailabilities($event.value)">
+      <mat-select formControlName="spaceId" (selectionChange)="onSpaceChange($event.value)">
         <mat-option *ngFor="let s of spaces" [value]="s.id">{{ s.name }}</mat-option>
       </mat-select>
     </mat-form-field>
@@ -35,6 +37,7 @@
   <mat-list>
     <mat-list-item *ngFor="let a of availabilities">
       {{ diasSemana[a.diaSemana].nome }}: {{ a.horaInicio }} - {{ a.horaFim }}
+      {{ getDiaSemanaNome(a.diaSemana) }}: {{ a.horaInicio }} - {{ a.horaFim }}
       <span class="spacer"></span>
       <button mat-button color="warn" (click)="markUnavailable(a.id)" [disabled]="a.status === 'Indisponivel'">
         Indisponível

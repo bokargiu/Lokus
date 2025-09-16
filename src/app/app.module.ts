@@ -26,6 +26,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialogActions } from '@angular/material/dialog';
 import { MatListModule} from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDateFormats } from '@angular/material/core';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { QueryList } from '@angular/core';
 import { ViewChildren } from '@angular/core';
@@ -92,7 +95,6 @@ import { CardCompanyComponent } from './Components/card-company/card-company.com
 
 import { CompanyPageInterfaceComponent } from './Components/CompanyPageComponents/company-page-interface/company-page-interface.component';
 import { ColumnMenuComponent } from './Components/CompanyPageComponents/column-menu/column-menu.component';
-import { MenuRowComponent } from './Components/CompanyPageComponents/menu-row/menu-row.component';
 import { CompanyPageComponent } from './Pages/company-page/company-page.component';
 import { CompanyHomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/company-home/company-home.component';
 import { CompanySettingsComponent } from './Components/CompanyPageComponents/Cards/CompanySettings/company-settings/company-settings.component';
@@ -122,6 +124,9 @@ import { StablishmentListPageComponent } from './Components/CompanyPageComponent
 import { StablishmentGalleryService } from './Services/stablishment-gallery.service';
 
 import { DashboardLayoutComponent } from './Components/CompanyPageComponents/dashboard-layout/dashboard-layout.component';
+import { RentalFormMockComponent } from './Mock/rental-form-mock/rental-form-mock.component';
+import { CardRentalFormComponent } from './Pages/profile/card-rental-form/card-rental-form.component';
+
 
 @NgModule({
   declarations: [
@@ -162,7 +167,6 @@ import { DashboardLayoutComponent } from './Components/CompanyPageComponents/das
 
     CompanyPageInterfaceComponent,
     ColumnMenuComponent,
-    MenuRowComponent,
     CompanyPageComponent,
     CompanyHomeComponent,
     CompanySettingsComponent,
@@ -190,8 +194,9 @@ import { DashboardLayoutComponent } from './Components/CompanyPageComponents/das
     CardListSpaceComponent,
     CardAddSpaceComponent,
 
-    DashboardLayoutComponent
-
+    DashboardLayoutComponent,
+    RentalFormMockComponent,
+    CardRentalFormComponent
   ],
   imports: [
   BrowserModule,
@@ -223,6 +228,8 @@ import { DashboardLayoutComponent } from './Components/CompanyPageComponents/das
   MatDialogActions,
   MatListModule,
   MatSelectModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 
 
   // PrimeNG
@@ -242,7 +249,7 @@ import { DashboardLayoutComponent } from './Components/CompanyPageComponents/das
 
 ],
 
-  providers: [MatIconRegistry, { provide: LOCALE_ID, useValue: 'pt-BR' }],
+  providers: [MatIconRegistry, { provide: LOCALE_ID, useValue: 'pt-BR'  }],
 
   bootstrap: [AppComponent]
 })

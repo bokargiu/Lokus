@@ -1,7 +1,53 @@
+.feedback-carousel {
+  width: 90%; /* diminui um pouco para caber dentro do card */
+  max-width: 400px; /* opcional: não ultrapassar 400px */
+  margin: auto;
+}
+
 .feedback-card {
   margin-top: 16px;
+  min-height: 120px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #333333;
+  width: 80%; /* card ocupa toda largura do carousel */
+  box-sizing: border-box; /* garante que padding não aumente a largura */
+  margin-left: 50px;
+  border-radius: 15px;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
 .feedback-item {
   margin-bottom: 12px;
+.username {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: rgb(255, 255, 255);
+}
+
+.content {
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin-left: 40px;
+  font-weight: 600;
 }
