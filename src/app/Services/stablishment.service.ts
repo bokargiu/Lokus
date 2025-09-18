@@ -6,7 +6,7 @@ import { jwtDecode } from "jwt-decode";
 
 export interface Stablishment {
     id: string;
-    companyName: string;
+    name: string;
     virtualName: string;
     description: string;
 }
@@ -27,13 +27,9 @@ export class StablishmentService{
 
     constructor(private http: HttpClient) {}
 
+    
     getStablishment(id: string): Observable<Stablishment> {
         return this.http.get<Stablishment>(`${this.apiUrl}/${id}`);
-    }
-
-    // Atualiza stablishment pelo ID
-    updateStablishment(id: string, data: {virtualName?: string; description?: string}): Observable<void> {
-        return this.http.put<void>(`${this.apiUrl}/${id}`, data);
     }
 
     getMyStablishments(): Observable<StablishmentResponseDto[]> {
@@ -45,5 +41,16 @@ export class StablishmentService{
             Authorization: `Bearer ${token}`
         }
     });
+    }
+
+    // stablishment.service.ts
+    getByCompany(companyId: string): Observable<Stablishment[]> {
+        return this.http.get<Stablishment[]>(`${this.apiUrl}/byCompany/${companyId}`);
+    }
+
+    updateStablishment(id: string, dto: any) {
+  return this.http.patch(`${this.apiUrl}/${id}`, dto);
 }
+
+
 }

@@ -21,7 +21,7 @@ import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 import { SupportComponent } from './Pages/support/support.component';
 import { CarouselComponent } from './Components/ImagesComponents/carousel/carousel.component';
 import { SubscriptionsComponent } from './Pages/subscriptions/subscriptions.component';
-import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
+import { ProfilePageComponent } from './Pages/profile/profile-page/profile-page.component';
 import { CompanyPageComponent } from './Pages/company-page/company-page.component';
 import { CompanyHomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/company-home/company-home.component';
 import { CompanySpacesComponent } from './Components/CompanyPageComponents/Cards/CompanySpaces/company-spaces/company-spaces.component';
@@ -32,17 +32,20 @@ import { CompanyEditProfileComponent } from './Components/CompanyPageComponents/
 import { AuthGuard } from './Services/authguard.service';
 import { StablishmentListPageComponent } from './Components/CompanyPageComponents/stablishment-list-page/stablishment-list-page.component';
 import { DashboardLayoutComponent } from './Components/CompanyPageComponents/dashboard-layout/dashboard-layout.component';
+import { CardBoxFeedbackComponent } from './Components/card-box-feedback/card-box-feedback.component';
 
 const routes: Routes = [
-  // Página inicial 
+  // Página inicial
   { path: '', component: HomePageComponent, pathMatch: 'full' },
 
-  // Página do customer
+  // Página do cliente
   {
     path: 'customer',
-    component: UserPageComponent, canActivate: [AuthGuard],data: { role: 'customer' },
+    component: UserPageComponent,
+    canActivate: [AuthGuard],
+    data: { role: 'customer' },
     children: [
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: UserHomeComponent },
       { path: 'mensagens', component: UserMensagensComponent },
       { path: 'feedback', component: UserFeedbackComponent },
@@ -52,8 +55,8 @@ const routes: Routes = [
     ],
   },
 
-//página da company
-{
+  // Painel da empresa (stablishment admin)
+  {
     path: 'company',
     canActivate: [AuthGuard],
     data: { role: 'company' },
@@ -61,7 +64,6 @@ const routes: Routes = [
       { path: '', redirectTo: 'stablishments', pathMatch: 'full' },
       { path: 'stablishments', component: StablishmentListPageComponent },
 
-      // Dashboard usando o layout
       {
         path: 'dashboard/:stablishmentId',
         component: DashboardLayoutComponent,
@@ -73,12 +75,13 @@ const routes: Routes = [
           { path: 'relacionamentos', component: CompanyFeedbackComponent },
           { path: 'suporte', component: CompanySupportComponent },
           { path: 'configuracao', component: CompanySettingsComponent },
-        ]
-      }
-    ]
-  }
-,
+        ],
+      },
+    ],
+  },
 
+  // Perfil público de um stablishment
+  { path: 'stablishment/:id', component: ProfilePageComponent },
 
   // Outras páginas
   { path: 'pesquisar', component: SearchPageComponent },
@@ -88,11 +91,10 @@ const routes: Routes = [
   { path: 'cadastro-cliente', component: SignupCustomerPageComponent },
   { path: 'esqueceu-senha', component: ResetPasswordPageComponent },
   { path: 'perguntas', component: FaqPageComponent },
-  { path: 'suporte', component:SupportComponent},
-  { path: 'planos', component:SubscriptionsComponent},
-  { path: 'perfil', component:ProfilePageComponent},
-
+  { path: 'suporte', component: SupportComponent },
+  { path: 'planos', component: SubscriptionsComponent },
 ];
+
 
 
 @NgModule({

@@ -1,26 +1,30 @@
 .dashboard-container {
   height: 100vh;
   width: 100%;
-  background-color: #ffffff !important;
+  background-color: #e5e5e5;
+}
+
+.dashboard-items{
+  display: flex;
 }
 
 .dashboard-wrapper {
   display: flex;
-  height: 100%;
+  width: 60px;
 }
 
-.menu-row-wrapper {
-  width: 60px; /* largura do menu-row */
-  z-index: 10;
-}
 
 .main-content {
+  width: 90%;
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-self: right;
 }
 
 .infos {
+  width: 98%;
   flex: 1;
   padding: 16px;
+
 }

@@ -1,9 +1,48 @@
 .rating-card {
+  background-color: #ffffff !important;
   margin-top: 16px;
 }
 
 .rating-item {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   margin-bottom: 8px;
 }
+
+img{
+    align-self: center;
+    justify-content: center;
+    width: 25px;
+    height: auto;
+    margin: 15px;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: max-content;
+  color: #333333;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 80%; /* acima do ícone */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  z-index: 10;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.icon-wrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-wrapper {
+  position: relative; /* necessário para posicionar a tooltip */
+  display: inline-block;
+}
+

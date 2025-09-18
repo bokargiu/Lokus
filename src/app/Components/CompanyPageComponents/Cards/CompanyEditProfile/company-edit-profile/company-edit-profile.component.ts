@@ -7,14 +7,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './company-edit-profile.component.css'
 })
 export class CompanyEditProfileComponent implements OnInit{
-
-  stablishmentId!: string; 
+stablishmentId!: string; 
 
   constructor(private route: ActivatedRoute) {}
   
   ngOnInit(): void {
-  this.route.params.subscribe(params => {
-    this.stablishmentId = params['stablishmentId'];
-  });
-}
+    this.route.parent?.params.subscribe(params => {
+      this.stablishmentId = params['stablishmentId'];
+      console.log('ID do estabelecimento no editar-perfil:', this.stablishmentId);
+    });
+  }
 }

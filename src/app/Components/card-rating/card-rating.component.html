@@ -1,31 +1,46 @@
 
-<mat-card class="rating-card">
-  <mat-card-header>
-    <mat-card-title>Avaliações do Espaço</mat-card-title>
-  </mat-card-header>
+<div class="rating-card">
 
-  <mat-card-content>
-    <div class="rating-item">
-      <span>Geral:</span>
-      <strong>{{ averageOverall | number:'1.1-1' }}/5</strong>
-    </div>
-    <div class="rating-item">
-      <span>Estacionamento:</span>
-      <strong>{{ averageParking | number:'1.1-1' }}/5</strong>
-    </div>
-    <div class="rating-item">
-      <span>Wi-Fi:</span>
-      <strong>{{ averageWifi | number:'1.1-1' }}/5</strong>
-    </div>
-    <div class="rating-item">
-      <span>Tomadas:</span>
-      <strong>{{ averagePlug | number:'1.1-1' }}/5</strong>
-    </div>
-    <div class="rating-item">
-      <span>Preço:</span>
-      <strong>{{ averagePrice | number:'1.1-1' }}/5</strong>
-    </div>
+  <mat-card-content class="rating-item">
+
+      <div class="icon-wrapper">
+        <img src="https://cdn-icons-png.flaticon.com/512/3916/3916582.png" alt="">
+        <!-- <strong>{{ averageOverall | number:'1.1-1' }}/5</strong> -->
+         <span class="tooltip">4.2</span>
+
+      </div>                   
+
+      <div class="icon-wrapper">
+        <img src="https://cdn-icons-png.flaticon.com/512/6955/6955566.png" alt="">
+        <!-- <strong>{{ averageParking | number:'1.1-1' }}/5</strong> -->
+         <span class="tooltip">4.5</span>
+
+      </div>
+
+      <div class="icon-wrapper">
+        <img src="https://cdn-icons-png.flaticon.com/512/9254/9254512.png" alt="">
+        <!-- <strong>{{ averageWifi | number:'1.1-1' }}/5</strong> -->
+        <span class="tooltip">3.8</span>
+
+      </div>
+
+      <div class="icon-wrapper">
+        <img src="https://cdn-icons-png.flaticon.com/512/16059/16059904.png" alt="">
+        <!-- <strong>{{ averagePlug | number:'1.1-1' }}/5</strong> -->
+         <span class="tooltip">4.0</span>
+
+      </div>
+
+      <div class="icon-wrapper">
+        <img src="https://cdn-icons-png.flaticon.com/512/3916/3916676.png" alt="" class="moneySign">
+        <!-- <strong>{{ averagePrice | number:'1.1-1' }}/5</strong> -->
+         <span class="tooltip">3.7</span>
+
+      </div>
+
+
+
   </mat-card-content>
-</mat-card>
+</div>
 
 

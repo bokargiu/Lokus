@@ -1,1 +1,40 @@
-<p>company-feedback works!</p>
+<div class="modal-backdrop">
+  <div class="modal">
+    <h2>Deixe seu feedback</h2>
+
+    <label>
+      Comentário:
+      <textarea [(ngModel)]="feedback.comment" rows="3"></textarea>
+    </label>
+
+    <label>
+      Nota geral:
+      <input type="number" [(ngModel)]="feedback.overallRating" min="1" max="5">
+    </label>
+
+    <label>
+      Estacionamento:
+      <input type="number" [(ngModel)]="feedback.parkingRating" min="1" max="5">
+    </label>
+
+    <label>
+      Wi-Fi:
+      <input type="number" [(ngModel)]="feedback.wifiRating" min="1" max="5">
+    </label>
+
+    <label>
+      Tomadas:
+      <input type="number" [(ngModel)]="feedback.plugRating" min="1" max="5">
+    </label>
+
+    <label>
+      Preço:
+      <input type="number" [(ngModel)]="feedback.priceRating" min="1" max="5">
+    </label>
+
+    <div class="buttons">
+      <button (click)="submitFeedback()">Enviar</button>
+      <button (click)="close()">Cancelar</button>
+    </div>
+  </div>
+</div>

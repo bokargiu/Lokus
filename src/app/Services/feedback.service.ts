@@ -14,9 +14,7 @@ export interface FeedbackDto {
   createdAt: string;
 }
 
-export interface CreateFeedbackRequest {
-  companyId: string;
-  userId: string;
+export interface CreateFeedbackBody {
   comment: string;
   overallRating: number;
   parkingRating: number;
@@ -33,28 +31,22 @@ export class FeedbackService {
 
   constructor(private http: HttpClient) {}
 
-  // Obter todos os feedbacks 
-  getFeedbacks(companyId: string): Observable<FeedbackDto[]> {
-    return this.http.get<FeedbackDto[]>(`${this.apiUrl}/company/${companyId}`);
+ // feedback.service.ts atualizado
+  getFeedbacks(stablishmentId: string): Observable<FeedbackDto[]> {
+    return this.http.get<FeedbackDto[]>(`${this.apiUrl}/stablishment/${stablishmentId}/feedbacks`);
   }
 
-  // Obter média geral de uma empresa
-  getCompanyAverage(companyId: string): Observable<number> {
-    return this.http.get<number>(`${this.apiUrl}/company/${companyId}/average`);
+  getStablishmentAverage(stablishmentId: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/stablishment/${stablishmentId}/average`);
   }
 
-  // Criar feedback
-  createFeedback(request: CreateFeedbackRequest): Observable<FeedbackDto> {
-    return this.http.post<FeedbackDto>(this.apiUrl, request);
+  createFeedback(stablishmentId: string, body: CreateFeedbackBody) {
+    return this.http.post(`${this.apiUrl}/stablishment/${stablishmentId}/feedback`, body);
   }
 
-  // Atualizar 
-  updateFeedback(feedbackId: string, request: CreateFeedbackRequest): Observable<void> {
-    return this.http.put<void>(`${this.apiUrl}/${feedbackId}`, request);
-  }
 
-  // Deletar 
   deleteFeedback(feedbackId: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${feedbackId}`);
   }
+
 }

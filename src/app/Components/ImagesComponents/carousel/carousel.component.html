@@ -1,3 +1,4 @@
+
 <p-galleria 
     [value]="images" 
     [numVisible]="5" 
@@ -7,6 +8,9 @@
     [responsiveOptions]="responsiveOptions" 
     [containerStyle]="{ 'max-width': '640px' }">
         <ng-template pTemplate="item" let-item>
-            <img [src]="item.itemImageSrc" style="width: 100%; display: block;" />
+            <img [src]="item.itemImageSrc" style="width: 90%; display: block;" />
         </ng-template>
 </p-galleria>
+
+
+

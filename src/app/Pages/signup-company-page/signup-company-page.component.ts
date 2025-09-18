@@ -51,7 +51,7 @@ export class SignupCompanyPageComponent {
       ]
     };
 
-    this.http.post('https://localhost:7101/api/SignupCompany/register', companyDto)
+    this.http.post('https://localhost:7101/api/Company/SignUp', companyDto)
       .subscribe({
         next: (res: any) => alert('Usuário cadastrado com sucesso!'),
         error: (err) => {

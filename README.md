@@ -2,26 +2,52 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
 
-## Development server
+> Uma plataforma que conecta profissionais ou estudantes à espaços pra trabalhar e estudar. Esses espaços são coworkings, cafés e padarias.
+> A **Lokus** busca criar uma comunicação entre espaços e pessoas. Facilitar a organização, gestão e interação entre usuários. E dar visibilidade e ajudar os negócios locais.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades:
+ - Cadastro e gerenciamento de usuários
+ - Painel administrativo para controle de informações
+ - Upload e visualização de imagens
+ - Futuras integrações com recursos com feedbacks e mensagens
 
-## Code scaffolding
+## Tecnologias
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Frontend
+ - Angular 17
 
-## Build
+### Backend
+ - C# .NET
+ - ASP .NET Core
+ - JWT + Bcrypt
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Banco de dados
+ - MySql
 
-## Running unit tests
+### Outros
+ - Git e Github
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instalação
 
-## Running end-to-end tests
+### Frontend (Angular)
+#### 1. Clone o repositório
+git clone https://github.com/SEU-USUARIO/ProjetoLokus.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### 2. Entre na pasta do projeto
+cd ProjetoLokus
 
-## Further help
+#### 3. Instalar a dependência
+npm install
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### 4. Rode o servidor
+ng serve
+
+#### 5. Abra o navegador
+http://localhost:4200
+
+# Licença Acadêmica
+
+Este projeto foi desenvolvido para o trabalho final do curso de C#, do programa Entra21 em Blumenau(Santa Catarina, Brasil), do ano 2025.
+
+- Não é permitida a utilização deste projeto para fins **comerciais ou de distribuição**.  
+- Qualquer reprodução ou modificação deve manter a referência aos autores originais.  

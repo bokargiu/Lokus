@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title>Reservar espaço</mat-card-title>
+  <mat-card-content>
+    <mat-form-field class="full-width">
+      <mat-label>Escolha o espaço</mat-label>
+      <mat-select [(value)]="selectedSpace">
+        <mat-option *ngFor="let space of spaces" [value]="space">
+          {{ space.name }} - R$ {{ space.price }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Escolha a data</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Escolha o horário</mat-label>
+      <mat-select [(value)]="selectedHour">
+        <mat-option *ngFor="let h of hours" [value]="h">
+          {{ h }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="confirmRental()">Confirmar</button>
+  </mat-card-actions>
+</mat-card>

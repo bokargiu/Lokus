@@ -2,21 +2,31 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    gap: 20px;
+    gap: 10px;
 }
 .down{
     margin-top: 20px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    gap: 20px;
+    justify-content: right;
+    gap: 10px;
 }
 .container{
-    height: 87vh;
+    height: 80vh;
     display: flex;
-    justify-content: center ;
-    align-items: center;
-    gap: 40px;
+    justify-content: right;
+    gap: 20px;
     
+}
+
+.profile{
+    height: 15vh;
+    width: 20vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border:0;
+    border-radius: 20px;
+    cursor:pointer;
 }
