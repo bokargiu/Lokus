@@ -4,6 +4,7 @@ import { AuthService } from './auth.service';
 import { firstValueFrom } from 'rxjs';
 import { CustomerService } from './customer.service';
 import { PhotoDto } from '../Dto\'s/photoDto';
+import { ReturnStatement } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -26,8 +27,10 @@ export class PhotoService {
       }
     ];
   }
-
-    postImageOfProfile(file: FormData, customerId: string) {
+  getLokusImage(){
+    return this.http.get<PhotoDto>("http://localhost:5105/api/Image/LokusImage")
+  }
+  postImageOfProfile(file: FormData, customerId: string) {
     return this.http.post("http://localhost:5105/api/customer-images/profile/" + customerId, file)
   }
 

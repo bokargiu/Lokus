@@ -47,7 +47,7 @@ const routes: Routes = [
       { path: 'mensagens', component: UserMensagensComponent },
       { path: 'feedback', component: UserFeedbackComponent },
       { path: 'favorite', component: UserFavoritesComponent },
-      { path: 'company', component: UserCompanyComponent },
+      { path: 'company', redirectTo: 'empresa' },
       { path: 'options', component: UserOptionsComponent },
     ],
   },

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './user-carousel-home.component.css',
 })
 export class UserCarouselHomeComponent {
-  PrincipaisRecomendacoes:string[] = ["coworking", "coworking", "coworking",
+  PrincipaisRecomendacoes:any[] = ["coworking", "coworking", "coworking",
                                       "coworking", "coworking", "coworking",
                                       "coworking", "coworking", "coworking",]
 }
