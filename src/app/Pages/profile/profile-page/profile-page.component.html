@@ -18,6 +18,10 @@
 
   <mat-card class="card-info">
     <app-carousel></app-carousel>
+
+  <!-- Botão para abrir o feedback -->
+  <button class="btn-feedback" (click)="openFeedback()">Deixar Feedback</button>
+
     <app-card-box-feedback></app-card-box-feedback>
   </mat-card>
 
@@ -45,5 +49,35 @@
     </div>
   </div>
 </div>
+
+<!-- Modal de Feedback -->
+<div class="modal-backdrop" *ngIf="showFeedbackModal">
+  <div class="modal-card">
+    <!-- Botão de fechar -->
+    <button class="close-feedback" (click)="closeFeedback()">×</button>
+
+    <h2>Deixe seu feedback</h2>
+
+    <label>
+      Comentário:
+    </label>
+    <br>
+    <textarea [(ngModel)]="feedback.comment" rows="3"></textarea>
+
+    <div class="rating-row">
+      <label>Nota geral: <input type="number" [(ngModel)]="feedback.overallRating" min="1" max="5"></label>
+      <label>Estacionamento: <input type="number" [(ngModel)]="feedback.parkingRating" min="1" max="5"></label>
+      <label>Wi-Fi: <input type="number" [(ngModel)]="feedback.wifiRating" min="1" max="5"></label>
+      <label>Tomadas: <input type="number" [(ngModel)]="feedback.plugRating" min="1" max="5"></label>
+      <label>Preço: <input type="number" [(ngModel)]="feedback.priceRating" min="1" max="5"></label>
+    </div>
+
+    <div class="buttons">
+      <button (click)="submitFeedback()">Enviar</button>
+      <button (click)="closeFeedback()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
 
 <app-footing/>

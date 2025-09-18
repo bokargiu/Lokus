@@ -1,13 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MatCard } from "@angular/material/card";
-import { Companies } from 'src/app/Mock/companies-mock';
 import { ActivatedRoute } from '@angular/router';
 import { ImagesService } from 'src/app/Services/images.service';
-import { Feedbacks } from 'src/app/Mock/feedback-mock';
 import { BookingService, Booking } from 'src/app/Services/booking.service';
 import { CompanyService } from 'src/app/Services/company.service';
 import { Stablishment, StablishmentService } from 'src/app/Services/stablishment.service';
 import { Space, SpaceService } from 'src/app/Services/space.service';
+import { FeedbackService } from 'src/app/Services/feedback.service';
 
 
 @Component({
@@ -29,7 +27,8 @@ export class ProfilePageComponent implements OnInit{
     private route: ActivatedRoute,
     private stablishmentService: StablishmentService,
     private spaceService: SpaceService,
-    private bookingService: BookingService
+    private bookingService: BookingService,
+    private feedbackService: FeedbackService
   ) {}
 
 
@@ -97,7 +96,35 @@ export class ProfilePageComponent implements OnInit{
     return (h + 1).toString().padStart(2, '0') + ':00';
   }
 
+  showFeedbackModal = false;
 
+feedback = {
+  comment: '',
+  overallRating: 0,
+  parkingRating: 0,
+  wifiRating: 0,
+  plugRating: 0,
+  priceRating: 0
+};
+
+openFeedback() {
+  this.showFeedbackModal = true;
+}
+
+closeFeedback() {
+  this.showFeedbackModal = false;
+}
+
+submitFeedback() {
+  this.feedbackService.createFeedback(this.stablishment.id, this.feedback).subscribe({
+    next: res => {
+      console.log('Feedback enviado:', res);
+      this.closeFeedback();
+    },
+    error: err => console.error('Erro ao enviar feedback:', err)
+  });
+
+}
 
 }
 

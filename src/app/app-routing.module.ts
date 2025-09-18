@@ -21,7 +21,7 @@ import { FaqPageComponent } from './Pages/faq-page/faq-page.component';
 import { SupportComponent } from './Pages/support/support.component';
 import { CarouselComponent } from './Components/ImagesComponents/carousel/carousel.component';
 import { SubscriptionsComponent } from './Pages/subscriptions/subscriptions.component';
-import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
+import { ProfilePageComponent } from './Pages/profile/profile-page/profile-page.component';
 import { CompanyPageComponent } from './Pages/company-page/company-page.component';
 import { CompanyHomeComponent } from './Components/CompanyPageComponents/Cards/CompanyHome/company-home/company-home.component';
 import { CompanySpacesComponent } from './Components/CompanyPageComponents/Cards/CompanySpaces/company-spaces/company-spaces.component';
