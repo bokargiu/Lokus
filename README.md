@@ -43,4 +43,11 @@ npm install
 ng serve
 
 #### 5. Abra o navegador
+http://localhost:4200
 
+# Licença Acadêmica
+
+Este projeto foi desenvolvido para o trabalho final do curso de C#, do programa Entra21 em Blumenau(Santa Catarina, Brasil), do ano 2025.
+
+- Não é permitida a utilização deste projeto para fins **comerciais ou de distribuição**.  
+- Qualquer reprodução ou modificação deve manter a referência aos autores originais.  
